@@ -1,0 +1,313 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Introdução à programação científica &#8212; IPC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/mystnb.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Sobre Python" href="sobre_py.html" />
+    <link rel="prev" title="Introdução à programação científica" href="index.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/IPC_wc.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">IPC</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Introdução à programação científica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sobre_py.html">
+   Sobre Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="getting_started.html">
+   Setting up Your Python Environment
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_by_example.html">
+   An Introductory Example
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="learn_more.html">
+   Learn More
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/Introdução.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> On this page
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objetivos-de-aprendizagem">
+   Objetivos de aprendizagem
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#como-funcionam-os-computadores">
+     Como funcionam os computadores?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#o-que-e-uma-linguagem-de-programacao">
+     O que é uma linguagem de programação?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#como-comecar-a-programar-em-python">
+     Como começar a programar em Python?
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="introducao-a-programacao-cientifica">
+<h1>Introdução à programação científica<a class="headerlink" href="#introducao-a-programacao-cientifica" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="objetivos-de-aprendizagem">
+<h2>Objetivos de aprendizagem<a class="headerlink" href="#objetivos-de-aprendizagem" title="Permalink to this headline">¶</a></h2>
+<p>Nesta lição veremos:</p>
+<ol class="simple">
+<li><p>Como funcionam os computadores</p></li>
+<li><p>O que é uma linguagem de programação</p></li>
+<li><p>Como começar a programar em Python</p></li>
+</ol>
+<div class="section" id="como-funcionam-os-computadores">
+<h3>Como funcionam os computadores?<a class="headerlink" href="#como-funcionam-os-computadores" title="Permalink to this headline">¶</a></h3>
+<p>Um computador é um equipamento constituído por vários componentes.
+Quando respondemos a uma pergunta do tipo <em>Que computador tens?</em>
+tipicamente indicamos o processador, a quantidade de memória <em>RAM</em> e a
+dimensão do disco rígido.</p>
+<p>Mas há outros componentes num computador que, de tão comuns, nem nos
+lembramos de referir. Por exemplo, o teclado, o rato, o monitor.</p>
+<p>::: {#esquema-computador}
+<img alt="Diagrama simplificado de umcomputador" src="docs/../img/sketch/computer_sk_transp.png" />
+:::</p>
+<p>Na [esquema-computador]{role=”numref”} vemos a representação de alguns
+dos dispositivos que compõem um computador.</p>
+</div>
+<div class="section" id="o-que-e-uma-linguagem-de-programacao">
+<h3>O que é uma linguagem de programação?<a class="headerlink" href="#o-que-e-uma-linguagem-de-programacao" title="Permalink to this headline">¶</a></h3>
+<p>Uma linguagem de programação é uma forma de descrever um conjunto de
+actividades que pretendemos que sejam efetuadas para atingir um
+determinado fim.</p>
+</div>
+<div class="section" id="como-comecar-a-programar-em-python">
+<h3>Como começar a programar em Python?<a class="headerlink" href="#como-comecar-a-programar-em-python" title="Permalink to this headline">¶</a></h3>
+<p>Um dos pontos fortes do Python é a existência de múltiplos recursos,
+livres e gratuitos. E assim, existem muitas formas de abordar a
+programação em Python. Nós vamos optar por uma forma que facilitará o
+uso ao longo do curso em Bioengenharia, mas também facilita o uso
+futuro.</p>
+<p>Há uma proposta de princípios de <em>Open Science</em> (ciência aberta, veja
+<a class="reference external" href="https://vimeo.com/162062013">https://vimeo.com/162062013</a>). Essa proposta surge frequentemente a par
+da promoção das sequintes características dos repositórios de dados: os
+dados devem poder ser encontrados, acedidos, entendidos, movidos entre
+sistemas e reutilizados.</p>
+<p>Esta visão de <em>FAIR data</em> (veja
+<a class="reference external" href="https://pt.wikipedia.org/wiki/Dados_FAIR">https://pt.wikipedia.org/wiki/Dados_FAIR</a>) foi também adotada pela
+União Europeia e pelos G20. A sigla <em>FAIR</em> representa:</p>
+<p>Findability</p>
+<p>:   os dados devem poder ser encontrados</p>
+<p>Accessibility</p>
+<p>:   uma vez encontrados, deve ser claro se/como podem ser acedidos</p>
+<p>Interoperability</p>
+<p>:   não existir uma restrição técnica de como os dados poderão ser
+tratados</p>
+<p>Reusability</p>
+<p>:   os dados devem poder ser reutilizados.</p>
+<p>É com estes princípio que vamos começar a programar em Python e fazer
+ciência aberta. Assim, vamos usar o ambiente Jupyter, vamos usar dados
+publicados na Internet e, programando em Python, vamos obter as nossas
+próprias conclusões.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">Introdução à programação científica</a>
+    <a class='right-next' id="next-link" href="sobre_py.html" title="next page">Sobre Python</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Margarida Madeira e Moura<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>
