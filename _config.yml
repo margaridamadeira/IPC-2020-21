@@ -26,7 +26,7 @@ notebook_interface            : "notebook"
 # Launch button settings
 repository:
   url                         : https://github.com/margaridamadeira/IPC-2020-21.git
-  path_to_book                : "mini_book"
+  path_to_book                : "IPC-2020-21"
 
 binder:
   binderhub_url               : "https://mybinder.org"
