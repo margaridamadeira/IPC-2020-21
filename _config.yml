@@ -20,7 +20,7 @@ html:
 # Launch button settings
 launch_buttons:
   notebook_interface          : "classic"
-  binderhub_url               : "https://mybinder.org/v2/gh/margaridamadeira/IPC-2020-21/master"
+  binderhub_url               : "https://mybinder.org"
 
 # Information about where the book exists on the web
 repository:
