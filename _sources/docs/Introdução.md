@@ -25,7 +25,7 @@ dos dispositivos que compõem um computador.
 
 ```{figure} ../images/sketch/computer_sk_transp.png
 ---
-height: 250px
+height: 350px
 name: esquema-computador
 ---
 Diagrama simplificado de um computador.
