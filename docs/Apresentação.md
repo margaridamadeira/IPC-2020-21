@@ -1,13 +1,13 @@
 # Introdução à programação científica 
 
 ## O que é?
-Introdução à programação científica.
+Introdução à programação científica é a disciplina onde se apresenta a programação a alunos de [Bioengenharia](https://www.ualg.pt/pt/curso/1907). Pode ver a descrição [formal](https://academico.ualg.pt/netpa/doc?codeDiscip=19071001&anoLectivo=202021&codInstituic=9&stage=FichaUnidadeCurricular&_event=publicacaoFUC&docIsAttachment=false) ou continuar a ler.
 
 ## Como?
 
-Nas aulas teóricas, vamos discutir os temas da disciplina, através de apresentações, ou demonstrações ou esboçar soluções alternativas que ilustram o desenvolvimento de programas. 
+Nas aulas teóricas, vamos discutir os temas da disciplina, através de apresentações, ou demonstrações ou esboçar soluções alternativas que ilustram o desenvolvimento de programas. Teremos uma aula teórica de uma hora por semana.
 
-Nas aulas práticas, vamos resolver pequenos problemas de programação ou realizar trabalhos mais longos, com guião, no computador. 
+Nas aulas práticas, vamos resolver pequenos problemas de programação ou realizar trabalhos mais longos, com guião, no computador. Teremos três horas de aulas práticas laboratoriais por semana, divididas em dois blocos de hora e meia.
 
 Haverá também algum trabalho, individual ou em grupo, a ser realizado fora das aulas.
 

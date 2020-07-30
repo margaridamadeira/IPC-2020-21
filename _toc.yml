@@ -1,7 +1,11 @@
 - file: docs/index
+
+- chapter: Preâmbulo
   sections:
-    - file: docs/Introdução
-    - file: docs/sobre_py
-    - file: docs/getting_started
-    - file: docs/python_by_example
+  - file: docs/Apresentação
+  - file: docs/Familiarização
+
+- chapter: Introdução
+  sections:
+  - file: docs/Introdução
 
