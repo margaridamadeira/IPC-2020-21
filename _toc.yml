@@ -1,8 +1,9 @@
-# - file: README
+- file: docs/README
+
 - file: docs/index
   sections:
     - file: docs/Introdução
     - file: docs/sobre_py
     - file: docs/getting_started
     - file: docs/python_by_example
-    - file: docs/learn_more
+

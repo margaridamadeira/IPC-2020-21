@@ -20,13 +20,18 @@ dimensão do disco rígido.
 Mas há outros componentes num computador que, de tão comuns, nem nos
 lembramos de referir. Por exemplo, o teclado, o rato, o monitor.
 
-::: {#esquema-computador}
-![Diagrama simplificado de um
-computador](../img/sketch/computer_sk_transp.png)
-:::
-
-Na [esquema-computador]{role="numref"} vemos a representação de alguns
+Na {numref}`esquema-computador` vemos a representação de alguns
 dos dispositivos que compõem um computador.
+
+```{figure} ../images/sketch/computer_sk_transp.png
+---
+height: 250px
+name: esquema-computador
+---
+Diagrama simplificado de um computador.
+```
+
+
 
 ### O que é uma linguagem de programação?
 
