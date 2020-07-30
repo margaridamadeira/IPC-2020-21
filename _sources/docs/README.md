@@ -5,7 +5,5 @@ Estão aqui reunidos os materiais de apoio (lições e guiões) à unidade curri
 
 Estes materiais foram produzidos por [Margarida Madeira e Moura](https://fct.ualg.pt/pt/content/ficha-docente-margarida-madeira).
 
-```{note}
-Estes materiais foram construídos usando [Jupyter Book 2.0](https://beta.jupyterbook.org/intro.html), um conjunto de ferramentas baseadas em Sphinx e que fazem parte do
-[ExecutableBookProject](https://ebp.jupyterbook.org/en/latest/).
-```
+
+> Estes materiais foram construídos usando [Jupyter Book 2.0](https://beta.jupyterbook.org/intro.html), um conjunto de ferramentas baseadas em Sphinx e que fazem parte do [ExecutableBookProject](https://ebp.jupyterbook.org/en/latest/).
