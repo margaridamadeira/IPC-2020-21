@@ -1,5 +1,7 @@
 # Introdução à programação científica 
 
+[![Binder](http://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/margaridamadeira/IPC-2020-21/master)
+
 ## O que é?
 Introdução à programação científica.
 
