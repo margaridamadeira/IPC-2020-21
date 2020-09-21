@@ -1,11 +1,14 @@
 - file: docs/index
 
-- chapter: Preâmbulo
-  sections:
-  - file: docs/Apresentação
-  - file: docs/Familiarização
+- part: Preâmbulo
+  chapters:
+  - file: docs/Pre/Apresentação
+  - file: docs/Pre/Familiarização
 
-- chapter: Introdução
-  sections:
-  - file: docs/Introdução
+- part: Semana 1
+  chapters:
+  - file: docs/S1/Introdução
+  - file: docs/S1/ler_escrever
+
+  
 
