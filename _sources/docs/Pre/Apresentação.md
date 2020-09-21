@@ -1,7 +1,11 @@
-# Introdução à programação científica 
+# Apresentação geral
 
 ## O que é?
-Introdução à programação científica é a disciplina onde se apresenta a programação a alunos de [Bioengenharia](https://www.ualg.pt/pt/curso/1907). Pode ver a descrição [formal](https://academico.ualg.pt/netpa/doc?codeDiscip=19071001&anoLectivo=202021&codInstituic=9&stage=FichaUnidadeCurricular&_event=publicacaoFUC&docIsAttachment=false) ou continuar a ler.
+Introdução à programação científica (IPC) é a disciplina onde se apresenta a programação a alunos de [Bioengenharia](https://www.ualg.pt/pt/curso/1907). Pode ver a descrição [formal](https://academico.ualg.pt/netpa/doc?codeDiscip=19071001&anoLectivo=202021&codInstituic=9&stage=FichaUnidadeCurricular&_event=publicacaoFUC&docIsAttachment=false) ou continuar a ler.
+
+## Quando?
+
+Em qualquer nomento pode consultar o [horário](https://calendar.google.com/calendar/embed?src=eg5a54i2kbfgce9id7vmet9oi0%40group.calendar.google.com&bgcolor=%23FFFFFF&src=53g1q988gcb45gvkgotquqtue8%40group.calendar.google.com&color=%23AB8B00&src=pasegphndg67ke0m7bb4ihglf8%40group.calendar.google.com&color=%23B1440E&) do curso.
 
 ## Como?
 
