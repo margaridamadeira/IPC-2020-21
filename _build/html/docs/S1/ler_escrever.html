@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>O que vamos usar &#8212; IPC</title>
+    <title>Aula prática &#8212; IPC</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
@@ -26,6 +26,8 @@
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -36,7 +38,7 @@
     <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2020-21/docs/S1/ler_escrever.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="prev" title="Introdução" href="Introdução.html" />
+    <link rel="prev" title="O IPyhton como interpretador de comandos" href="T1.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -45,8 +47,8 @@
 <!-- Opengraph tags -->
 <meta property="og:url"         content="https://margaridamadeira.github.io/IPC-2020-21/docs/S1/ler_escrever.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="O que vamos usar" />
-<meta property="og:description" content="O que vamos usar  Aqui encontra a descrição da infraestrutura computacional da UAlg, disponível para as aulas prática. São também indicados os programas que dev" />
+<meta property="og:title"       content="Aula prática" />
+<meta property="og:description" content="Aula prática  Nesta primeira aula prática vamos ensaiar algumas das ferramentas que temos disponíveis.  Usar o posto de trabalho  Entrar no computador faz-se us" />
 <meta property="og:image"       content="https://margaridamadeira.github.io/IPC-2020-21/_static/IPC_wc.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -106,9 +108,19 @@
    Introdução
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="T1.html">
+   O IPyhton como interpretador de comandos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="T1.html#em-resumo">
+   Em resumo
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   O que vamos usar
+   Aula prática
   </a>
  </li>
 </ul>
@@ -217,23 +229,8 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#salas">
-   Salas
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#usar-o-posto-de-trabalho">
    Usar o posto de trabalho
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#paginas-web">
-   Páginas Web
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#identificar-as-ferramentas-a-utilizar">
-   Identificar as ferramentas a utilizar
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -251,11 +248,6 @@
    Notebook
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#e-e-tudo-por-agora">
-   E é tudo por agora.
-  </a>
- </li>
 </ul>
 
         </nav>
@@ -266,31 +258,13 @@
         
               <div>
                 
-  <div class="section" id="o-que-vamos-usar">
-<h1>O que vamos usar<a class="headerlink" href="#o-que-vamos-usar" title="Permalink to this headline">¶</a></h1>
-<p>Aqui encontra a descrição da infraestrutura computacional da UAlg, disponível para as aulas prática. São também indicados os programas que deverá instalar se preferir trabalhar no seu computador, na sala ou em casa.</p>
-<div class="section" id="salas">
-<h2>Salas<a class="headerlink" href="#salas" title="Permalink to this headline">¶</a></h2>
-<p>As salas com terminais da Faculdade de Ciências e Tecnologia (FCT) onde decorrem os laboratórios de Introdução à programação científica, estão equipadas com computadores ligados à rede UAlg e acesso a um conjunto de recursos. Esta organização é muito prática, pois assim teremos os programas necessários para trabalhar.</p>
-<p>Desta forma, é possível oferecer aos alunos a capacidade de trabalhar desde o início com as aplicações convenientes, não sendo necessário que os alunos usem os seus computadores pessoais e os tenham que trazer para as aulas práticas. Ainda assim, muitos alunos preferem usar também o seu computador pessoal, porque pode ser mais conveniente ter sempre acesso ao sistema e ambiente de trabalho. Para partilhar ficheiros entre o sistema pessoal e o usado nas aulas práticas sugere-se um sistema de partilha de ficheiros como o <a class="reference external" href="https://onedrive.live.com/about/en-us/signin/">OneDrive</a> (onde os alunos têm 1 TB).</p>
-<p>Em todo o caso, todos os alunos devem familiarizar-se com o sistema da Universidade do Algarve, que é a referência a ter em conta.</p>
-</div>
+  <div class="section" id="aula-pratica">
+<h1>Aula prática<a class="headerlink" href="#aula-pratica" title="Permalink to this headline">¶</a></h1>
+<p>Nesta primeira aula prática vamos ensaiar algumas das ferramentas que temos disponíveis.</p>
 <div class="section" id="usar-o-posto-de-trabalho">
 <h2>Usar o posto de trabalho<a class="headerlink" href="#usar-o-posto-de-trabalho" title="Permalink to this headline">¶</a></h2>
 <p>Entrar no computador faz-se usando o identificador oficial da Universidade do Algarve, estilo a12345, (sem a parte &#64;ualg.pt), e dando a password atribuída. Por vezes demora mais tempo do que esperaríamos, mas é mesmo assim.</p>
 <p>Experimente, mesmo que tenha o seu computador pessoal consigo.</p>
-</div>
-<div class="section" id="paginas-web">
-<h2>Páginas Web<a class="headerlink" href="#paginas-web" title="Permalink to this headline">¶</a></h2>
-<p>Provavelmente, está a ler este documento a partir da página de Web de Introdução à programação científica na chamada Tutoria Eletrónica da Universidade do Algarve, ou, mais simplesmente, Tutoria. Portanto, já sabe como é. Sugiro que guarde a página nos favoritos do seu navegador, e que coloque o link de acesso bem a jeito, pois vai usar a página muitas vezes.</p>
-<p>Estes conteúdos estão também disponíveis no <a class="reference external" href="https://margaridamadeira.github.io/IPC-2020-21">Github</a>.</p>
-</div>
-<div class="section" id="identificar-as-ferramentas-a-utilizar">
-<h2>Identificar as ferramentas a utilizar<a class="headerlink" href="#identificar-as-ferramentas-a-utilizar" title="Permalink to this headline">¶</a></h2>
-<p>Na área de trabalho acessível pelos computadores do laboratório já temos todo o software de que precisamos.</p>
-<p>Talvez queira instalar no seu computador a plataforma <a class="reference external" href="https://www.continuum.io/downloads">Anaconda</a> ou pelo menos o <a class="reference external" href="https://www.python.org/downloads/">Python</a> e o <a class="reference external" href="https://www.spyder-ide.org/">Spyder</a>. Visite as páginas indicadas, para se situar e depois instale nos seus computadores.</p>
-<p>Alguns alunos poderão preferir usar outra plataforma em vez de Anaconda. Não é proibido, claro, mas haverá mais uma ferramenta a aprender e, tal como a escolha é individual, a aprendizagem também será.</p>
-<p>Em alguns casos, poderá experimentar <em>online</em> os conteúdos que estão no <a class="reference external" href="https://margaridamadeira.github.io/IPC-2020-21">Github</a> abrindo a página correspondente no <a class="reference external" href="https://mybinder.org/v2/gh/margaridamadeira/IPC-2020-21/master">Binder</a>.</p>
 </div>
 <div class="section" id="criar-uma-area-de-trabalho-para-introducao-a-programacao-cientifica">
 <h2>Criar uma área de trabalho para Introdução à programação científica<a class="headerlink" href="#criar-uma-area-de-trabalho-para-introducao-a-programacao-cientifica" title="Permalink to this headline">¶</a></h2>
@@ -319,10 +293,6 @@
 <p>Da página da Tutoria descarregue o ficheiro <em>T1.ipynb</em> para a sua área.
 A partir do menu <em>Iniciar</em> abra agora o <em>Jupyter Notebook</em>. No separador do explorador que foi aberto, localize o ficheiro descarregado e abra-o.</p>
 <p>Vá pressionando as teclas <em>Shift</em>+<em>Enter</em> para executar as células. Experimente mudar o seu conteúdo.</p>
-</div>
-<div class="section" id="e-e-tudo-por-agora">
-<h2>E é tudo por agora.<a class="headerlink" href="#e-e-tudo-por-agora" title="Permalink to this headline">¶</a></h2>
-<p>Até breve.</p>
 </div>
 </div>
 
@@ -354,7 +324,7 @@ A partir do menu <em>Iniciar</em> abra agora o <em>Jupyter Notebook</em>. No sep
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="Introdução.html" title="previous page">Introdução</a>
+    <a class='left-prev' id="prev-link" href="T1.html" title="previous page">O IPyhton como interpretador de comandos</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

@@ -8,6 +8,7 @@
 - part: Semana 1
   chapters:
   - file: docs/S1/Introdução
+  - file: docs/S1/T1
   - file: docs/S1/ler_escrever
 
   
