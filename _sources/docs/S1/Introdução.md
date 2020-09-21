@@ -11,6 +11,7 @@ Nesta lição veremos:
 1.  Porque escolhemos Python
 1.  Como funcionam os computadores
 1.  O que é uma linguagem de programação
+1.  Uma breve apresentação de Python
 
 
 ### Porquê começar a programar em Python?
@@ -31,22 +32,14 @@ Esta visão de *FAIR data* (veja
 <https://pt.wikipedia.org/wiki/Dados_FAIR>) foi também adotada pela
 União Europeia e pelos G20. A sigla *FAIR* representa:
 
-Findability
+*Findability*: os dados devem poder ser encontrados
 
-:   os dados devem poder ser encontrados
+*Accessibility*: uma vez encontrados, deve ser claro se/como podem ser acedidos
 
-Accessibility
-
-:   uma vez encontrados, deve ser claro se/como podem ser acedidos
-
-Interoperability
-
-:   não existir uma restrição técnica de como os dados poderão ser
+*Interoperability*: não existir uma restrição técnica de como os dados poderão ser
     tratados
 
-Reusability
-
-:   os dados devem poder ser reutilizados.
+*Reusability*: os dados devem poder ser reutilizados.
 
 É com estes princípio que vamos começar a programar em Python e fazer
 ciência aberta. Assim, vamos usar o ambiente Jupyter, vamos usar dados
