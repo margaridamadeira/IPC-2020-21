@@ -45,4 +45,4 @@ A partir do menu *Iniciar* abra agora o *Jupyter Notebook*. No separador do expl
 
 Vá pressionando as teclas *Shift*+*Enter* para executar as células. Experimente mudar o seu conteúdo.
 
-Se está fora da sala e ainda não instalou todas as ferramentas no seu computador, pode usar a versão online do [Binder](https://mybinder.org/v2/gh/margaridamadeira/IPC-2020-21/6e6fa16b1891c69fec148b8642b9298ce3c9e24b)
+Se está fora da sala e ainda não instalou todas as ferramentas no seu computador, pode usar a versão online do Binder.
