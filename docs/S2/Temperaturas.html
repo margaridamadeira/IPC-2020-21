@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Apresentação geral &#8212; IPC</title>
+    <title>Primeiros programas &#8212; IPC</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
@@ -35,21 +35,20 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2020-21/docs/Pre/Apresentação.html" />
+    <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2020-21/docs/S2/Temperaturas.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Sobre a parte prática" href="Familiarização.html" />
-    <link rel="prev" title="Introdução à programação científica" href="../index.html" />
+    <link rel="prev" title="Começar a programar" href="IniciarProgramar.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
 
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="https://margaridamadeira.github.io/IPC-2020-21/docs/Pre/Apresentação.html" />
+<meta property="og:url"         content="https://margaridamadeira.github.io/IPC-2020-21/docs/S2/Temperaturas.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Apresentação geral" />
-<meta property="og:description" content="Apresentação geral  O que é?  Introdução à programação científica (IPC) é a disciplina onde se apresenta a programação a alunos de Bioengenharia. Pode ver a des" />
+<meta property="og:title"       content="Primeiros programas" />
+<meta property="og:description" content="Primeiros programas  Tema: Sistema métrico internacional (SI units).  Temperatura  &lt;img src=&#34;kelvin_front_web.jpg&#34; alt=&#34;Cartoon kelvin&#34; title=&#34;Dr. Kelvin&#34; style" />
 <meta property="og:image"       content="https://margaridamadeira.github.io/IPC-2020-21/_static/IPC_wc.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -86,14 +85,14 @@
   Preâmbulo
  </span>
 </p>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Pre/Apresentação.html">
    Apresentação geral
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Familiarização.html">
+  <a class="reference internal" href="../Pre/Familiarização.html">
    Sobre a parte prática
   </a>
  </li>
@@ -120,14 +119,14 @@
   Semana 2
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../S2/IniciarProgramar.html">
+  <a class="reference internal" href="IniciarProgramar.html">
    Começar a programar
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../S2/Temperaturas.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Primeiros programas
   </a>
  </li>
@@ -173,9 +172,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/docs/Pre/Apresentação.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/docs/S2/Temperaturas.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -205,6 +204,28 @@
 
         <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/margaridamadeira/IPC-2020-21/master?urlpath=tree/docs/docs/S2/Temperaturas.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/margaridamadeira/IPC-2020-21/blob/master/docs/docs/S2/Temperaturas.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
     </div>
 
     <!-- Table of contents -->
@@ -215,29 +236,43 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#o-que-e">
-   O que é?
+  <a class="reference internal nav-link" href="#temperatura">
+   Temperatura
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#quando">
-   Quando?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#como">
-   Como?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#para-que">
-   Para quê?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#por-que-meios">
-   Por que meios?
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tarefa-1">
+     Tarefa 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tarefa-2">
+     Tarefa 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tarefa-3">
+     Tarefa 3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tarefa-4">
+     Tarefa 4
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tarefa-5">
+       Tarefa 5
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tarefa-6">
+       Tarefa 6
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -249,45 +284,42 @@
         
               <div>
                 
-  <div class="section" id="apresentacao-geral">
-<h1>Apresentação geral<a class="headerlink" href="#apresentacao-geral" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="o-que-e">
-<h2>O que é?<a class="headerlink" href="#o-que-e" title="Permalink to this headline">¶</a></h2>
-<p>Introdução à programação científica (IPC) é a disciplina onde se apresenta a programação a alunos de <a class="reference external" href="https://www.ualg.pt/pt/curso/1907">Bioengenharia</a>. Pode ver a descrição <a class="reference external" href="https://academico.ualg.pt/netpa/doc?codeDiscip=19071001&amp;anoLectivo=202021&amp;codInstituic=9&amp;stage=FichaUnidadeCurricular&amp;_event=publicacaoFUC&amp;docIsAttachment=false">formal</a> ou continuar a ler.</p>
+  <div class="section" id="primeiros-programas">
+<h1>Primeiros programas<a class="headerlink" href="#primeiros-programas" title="Permalink to this headline">¶</a></h1>
+<p>Tema: Sistema métrico internacional (<a class="reference external" href="https://doi.org/10.6028/NIST.SP.1247">SI units</a>).</p>
+<div class="section" id="temperatura">
+<h2>Temperatura<a class="headerlink" href="#temperatura" title="Permalink to this headline">¶</a></h2>
+<img src="kelvin_front_web.jpg" alt="Cartoon kelvin" title="Dr. Kelvin" style="width: 200px;"/>
+<p>Eis o <a class="reference external" href="https://www.nist.gov/sites/default/files/styles/220_x_220_limit/public/images/2016/08/29/kelvin_front_web.jpg?itok=1RygGZAs">Dr. Kelvin</a>. Sim, o tema de hoje é a conversão de <a class="reference external" href="https://www.nist.gov/pml/weights-and-measures/si-units-temperature">temperatura</a> entre várias unidades.</p>
+<p>A unidade padrão de medida da temperatura é Kelvin (K), mas não é algo que usemos no dia-a-dia. Normalmente trabalhamos com graus Celcius (C) e alguns preferem referir-se à temperatura em graus Fahrenheit (F).</p>
+<p>Quando falamos em <em>zero absoluto</em>, estamos a referir-nos a 0 K.
+Se nos perguntarem a que temperaturas a água congela e ferve, se calhar respondemos 0⁰ e 100⁰. Felizmente que um grau Celcius corresponde a um intervalo de 1 K. Sabendo que 0⁰C corresponde a 273.15 K, já podemos converter de Celsius para Kelvin e vice-versa.</p>
+<p>Para a conversão de e para Fahrenheit, precisamos saber que 0⁰C corresponde a 32⁰F e que um intervalo de um grau Celsius corresponde a um intervalo de 1.8 graus Fahrenheit.</p>
+<div class="section" id="tarefa-1">
+<h3>Tarefa 1<a class="headerlink" href="#tarefa-1" title="Permalink to this headline">¶</a></h3>
+<p>Faça uma função <em>k2c</em> que converta uma temperatura em kelvin para graus Celsius.</p>
 </div>
-<div class="section" id="quando">
-<h2>Quando?<a class="headerlink" href="#quando" title="Permalink to this headline">¶</a></h2>
-<p>Em qualquer nomento pode consultar o <a class="reference external" href="https://calendar.google.com/calendar/embed?src=eg5a54i2kbfgce9id7vmet9oi0%40group.calendar.google.com&amp;bgcolor=%23FFFFFF&amp;src=53g1q988gcb45gvkgotquqtue8%40group.calendar.google.com&amp;color=%23AB8B00&amp;src=pasegphndg67ke0m7bb4ihglf8%40group.calendar.google.com&amp;color=%23B1440E&amp;">horário</a> do curso.</p>
+<div class="section" id="tarefa-2">
+<h3>Tarefa 2<a class="headerlink" href="#tarefa-2" title="Permalink to this headline">¶</a></h3>
+<p>Faça uma função <em>c2k</em> que converta uma temperatura em graus Celsius para kelvin.</p>
 </div>
-<div class="section" id="como">
-<h2>Como?<a class="headerlink" href="#como" title="Permalink to this headline">¶</a></h2>
-<p>Nas aulas teóricas, vamos discutir os temas da disciplina, através de apresentações, ou demonstrações ou esboçar soluções alternativas que ilustram o desenvolvimento de programas. Teremos uma aula teórica de uma hora por semana.</p>
-<p>Nas aulas práticas, vamos resolver pequenos problemas de programação ou realizar trabalhos mais longos, com guião, no computador. Teremos três horas de aulas práticas laboratoriais por semana, divididas em dois blocos de hora e meia.</p>
-<p>Haverá também algum trabalho, individual ou em grupo, a ser realizado fora das aulas.</p>
+<div class="section" id="tarefa-3">
+<h3>Tarefa 3<a class="headerlink" href="#tarefa-3" title="Permalink to this headline">¶</a></h3>
+<p>Faça uma função <em>c2f</em> que converta uma temperatura em graus Celsius para graus Farenheit.</p>
 </div>
-<div class="section" id="para-que">
-<h2>Para quê?<a class="headerlink" href="#para-que" title="Permalink to this headline">¶</a></h2>
-<p>Bioengenharia é uma área científica e, atualmente, as ciências e as tecnologias de informação e comunicação estão muito ligadas.
-Ao longo do curso e depois do curso, os casos de trabalho são progressivamente mais complexos e, para alguns deles, não haverá soluções informáticas satisfatórias.</p>
-<p>Para que possam criar as vossas próprias soluções, começam aqui a programar para que depois o possam continuar a fazer ao longo do curso e depois do curso.</p>
-<p>Assim, vão:</p>
-<ul class="simple">
-<li><p>Compreender a utilização da programação na resolução de problemas do âmbito da sua disciplina de estudos.</p></li>
-<li><p>Identificar as principais componentes dos sistemas computacionais e sua relação com a programação.</p></li>
-<li><p>Dominar com razoável à-vontade as técnicas de programação elementares.</p></li>
-<li><p>Resolver autonomamente problemas de programação simples.</p></li>
-<li><p>Apreciar a complexidade algorítmica dos programas que escrevem.</p></li>
-<li><p>Conhecer os fundamentos da programação vetorial e matricial.</p></li>
-<li><p>Tirar partido das técnicas básicas da programação gráfica (como representação simples de pontos em 2D e 3D, histogramas, gráficos de barras).</p></li>
-<li><p>Utilizar funcionalidades de bibliotecas de estatística, de álgebra simbólica, de manipulação de dados e de programação numérica.</p></li>
-</ul>
+<div class="section" id="tarefa-4">
+<h3>Tarefa 4<a class="headerlink" href="#tarefa-4" title="Permalink to this headline">¶</a></h3>
+<p>Faça uma função <em>f2c</em> que converta uma temperatura em graus Fahrenheit para graus Celsius.</p>
+<div class="section" id="tarefa-5">
+<h4>Tarefa 5<a class="headerlink" href="#tarefa-5" title="Permalink to this headline">¶</a></h4>
+<p>Usando as funções <em>k2c</em> e c2f*, faça uma função <em>k2f</em> que converta uma temperatura em kelvin para graus Farenheit.</p>
 </div>
-<div class="section" id="por-que-meios">
-<h2>Por que meios?<a class="headerlink" href="#por-que-meios" title="Permalink to this headline">¶</a></h2>
-<p>Vamos usar Python, que permitirá criar soluções (<em>scripts</em> e programas) para alguns casos simples.
-E vamos usar algumas bibliotecas, usufruindo das funcionalidades que contêm.
-E vamos usar ferramentas de suporte à atividade de programar, aplicar a solução ao caso em estudo e apresentar a solução proposta.</p>
-<p>E o que vamos usar, é de acesso livre e gratuito, e poderão continuar a usar ao longo do curso e depois do curso.</p>
+<div class="section" id="tarefa-6">
+<h4>Tarefa 6<a class="headerlink" href="#tarefa-6" title="Permalink to this headline">¶</a></h4>
+<p>Usando as funções <em>f2c</em> e <em>c2k</em>, faça uma função <em>f2k</em> que converta uma temperatura em graus Fahrenheit para kelvin.</p>
+<p>Posteriormente serão dadas instruções para submeter este trabalho.</p>
+</div>
+</div>
 </div>
 </div>
 
@@ -300,16 +332,16 @@ E vamos usar ferramentas de suporte à atividade de programar, aplicar a soluç�
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "Python 3.7.8 64-bit ('IPC-2020-21': conda)"
         },
         kernelOptions: {
-            kernelName: "python3",
-            path: "./docs/Pre"
+            kernelName: "Python 3.7.8 64-bit ('IPC-2020-21': conda)",
+            path: "./docs/S2"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'Python 3.7.8 64-bit ('IPC-2020-21': conda)'</script>
 
               </div>
               
@@ -319,8 +351,7 @@ E vamos usar ferramentas de suporte à atividade de programar, aplicar a soluç�
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="../index.html" title="previous page">Introdução à programação científica</a>
-    <a class='right-next' id="next-link" href="Familiarização.html" title="next page">Sobre a parte prática</a>
+    <a class='left-prev' id="prev-link" href="IniciarProgramar.html" title="previous page">Começar a programar</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
