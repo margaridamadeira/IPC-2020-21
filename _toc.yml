@@ -10,5 +10,9 @@
   - file: docs/S1/Introdução
   - file: docs/S1/Primeiros_passos
 
+- part: Semana 2
+  chapters:
+  - file: docs/S2/IniciarProgramar
+
   
 
