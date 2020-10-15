@@ -262,10 +262,6 @@
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#tipo-nonetype">
        Tipo
        <em>
@@ -373,7 +369,7 @@ Por exemplo,</p>
 <h4>Tipos de dados alfanuméricos<a class="headerlink" href="#tipos-de-dados-alfanumericos" title="Permalink to this headline">¶</a></h4>
 <p>Se podemos representar números, também podemos representar caracteres. Os caracteres incluem letras e também algarismos, o caracter &lt;espaço&gt; e sinais de pontuação. O que recebemos do teclado é uma sequência de caracteres.</p>
 <p>O Python inclui um tipo para cadeias de caracteres, o tipo <em>str</em>  (em inglês <em>string</em>), usado para sequências imutáveis de dados textuais.</p>
-<p>Palavras e frases são do tipo <em>str</em>. É necessário delimitar a cadeia de caracteres, usando aspas, para que se saiba onde começa e acaba. As aspas podem ser simples (“’”) ou duplas (‘”’).</p>
+<p>Palavras e frases são do tipo <em>str</em>. É necessário delimitar a cadeia de caracteres, usando aspas, para que se saiba onde começa e acaba. As aspas podem ser simples (‘) ou duplas (“).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="s1">&#39;Nome&#39;</span><span class="p">)</span>
@@ -400,7 +396,7 @@ Por exemplo,</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="s1">&#39;2.0&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="s2">&quot;2.0&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -414,9 +410,6 @@ Por exemplo,</p>
 <div class="section" id="tipo-logico">
 <h4>Tipo lógico<a class="headerlink" href="#tipo-logico" title="Permalink to this headline">¶</a></h4>
 <p>Este tipo, <em>bool</em>, inclui as constantes <em>True</em> e <em>False</em>. Há um conjunto de operações, entre as quais conjunção, disjunção e negação, que usamos muito na programação.</p>
-</div>
-<div class="section" id="id1">
-<h4><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
@@ -479,7 +472,7 @@ Para usar, preferimos o nome ao conteúdo. Por exemplo,</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># distância em centímetros</span>
-<span class="n">distancia_em_polegadas</span><span class="o">*</span><span class="n">centimetros_por_polegada</span>
+<span class="n">distancia_em_polegadas</span> <span class="o">*</span> <span class="n">centimetros_por_polegada</span>
 </pre></div>
 </div>
 </div>
@@ -499,7 +492,7 @@ Para usar, preferimos o nome ao conteúdo. Por exemplo,</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># distância em centímetros</span>
-<span class="n">distancia_em_polegadas</span><span class="o">*</span><span class="n">centimetros_por_polegada</span>
+<span class="n">distancia_em_polegadas</span> <span class="o">*</span> <span class="n">centimetros_por_polegada</span>
 </pre></div>
 </div>
 </div>
@@ -543,7 +536,7 @@ No nosso primeiro programa, vimos a função <em>print</em>, e usámo-la para ap
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Distância (in):&#39;</span><span class="p">,</span> <span class="n">distancia_em_polegadas</span><span class="p">)</span>
-<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Distância (cm):&#39;</span><span class="p">,</span> <span class="n">distancia_em_polegadas</span><span class="o">*</span><span class="n">centimetros_por_polegada</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Distância (cm):&#39;</span><span class="p">,</span> <span class="n">distancia_em_polegadas</span> <span class="o">*</span> <span class="n">centimetros_por_polegada</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -579,7 +572,7 @@ Distância (cm): 25.4
     <span class="sd">&quot;&quot;&quot;Função que converte uma distância de polegadas para centímetros.&quot;&quot;&quot;</span>
 
     <span class="n">centimetros_por_polegada</span> <span class="o">=</span> <span class="mf">2.54</span>
-    <span class="n">resultado</span> <span class="o">=</span> <span class="n">distancia_em_polegadas</span> <span class="o">*</span> <span class="n">centimetros_por_polegada</span>
+    <span class="n">resultado</span> <span class="o">=</span> <span class="n">dist_polegadas</span> <span class="o">*</span> <span class="n">centimetros_por_polegada</span>
     <span class="k">return</span> <span class="n">resultado</span> 
 </pre></div>
 </div>
@@ -649,16 +642,16 @@ Distância (cm): 25.4
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "Python 3.7.8 64-bit ('IPC-2020-21': conda)"
+            mode: "python"
         },
         kernelOptions: {
-            kernelName: "Python 3.7.8 64-bit ('IPC-2020-21': conda)",
+            kernelName: "python3",
             path: "./docs/S2"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'Python 3.7.8 64-bit ('IPC-2020-21': conda)'</script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
