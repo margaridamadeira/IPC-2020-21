@@ -45,20 +45,18 @@ Se podemos representar números, também podemos representar caracteres. Os cara
 
 O Python inclui um tipo para cadeias de caracteres, o tipo *str*  (em inglês *string*), usado para sequências imutáveis de dados textuais. 
 
-Palavras e frases são do tipo *str*. É necessário delimitar a cadeia de caracteres, usando aspas, para que se saiba onde começa e acaba. As aspas podem ser simples ("'") ou duplas ('"'). 
+Palavras e frases são do tipo *str*. É necessário delimitar a cadeia de caracteres, usando aspas, para que se saiba onde começa e acaba. As aspas podem ser simples (') ou duplas ("). 
 
 
 type('Nome')
 
 type('2')
 
-type('2.0')
+type("2.0")
 
 #### Tipo lógico
 
 Este tipo, *bool*, inclui as constantes *True* e *False*. Há um conjunto de operações, entre as quais conjunção, disjunção e negação, que usamos muito na programação.
-
-#### 
 
 type(True)
 
@@ -88,12 +86,12 @@ Para usar, preferimos o nome ao conteúdo. Por exemplo,
 
 
 # distância em centímetros
-distancia_em_polegadas*centimetros_por_polegada
+distancia_em_polegadas * centimetros_por_polegada
 
 distancia_em_polegadas = 10
 
 # distância em centímetros
-distancia_em_polegadas*centimetros_por_polegada
+distancia_em_polegadas * centimetros_por_polegada
 
 ### Usar e definir funções
 
@@ -109,7 +107,7 @@ print (distancia_em_polegadas)
 Se a função *print* apresenta o que está entre parênteses (argumento ou argumentos), podemos usar a função *print* para apresentar algo mais. 
 
 print ('Distância (in):', distancia_em_polegadas)
-print ('Distância (cm):', distancia_em_polegadas*centimetros_por_polegada)
+print ('Distância (cm):', distancia_em_polegadas * centimetros_por_polegada)
 
 Se quisermos agilizar o processo, podemos criar uma função que recebe a distância em polegadas e a apresenta em centímetros.
 
@@ -120,7 +118,6 @@ A ideia seria poder fazer
 > resultado = converte_polegada_para_centimetro(distancia_em_polegadas)
 
 > print('Distância (cm):', resultado)
-
 
 ou mesmo
 
@@ -134,7 +131,7 @@ def converte_polegada_para_centimetro(dist_polegadas):
     """Função que converte uma distância de polegadas para centímetros."""
 
     centimetros_por_polegada = 2.54
-    resultado = distancia_em_polegadas * centimetros_por_polegada
+    resultado = dist_polegadas * centimetros_por_polegada
     return resultado 
 
 Note que as instruções dentro da função estão alinhadas a quatro espaços (ou um `<tab>`).
