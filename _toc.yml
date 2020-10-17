@@ -15,3 +15,7 @@
   - file: docs/S2/IniciarProgramar
   - file: docs/S2/Temperaturas  
 
+- part: Semana 3
+  chapters:
+  - file: docs/S3/SubmissãoMooshak
+
