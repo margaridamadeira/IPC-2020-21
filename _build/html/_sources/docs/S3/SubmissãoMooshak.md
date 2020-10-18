@@ -1,8 +1,12 @@
+(submMooshak)=
 # Submissão ao Mooshak
 
 Para que possamos verificar se os nossos exercícios de programação estão corretos, usaremos o *Mooshak*, que suporta a avaliação automática. Desta forma, pode-se em submeter várias vezes cada programa e saber se os resultados estão certos. E as submissões podem ser feitas pela internet, sem ser necessário estar estar na universidade.
 
 Mas é de notar que o Mooshak só verifica se os resultados estão corretos. Para pontuar, ainda será necessário que o programa seja visto - e eventualmente discutido - com o/a professor(a).
+
+Vamos começar por ver, de forma geral, como é uma submissão.
+Depois, no Guião do Lab 0, encontrará informação detalhada para usar este concurso.
 
 
 ## Aceder

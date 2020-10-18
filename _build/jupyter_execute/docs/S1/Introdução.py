@@ -183,13 +183,11 @@ Outro exemplo do que usaremos é *Matplotlib*.
 
 No futuro, para se trabalhar com vetores e matrizes, poderíamos usar *NumPy* ou outras alternativas.
 
-?numpy
-
 A instrução precedida de % é aquilo a que na terminologia do IPython se denomina *magic*, uma extensão à linguagem Python que facilita a interacção com o sistema. Introduziremos, quando necessário, outras magias do IPython.
 
-Neste caso e apenas para efeitos de demonstração, ativamos o Pylab. No futuro, em vez de trazermos a caixa de ferramentas toda, escolhemos a ferramenta que precisamos.
+Neste caso e apenas para efeitos de demonstração, ativamos o matplotlib. No futuro, em vez de trazermos a caixa de ferramentas toda, escolhemos a ferramenta que precisamos.
 
-%pylab inline
+%matplotlib inline
 
 E já temos mais funcionalidades disponíveis, por exemplo, para gerar gráficos.
 
