@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Aula prática &#8212; IPC</title>
+    <title>Lab1 &#8212; IPC</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
@@ -35,21 +35,20 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2020-21/docs/S1/Primeiros_passos.html" />
+    <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2020-21/docs/S3/Lab1.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Começar a programar" href="../S2/IniciarProgramar.html" />
-    <link rel="prev" title="Introdução" href="Introdução.html" />
+    <link rel="prev" title="Lab0" href="Lab0.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
 
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="https://margaridamadeira.github.io/IPC-2020-21/docs/S1/Primeiros_passos.html" />
+<meta property="og:url"         content="https://margaridamadeira.github.io/IPC-2020-21/docs/S3/Lab1.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Aula prática" />
-<meta property="og:description" content="Aula prática  Nesta primeira aula prática vamos ensaiar algumas das ferramentas que temos disponíveis.  Usar o posto de trabalho  Entrar no computador faz-se us" />
+<meta property="og:title"       content="Lab1" />
+<meta property="og:description" content="Lab1  Objetivos de aprendizagem  Com este guião:  exercitaremos o desenvolvimento de funções simples  exercitaremos o desenvolvimento de funções aninhadas (funç" />
 <meta property="og:image"       content="https://margaridamadeira.github.io/IPC-2020-21/_static/IPC_wc.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -103,14 +102,14 @@
   Semana 1
  </span>
 </p>
-<ul class="current nav sidenav_l1">
+<ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="Introdução.html">
+  <a class="reference internal" href="../S1/Introdução.html">
    Introdução
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S1/Primeiros_passos.html">
    Aula prática
   </a>
  </li>
@@ -137,20 +136,20 @@
   Semana 3
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../S3/SubmissãoMooshak.html">
+  <a class="reference internal" href="SubmissãoMooshak.html">
    Submissão ao Mooshak
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../S3/Lab0.html">
+  <a class="reference internal" href="Lab0.html">
    Lab0
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../S3/Lab1.html">
-   Lab0
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Lab1
   </a>
  </li>
 </ul>
@@ -195,9 +194,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/docs/S1/Primeiros_passos.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/docs/S3/Lab1.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
+                data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -227,28 +226,6 @@
 
         <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/margaridamadeira/IPC-2020-21/master?urlpath=tree/docs/docs/S1/Primeiros_passos.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/margaridamadeira/IPC-2020-21/blob/master/docs/docs/S1/Primeiros_passos.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="../../_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
-
     </div>
 
     <!-- Table of contents -->
@@ -259,24 +236,88 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#usar-o-posto-de-trabalho">
-   Usar o posto de trabalho
+  <a class="reference internal nav-link" href="#objetivos-de-aprendizagem">
+   Objetivos de aprendizagem
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#criar-uma-area-de-trabalho-para-introducao-a-programacao-cientifica">
-   Criar uma área de trabalho para Introdução à programação científica
+  <a class="reference internal nav-link" href="#enunciado">
+   Enunciado
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#primeiros-passos">
-   Primeiros passos
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#notebook">
-   Notebook
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tarefa-a">
+     Tarefa A
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#caso-de-teste">
+       Caso de teste
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tarefa-b">
+     Tarefa B
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Caso de teste
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tarefa-c">
+     Tarefa C
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Caso de teste
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tarefa-d">
+     Tarefa D
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Caso de teste
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tarefa-e">
+     Tarefa E
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id4">
+       Caso de teste
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tarefa-f">
+     Tarefa F
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id5">
+       Caso de teste
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -288,42 +329,92 @@
         
               <div>
                 
-  <div class="section" id="aula-pratica">
-<h1>Aula prática<a class="headerlink" href="#aula-pratica" title="Permalink to this headline">¶</a></h1>
-<p>Nesta primeira aula prática vamos ensaiar algumas das ferramentas que temos disponíveis.</p>
-<div class="section" id="usar-o-posto-de-trabalho">
-<h2>Usar o posto de trabalho<a class="headerlink" href="#usar-o-posto-de-trabalho" title="Permalink to this headline">¶</a></h2>
-<p>Entrar no computador faz-se usando o identificador oficial da Universidade do Algarve, estilo a12345, (sem a parte &#64;ualg.pt), e dando a password atribuída. Por vezes demora mais tempo do que esperaríamos, mas é mesmo assim.</p>
-<p>Experimente, mesmo que tenha o seu computador pessoal consigo.</p>
+  <div class="section" id="lab1">
+<h1>Lab1<a class="headerlink" href="#lab1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="objetivos-de-aprendizagem">
+<h2>Objetivos de aprendizagem<a class="headerlink" href="#objetivos-de-aprendizagem" title="Permalink to this headline">¶</a></h2>
+<p>Com este guião:</p>
+<ol class="simple">
+<li><p>exercitaremos o desenvolvimento de funções simples</p></li>
+<li><p>exercitaremos o desenvolvimento de funções aninhadas (funções que chamam outras funções)</p></li>
+<li><p>usaremos o Mooshak para verificar o resultado dos programas desenvolvidos</p></li>
+</ol>
+<p><em>Nota</em>: estas tarefas já tinham sido propostas na semana passada, sim.
+Mas agora temos o formato que usaremos de futuro.</p>
 </div>
-<div class="section" id="criar-uma-area-de-trabalho-para-introducao-a-programacao-cientifica">
-<h2>Criar uma área de trabalho para Introdução à programação científica<a class="headerlink" href="#criar-uma-area-de-trabalho-para-introducao-a-programacao-cientifica" title="Permalink to this headline">¶</a></h2>
-<p>Na pasta <em>Documents</em> da sua área crie uma pasta IPC. Dentro desta, crie uma pasta geral.</p>
-<p>Guarde tudo o que tiver a ver com a nossa cadeira nessa pasta!</p>
-<p>Abra o IDE Spyder e crie um pequeno texto, como quiser e com o que quiser. Guarde-o na sua pasta geral.</p>
-<p>E, se for essa a sua opção, faça isto no seu computador pessoal também. Mantenha os dois computadores “iguais”, por assim dizer. Use a sua área do <a class="reference external" href="https://onedrive.live.com/about/en-us/signin/">OneDrive</a> para manter a informação: no fim da aula, passe para lá os seus ficheiros, e em casa trabalhe nessa pasta; quando voltar à aula, terá lá tudo o que fez fora da aula.</p>
-<p>Se estiver a usar o computador da sala, saia da sessão. Depois volte a entrar, noutro computador. Verifique que o seu ficheiro está lá.</p>
+<div class="section" id="enunciado">
+<h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this headline">¶</a></h2>
+<p>A unidade padrão de medida da temperatura é kelvin (K), mas não é algo que usemos no dia-a-dia. Normalmente trabalhamos com graus Celsius (C) e alguns preferem referir-se à temperatura em graus Fahrenheit (F).</p>
+<p>Quando falamos em zero absoluto, estamos a referir-nos a 0 K. Se nos perguntarem a que temperaturas a água congela e ferve, se calhar respondemos 0⁰ e 100⁰. Felizmente que um grau Celsius corresponde a um intervalo de 1 K. Sabendo que 0⁰C corresponde a 273.15 K, já podemos converter de Celsius para Kelvin e vice-versa.</p>
+<p>Para a conversão de e para Fahrenheit, precisamos saber que 0⁰C corresponde a 32⁰F e que um intervalo de um grau Celsius corresponde a um intervalo de 1.8 graus Fahrenheit.</p>
+<p>Queremos pois um conjunto de programas que convertam as temperaturas de e para as várias unidades ou escalas. Note que deve utilizar o modelo apresentado anteriormente (<a class="reference internal" href="Lab0.html#resprogrcompl"><span class="std std-ref">Resolução</span></a>).</p>
+<p>Submeta cada uma das tarefas no problema correspondente do concurso IPC_2021_L1.</p>
+<div class="section" id="tarefa-a">
+<h3>Tarefa A<a class="headerlink" href="#tarefa-a" title="Permalink to this headline">¶</a></h3>
+<p>Prepare um programa que contenha uma função <em>k2c</em> que converta uma temperatura em kelvin para graus Celsius.</p>
+<div class="section" id="caso-de-teste">
+<h4>Caso de teste<a class="headerlink" href="#caso-de-teste" title="Permalink to this headline">¶</a></h4>
+<p><strong>Input</strong></p>
+<p>273.15</p>
+<p><strong>Output</strong></p>
+<p>0.0</p>
 </div>
-<div class="section" id="primeiros-passos">
-<h2>Primeiros passos<a class="headerlink" href="#primeiros-passos" title="Permalink to this headline">¶</a></h2>
-<p>No menu <em>Iniciar</em> do seu computador, localize o <em>Jupyter QTConsole</em></p>
-<p>A linha de comando do python é representada por ‘&gt;&gt;&gt;’, designada <em>prompt</em>. Na linha de comando, a introdução de uma instrução completa é seguida pela sua execução.</p>
-<p>Usando o exemplo mais famoso da informática, escreva:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>print (&quot;Olá mundo&quot;)
-</pre></div>
 </div>
-<p>e pressione <em>Enter</em>. Fará com que seja apresentado:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Olá mundo
-</pre></div>
+<div class="section" id="tarefa-b">
+<h3>Tarefa B<a class="headerlink" href="#tarefa-b" title="Permalink to this headline">¶</a></h3>
+<p>Prepare um programa que contenha uma função <em>c2k</em> que converta uma temperatura em graus Celsius para kelvin.</p>
+<div class="section" id="id1">
+<h4>Caso de teste<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p><strong>Input</strong></p>
+<p>37</p>
+<p><strong>Output</strong></p>
+<p>310.15</p>
 </div>
-<p>Uma das utilizações típicas da linha de comando do python é como calculadora. Teste os exemplos apresentados na aula teórica.</p>
 </div>
-<div class="section" id="notebook">
-<h2>Notebook<a class="headerlink" href="#notebook" title="Permalink to this headline">¶</a></h2>
-<p>Descarregue o ficheiro <em>Introdução_fresh.ipynb</em> que está na Tutoria para a sua área.</p>
-<p>A partir do menu <em>Iniciar</em> abra agora o <em>Jupyter Notebook</em>. No separador do explorador que foi aberto, localize o ficheiro descarregado e abra-o.</p>
-<p>Vá pressionando as teclas <em>Shift</em>+<em>Enter</em> para executar as células. Experimente mudar o seu conteúdo.</p>
-<p>Se está fora da sala e ainda não instalou todas as ferramentas no seu computador, pode usar a versão online do Binder.</p>
+<div class="section" id="tarefa-c">
+<h3>Tarefa C<a class="headerlink" href="#tarefa-c" title="Permalink to this headline">¶</a></h3>
+<p>Prepare um programa que contenha uma função <em>c2f</em> que converta uma temperatura em graus Celsius para graus Farenheit.</p>
+<div class="section" id="id2">
+<h4>Caso de teste<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<p><strong>Input</strong></p>
+<p>37</p>
+<p><strong>Output</strong></p>
+<p>98.60000000000001</p>
+</div>
+</div>
+<div class="section" id="tarefa-d">
+<h3>Tarefa D<a class="headerlink" href="#tarefa-d" title="Permalink to this headline">¶</a></h3>
+<p>Prepare um programa que contenha uma função <em>f2c</em> que converta uma temperatura em graus Fahrenheit para graus Celsius.</p>
+<div class="section" id="id3">
+<h4>Caso de teste<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<p><strong>Input</strong></p>
+<p>98.6</p>
+<p><strong>Output</strong></p>
+<p>36.99999999999999</p>
+</div>
+</div>
+<div class="section" id="tarefa-e">
+<h3>Tarefa E<a class="headerlink" href="#tarefa-e" title="Permalink to this headline">¶</a></h3>
+<p>Prepare um programa que contenha uma função <em>k2f</em> (que usa as funções <em>k2c</em> e <em>c2f</em>)que converta uma temperatura em kelvin para graus Farenheit.</p>
+<div class="section" id="id4">
+<h4>Caso de teste<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<p><strong>Input</strong></p>
+<p>273.15</p>
+<p><strong>Output</strong></p>
+<p>32.0</p>
+</div>
+</div>
+<div class="section" id="tarefa-f">
+<h3>Tarefa F<a class="headerlink" href="#tarefa-f" title="Permalink to this headline">¶</a></h3>
+<p>Prepare um programa que contenha uma função <em>f2k</em> (que usa as funções <em>f2c</em> e <em>c2k</em>) que converta uma temperatura em graus Fahrenheit para kelvin.</p>
+<div class="section" id="id5">
+<h4>Caso de teste<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<p><strong>Input</strong></p>
+<p>98.6</p>
+<p><strong>Output</strong></p>
+<p>310.15</p>
+</div>
+</div>
 </div>
 </div>
 
@@ -340,7 +431,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./docs/S1"
+            path: "./docs/S3"
         },
         predefinedOutput: true
     }
@@ -355,8 +446,7 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="Introdução.html" title="previous page">Introdução</a>
-    <a class='right-next' id="next-link" href="../S2/IniciarProgramar.html" title="next page">Começar a programar</a>
+    <a class='left-prev' id="prev-link" href="Lab0.html" title="previous page">Lab0</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
