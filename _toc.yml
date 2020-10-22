@@ -17,6 +17,7 @@
 
 - part: Semana 3
   chapters:
+  - file: docs/S3/ProgPython
   - file: docs/S3/SubmissãoMooshak
   - file: docs/S3/Lab0
   - file: docs/S3/Lab1
