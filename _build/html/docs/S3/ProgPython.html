@@ -294,8 +294,8 @@
       </a>
       <ul class="nav section-nav flex-column">
        <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#experimentemos">
-         Experimentemos
+        <a class="reference internal nav-link" href="#id1">
+         Exemplos
         </a>
        </li>
       </ul>
@@ -322,23 +322,14 @@
        </li>
       </ul>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#ainda-expressoes">
-       Ainda expressões
-      </a>
-     </li>
     </ul>
    </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   Programação em Python
-  </a>
-  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#i-interrogacoes-e-ciclos">
-     I - Interrogações e ciclos
+    <a class="reference internal nav-link" href="#interrogacoes-e-ciclo-while">
+     Interrogações e ciclo
+     <em>
+      while
+     </em>
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
@@ -347,30 +338,6 @@
       </a>
      </li>
     </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id3">
-   Programação em Python
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#o-organizar">
-     O - Organizar
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id4">
-   Programação em Python
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#u-usar">
-     U - Usar
-    </a>
    </li>
   </ul>
  </li>
@@ -392,47 +359,7 @@
 <ol class="simple">
 <li><p>Expressões com tipos de dados nativos simples, incluindo a indexação de strings</p></li>
 <li><p>Interrogações e ciclo <em>while</em></p></li>
-<li><p>Funções nativas do python padrão</p></li>
 </ol>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x = </span><span class="si">{0:d}</span><span class="s1">; y = </span><span class="si">{1:d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x = 2; y = 5
-</pre></div>
-</div>
-</div>
-</div>
-<p>Mas o conteúdo não tem que ser sempre numérico.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nome</span> <span class="o">=</span> <span class="s1">&#39;Maria&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">nome</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Maria
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">apelido</span> <span class="o">=</span> <span class="s1">&#39;Silva&#39;</span>
-<span class="n">apelido</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Silva&#39;
-</pre></div>
-</div>
-</div>
-</div>
 <div class="section" id="expressoes-com-tipos-de-dados-nativos-simples">
 <h3>Expressões com tipos de dados nativos simples<a class="headerlink" href="#expressoes-com-tipos-de-dados-nativos-simples" title="Permalink to this headline">¶</a></h3>
 <p>Na semana passada tivemos a oportunidade de experimentar conhecer alguns tipos de dados nativos simples. Já tivemos a oportunidade de ver algumas expressões aritméticas elementares. Mas também é possível usar expressões para outras expressões, numéricas, cadeias de carateres ou lógicas.</p>
@@ -452,12 +379,23 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nome</span> <span class="o">=</span> <span class="s1">&#39;Maria&#39;</span>
 <span class="n">apelido</span> <span class="o">=</span> <span class="s1">&#39;Moura&#39;</span>
 <span class="n">nome</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">apelido</span> 
-<span class="nb">print</span> <span class="p">(</span><span class="n">nome</span><span class="p">,</span> <span class="n">apelido</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Maria Moura&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="n">nome</span><span class="p">,</span> <span class="n">apelido</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Maria Moura
 </pre></div>
 </div>
 </div>
@@ -478,19 +416,6 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Isto é muito importante, note que começa em 0</span>
-<span class="n">nome</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;M&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">frase</span> <span class="o">=</span> <span class="s1">&#39;Python é muito giro e interessante!&#39;</span>
 </pre></div>
 </div>
@@ -498,16 +423,30 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">frase</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">7</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Isto é muito importante, note que começa em 0</span>
+<span class="n">frase</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Python &#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;P&#39;
 </pre></div>
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">frase</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Python&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Os índices negativos podem ser entendidos como <em>a contar do fim</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">frase</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
@@ -536,17 +475,16 @@
 </div>
 <div class="section" id="operacoes-com-valores-logicos">
 <h4>Operações com valores lógicos<a class="headerlink" href="#operacoes-com-valores-logicos" title="Permalink to this headline">¶</a></h4>
-<p>True</p>
-<p>False</p>
-<p>True == True</p>
-<p>True != True</p>
-<p>True != False</p>
-<p>True or False</p>
-<p>True and False</p>
-<p>not(True)</p>
-<p>not(False)</p>
-<div class="section" id="experimentemos">
-<h5>Experimentemos<a class="headerlink" href="#experimentemos" title="Permalink to this headline">¶</a></h5>
+<p>Os valores lógicos (de tipo <em>bool</em>) podem assumir os valores <strong>False</strong> e <strong>True</strong>. Usamos:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>== para a igualdade. E não confunda com = da atribuição
+!= para a negação
+not() também para a negação
+or para conjunção
+and para a disjunção
+</pre></div>
+</div>
+<div class="section" id="id1">
+<h5>Exemplos<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h5>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> 
@@ -700,7 +638,7 @@
 </table>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Faça variar os valores de a e b e a operação lógica</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Experimente: faça variar os valores de a e b e a operação lógica</span>
 <span class="n">a</span> <span class="o">=</span> <span class="kc">True</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">a</span><span class="p">;</span> <span class="n">a</span> <span class="ow">and</span> <span class="n">b</span> 
 </pre></div>
 </div>
@@ -713,21 +651,16 @@
 </div>
 </div>
 </div>
-<div class="section" id="ainda-expressoes">
-<h4>Ainda expressões<a class="headerlink" href="#ainda-expressoes" title="Permalink to this headline">¶</a></h4>
 </div>
-</div>
-</div>
-<div class="section" id="id1">
-<h2>Programação em Python<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="i-interrogacoes-e-ciclos">
-<h3>I - Interrogações e ciclos<a class="headerlink" href="#i-interrogacoes-e-ciclos" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="interrogacoes-e-ciclo-while">
+<h3>Interrogações e ciclo <em>while</em><a class="headerlink" href="#interrogacoes-e-ciclo-while" title="Permalink to this headline">¶</a></h3>
 <p>É do conhecimento geral que os computadores fazem aquilo para que foram programados. Mas representar “coisas”, dar-lhes nomes, e operar com/sobre elas, usando expressões, não é suficiente.</p>
 <p>As ações a desempenhar dependem das circunstâncias. Por isso, surgiram formas de definir o que vai ser, ou não, feito. Na base do controlo de execução estão a avaliação das circunstâncias pela interrogação de estados significativos e a decisão de prosseguir ou repetir.</p>
 <p>Vejamos então, duas formas de controlar o fluxo de execução.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- if
     Se &lt;algo se verifica&gt; &lt;faça-se&gt;
     Se &lt;acabou o filme&gt; &lt;sair da sala&gt;
+    
 - while
     Enquanto &lt;algo se verifica&gt; &lt;faça-se&gt;
     Enquanto &lt;o filme decorre&gt; &lt;silêncio&gt;
@@ -735,12 +668,94 @@
 </div>
 <div class="section" id="id2">
 <h4>Exemplos<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<p>Queremos apresentar uma mensagem a indicar se um número é maior, igual, ou menor que zero.</p>
+<p>Vamos esboçar a solução e melhorando progressivamente.</p>
+<p>A variável <em>num</em> representará o nosso número neste caso.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="o">%</span><span class="k">2</span>)==0:
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para começar, queremos a mensagem para indicar se o número é maior que zero</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
     <span class="c1"># a identação é importante</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s1">&#39;é par&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> é maior que zero&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4 é maior que zero
+</pre></div>
+</div>
+</div>
+</div>
+<p>Agora que isso está, acrescentamos outro caso. E para testar esse caso, mudamos o valor de <em>num</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> é maior que zero&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> não é maior que zero&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2 não é maior que zero
+</pre></div>
+</div>
+</div>
+</div>
+<p>Mas não ser maior que zero, não é suficiente.</p>
+<p>Agora precisávamos de outro teste para saber se é zero, ou menor que zero.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="mi">0</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> é maior que zero&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
+<span class="k">elif</span> <span class="p">(</span><span class="n">num</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> é igual a zero&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> é menor que zero&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 é igual a zero
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vejamos outro exemplo: queremos saber se um número é par.</p>
+<p>Ora um número par é divisível por 2, ou seja, o resto da divisão por dois é zero.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="mi">6</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">num</span><span class="o">%</span><span class="k">2</span>) == 0:
+    <span class="c1"># a identação é importante</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="s1">&#39;é par&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -752,11 +767,17 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="o">%</span><span class="k">2</span>)==0:
-   <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s1">&#39;é par&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">num</span><span class="o">%</span><span class="k">2</span>) == 0:
+   <span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="s1">&#39;é par&#39;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-   <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s1">&#39;não é par&#39;</span><span class="p">)</span>
+   <span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="s1">&#39;não é par&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -766,24 +787,32 @@
 </div>
 </div>
 </div>
+<p>Por vezes, queremos tratar toda uma gama de elementos, mas não sabemos quantos são.
+Sabemos, isso sim, em que condições queremos fazer esse “tratamento”.</p>
+<p>Por exemplo, queremos apresentar os elementos <span class="math notranslate nohighlight">\(a\)</span> do intervalo <span class="math notranslate nohighlight">\( [0, 5[ \)</span> sabendo que <span class="math notranslate nohighlight">\(a \in N\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="o">-</span><span class="mi">4</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a é zero&#39;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;a é positivo&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a é negativo&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">):</span>
+    <span class="c1"># a identação é importante</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">a</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># O mesmo que a = a + 1</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a é negativo
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
 </pre></div>
 </div>
 </div>
 </div>
+<p>Se quisessemos os valores de <span class="math notranslate nohighlight">\([0, 3]\)</span> por ordem decrescente, podíamos fazer</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
@@ -803,124 +832,66 @@
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="id3">
-<h2>Programação em Python<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="o-organizar">
-<h3>O - Organizar<a class="headerlink" href="#o-organizar" title="Permalink to this headline">¶</a></h3>
-<p>Agora que já temos as ferramentas essenciais, precisamos de preparar a nossa solução computacional. Usamos as funções do Python e, quando não existirem, fazemos as funções necessárias. Várias funções podem ser reunidas para criar uma solução, o nosso programa.</p>
-<p>Vamos começar com um programa <em>muito</em> simples, tão simples que é desnecessário: quero somar dois números inteiros.
-Na resolução deste problema:</p>
-<ul class="simple">
-<li><p>precisamos saber quais são as parcelas (<em>input</em>) e</p></li>
-<li><p>precisamos de adicionar as parcelas para obtermos a soma (<em>processamento</em>)</p></li>
-<li><p>precisamos de apresentar uma mensagem com as parcelas e a soma resultante (<em>output</em>).</p></li>
-</ul>
-<p>Temos pois que organizar a nossa solução na forma de um programa de forma que cumpra o seu objetivo mas com cada parte separada de forma a que possamos testar e, mais importante, possamos reutilizar noutros programas que venhamos a precisar.</p>
+<p>Criando expressões com estes operadores e conseguindo moldar o nosso programa às circunstâncias, já conseguimos fazer muitas coisas.</p>
+<p>Vejamos agora o cálculo do fatorial de um número.</p>
+<p>Queremos calcular o fatorial de um número usando a expressão <span class="math notranslate nohighlight">\(n! = n * (n-1)!\)</span>, para  <span class="math notranslate nohighlight">\(n &gt; 1\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
-<span class="c1"># -*- coding: utf-8 -*-</span>
-
-<span class="c1"># Authors: Margarida Madeira e Moura</span>
-<span class="c1"># Contacts: mmadeira@ualg.pt</span>
-
-<span class="c1"># Exemplo inicial de um programa</span>
-<span class="k">def</span> <span class="nf">soma</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
-	<span class="sd">&quot;&quot;&quot; Função que devolve a soma de dois números.</span>
-
-<span class="sd">	Args:</span>
-<span class="sd">	    x (int): uma parcela</span>
-<span class="sd">	    y (int): outra parcela</span>
-
-<span class="sd">	Returns:</span>
-<span class="sd">	    int: a soma das duas parcelas</span>
-
-<span class="sd">	Examples:</span>
-<span class="sd">	    &gt;&gt;&gt; soma (2, 3)</span>
-<span class="sd">	    5</span>
-<span class="sd">	    &gt;&gt;&gt; soma (4, 5) </span>
-<span class="sd">	    9</span>
-<span class="sd">	&quot;&quot;&quot;</span>
-	<span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
-
-<span class="k">def</span> <span class="nf">testar_soma</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot; O teste da função soma:</span>
-<span class="sd">    lê os dados, chama a função e escreve os resultados &quot;&quot;&quot;</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fatorial_r</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Calculo do fatorial de um número.</span>
+<span class="sd">    n! = n * (n-1)! para n &gt; 1</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     
-    <span class="n">result</span> <span class="o">=</span> <span class="n">soma</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+    <span class="n">resultado</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># Elemento neutro da multiplicação </span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">resultado</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="n">fatorial_r</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
     
-    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;A soma de&quot;</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="s2">&quot;com&quot;</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s2">&quot;é&quot;</span><span class="p">,</span><span class="n">result</span><span class="p">)</span>
-
-<span class="c1"># Se o nosso programa for chamado diretamente a partir da consola </span>
-<span class="c1"># é preciso indicar por onde se começa </span>
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">testar_soma</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Feito!&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">37</span><span class="o">-</span><span class="mi">496</span><span class="n">c28957c2d</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">37</span> <span class="c1"># é preciso indicar por onde se começa</span>
-<span class="g g-Whitespace">     </span><span class="mi">38</span> <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">39</span>     <span class="n">testar_soma</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">40</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Feito!&quot;</span><span class="p">)</span>
-
-<span class="nn">&lt;ipython-input-37-496c28957c2d&gt;</span> in <span class="ni">testar_soma</span><span class="nt">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">27</span>     <span class="sd">&quot;&quot;&quot; O teste da função soma:</span>
-<span class="g g-Whitespace">     </span><span class="mi">28</span><span class="sd">     lê os dados, chama a função e escreve os resultados &quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">29</span>     <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
-<span class="g g-Whitespace">     </span><span class="mi">30</span>     <span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
-<span class="g g-Whitespace">     </span><span class="mi">31</span> 
-
-<span class="ne">ValueError</span>: invalid literal for int() with base 10: &#39;&#39;
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="id4">
-<h2>Programação em Python<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="u-usar">
-<h3>U - Usar<a class="headerlink" href="#u-usar" title="Permalink to this headline">¶</a></h3>
-<p>Porque o nosso programa está definido com várias funções podemos dar-lhe vários usos.</p>
-<p>Para além de o podermos ter no <em>notebook</em>, podemos guardá-lo num ficheiro de extensão .py e chamá-lo na <em>prompt</em>.
-&gt; python P1B.py</p>
-<p>Mas podemos também usar as funções que aqui definimos.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">testar_soma</span><span class="p">()</span>
-<span class="c1"># Compare com o resultado anterior. Porque é que é diferente?</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
-3
-A soma de 2 com 3 é 5
+    <span class="k">return</span> <span class="n">resultado</span>
+    
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span> <span class="c1"># Podemos fazer mais do que uma atribuição</span>
-<span class="n">soma</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>   <span class="c1"># Note que os argumentos a e b da função são diferentes </span>
-            <span class="c1"># dos parâmetros x e y</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">fatorial_r</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>120
 </pre></div>
+</div>
+</div>
+</div>
+<p>Queremos agora calcular o fatorial de um número usando a expressão <span class="math notranslate nohighlight">\(n! = n * (n-1) * ... * 2\)</span>, para  <span class="math notranslate nohighlight">\(n &gt; 0\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fatorial_i</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Calculo do fatorial de um número.</span>
+<span class="sd">    n! = n * (n-1) * ... * 2</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">resultado</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># Elemento neutro da multiplicação </span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">n</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">resultado</span> <span class="o">*=</span> <span class="n">n</span> 
+        <span class="n">n</span> <span class="o">-=</span> <span class="mi">1</span>        
+    
+    <span class="k">return</span> <span class="n">resultado</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">fatorial_i</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>120
+</pre></div>
+</div>
 </div>
 </div>
 </div>
