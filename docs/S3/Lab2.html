@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Lab0 &#8212; IPC</title>
+    <title>Lab2 &#8212; IPC</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
@@ -35,21 +35,20 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2020-21/docs/S3/Lab0.html" />
+    <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2020-21/docs/S3/Lab2.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Lab1" href="Lab1.html" />
-    <link rel="prev" title="Submissão ao Mooshak" href="SubmissãoMooshak.html" />
+    <link rel="prev" title="Lab1" href="Lab1.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
 
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="https://margaridamadeira.github.io/IPC-2020-21/docs/S3/Lab0.html" />
+<meta property="og:url"         content="https://margaridamadeira.github.io/IPC-2020-21/docs/S3/Lab2.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Lab0" />
-<meta property="og:description" content="Lab0  Objetivos de aprendizagem  Com este guião:  exercitaremos a submissão ao Mooshak  veremos como preparar os programas para submeter  Tarefa A  Enunciado  P" />
+<meta property="og:title"       content="Lab2" />
+<meta property="og:description" content="Lab2  Objetivos de aprendizagem  Com este guião, exercitaremos:  a validação de dados de entrada  o uso de condições no controlo de fluxo do programa (com if e " />
 <meta property="og:image"       content="https://margaridamadeira.github.io/IPC-2020-21/_static/IPC_wc.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -148,8 +147,8 @@
    Submissão ao Mooshak
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab0.html">
    Lab0
   </a>
  </li>
@@ -158,8 +157,8 @@
    Lab1
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Lab2.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Lab2
   </a>
  </li>
@@ -205,7 +204,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/docs/S3/Lab0.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/docs/S3/Lab2.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -250,6 +249,11 @@
   <a class="reference internal nav-link" href="#objetivos-de-aprendizagem">
    Objetivos de aprendizagem
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#enunciado">
+   Enunciado
+  </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tarefa-a">
@@ -257,20 +261,8 @@
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#enunciado">
-       Enunciado
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#caso-de-teste">
-         Caso de teste
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#resolucao">
-       Resolução
+      <a class="reference internal nav-link" href="#casos-de-teste">
+       Casos de teste
       </a>
      </li>
     </ul>
@@ -282,19 +274,31 @@
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id1">
-       Enunciado
+       Casos de teste
       </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id2">
-         Caso de teste
-        </a>
-       </li>
-      </ul>
      </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tarefa-c">
+     Tarefa C
+    </a>
+    <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#resprogrcompl">
-       Resolução
+      <a class="reference internal nav-link" href="#id2">
+       Casos de teste
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tarefa-d">
+     Tarefa D
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Casos de teste
       </a>
      </li>
     </ul>
@@ -311,88 +315,176 @@
         
               <div>
                 
-  <div class="section" id="lab0">
-<h1>Lab0<a class="headerlink" href="#lab0" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="lab2">
+<h1>Lab2<a class="headerlink" href="#lab2" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="objetivos-de-aprendizagem">
 <h2>Objetivos de aprendizagem<a class="headerlink" href="#objetivos-de-aprendizagem" title="Permalink to this headline">¶</a></h2>
-<p>Com este guião:</p>
+<p>Com este guião, exercitaremos:</p>
 <ol class="simple">
-<li><p>exercitaremos a submissão ao Mooshak</p></li>
-<li><p>veremos como preparar os programas para submeter</p></li>
+<li><p>a validação de dados de entrada</p></li>
+<li><p>o uso de condições no controlo de fluxo do programa (com <em>if</em> e <em>while</em>)</p></li>
+<li><p>o desenvolvimento de programas</p></li>
 </ol>
+<p>e continuaremos a usar o Mooshak para verificar o resultado dos programas desenvolvidos.</p>
+</div>
+<div class="section" id="enunciado">
+<h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="tarefa-a">
 <h3>Tarefa A<a class="headerlink" href="#tarefa-a" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="enunciado">
-<h4>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this headline">¶</a></h4>
-<p>Prepare um programa que apresente a mensagem “Hello world!” (sem as aspas).</p>
-<div class="section" id="caso-de-teste">
-<h5>Caso de teste<a class="headerlink" href="#caso-de-teste" title="Permalink to this headline">¶</a></h5>
-<p><strong>Output</strong></p>
-<p>Hello world!</p>
-<p>Submeta no problema A do concurso IPC_L0.</p>
-</div>
-</div>
-<div class="section" id="resolucao">
-<h4>Resolução<a class="headerlink" href="#resolucao" title="Permalink to this headline">¶</a></h4>
-<p>Usando o Spyder, abra um ficheiro novo.</p>
-<p>Depois das linhas de comentário, escreva</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello world!&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Note que deve começar na primeira coluna, pois os espaços à esquerda têm significado nos programas em Python.</p>
-<p>Guarde o ficheiro que criou e execute-o. Se não estiver satisfeito com o resultado do seu programa, altere, grave e execute, até que esteja satisfeito.</p>
-<p>Passamos agora para a submissão do programa. Usando um <em>browser</em> à sua escolha, aceda ao <a class="reference external" href="http://deei-mooshak.ualg.pt/~mmadeira">Mooshak</a>. Entre, com as suas credenciais no concurso IPC_L0.</p>
-<p>Verifique que o problema selecionado é o que pretende, neste caso o A, e submeta o programa que preparou. Se necessário, reveja a <a class="reference internal" href="SubmissãoMooshak.html#submmooshak"><span class="std std-ref">Submissão ao Mooshak</span></a>.</p>
-<p>Se a submissão ficou aceite, esta tarefa está concluída.</p>
+<p>Na aula teórica vimos o desenvolvimento de funções para o cálculo do fatorial de um número.
+Pretendemos agora incluir uma dessas funções num programa ( cf. <a class="reference internal" href="Lab0.html#resprogrcompl"><span class="std std-ref">Resolução</span></a>), incluindo na função de teste a verificação de que a entrada é válida.</p>
+<p>Note que o fatorial de um número está definido para números inteiros positivos (<span class="math notranslate nohighlight">\(N_0^+\)</span>). Ou seja, não se aceitam valores negativos ou strings.</p>
+<p>Assim, se o cálculo não puder ser efetuado, o seu programa deverá produzir a mensagem (sem as aspas):
+“A função fatorial está definida para números inteiros maiores ou iguais a zero.”
+a um pedido de cálculo ilegal</p>
+<p>Prepare então um programa calcule o fatorial de um número e valide os dados de entrada.</p>
+<p><strong>Dicas</strong>:
+Veja a ajuda sobre a função str.isnumeric
+Para os diferentes casos de input, experimente na consola do Spyder:
+temp = input()
+temp.isnumeric()</p>
+<div class="section" id="casos-de-teste">
+<h4>Casos de teste<a class="headerlink" href="#casos-de-teste" title="Permalink to this headline">¶</a></h4>
+<p><strong>Input 1</strong></p>
+<p>5</p>
+<p><strong>Output 1</strong></p>
+<p>120</p>
+<p><strong>Input 2</strong></p>
+<p>5.0</p>
+<p><strong>Output 2</strong></p>
+<p>A função fatorial está definida para números inteiros maiores ou iguais a zero.</p>
+<p><strong>Input 3</strong></p>
+<p>-5</p>
+<p><strong>Output 3</strong></p>
+<p>A função fatorial está definida para números inteiros maiores ou iguais a zero.</p>
+<p><strong>Input 4</strong></p>
+<p>asd</p>
+<p><strong>Output 4</strong></p>
+<p>A função fatorial está definida para números inteiros maiores ou iguais a zero.</p>
+<p>Submeta no problema A do Lab2.</p>
 </div>
 </div>
 <div class="section" id="tarefa-b">
 <h3>Tarefa B<a class="headerlink" href="#tarefa-b" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id1">
-<h4>Enunciado<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
-<p>Sabendo que uma polegada corresponde a 2.54 centímetro, pretendemos converter as medidas em polegadas para centímetros.</p>
-<p>Prepare um programa que leia uma distância em polegadas e apresente essa distância em centímetros.</p>
-<div class="section" id="id2">
-<h5>Caso de teste<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h5>
-<p><strong>Input</strong></p>
-<p>10</p>
-<p><strong>Output</strong></p>
-<p>25.4</p>
-<p>Submeta no problema B do concurso IPC_L0.</p>
-</div>
-</div>
-<div class="section" id="resprogrcompl">
-<span id="id3"></span><h4>Resolução<a class="headerlink" href="#resprogrcompl" title="Permalink to this headline">¶</a></h4>
-<p>A definição de uma função que converte de polegadas para centímetros foi apresentada na aula teórica da Semana 2 usando <em>jupyter-notebook</em> e repetida numa aula prática dessa semana usando o <em>Spyder</em>.</p>
-<p>Neste caso, só temos uma função e eventualmente podemos acrescentar no fim do ficheiro as instruções de leitura de dados e escrita de resultados.</p>
-<p>Mas quando temos várias funções, torna-se mais complicado articular a leitura e escrita que queremos para verificar cada parte e as operaçoes de leitura e escrita que precisamos para verificar o programa completo.</p>
-<p>Assim, o nosso programa completo deveria ser:</p>
+<p>Pretende-se determinar os números pares de um intervalo. Para o efeito, considere o esboço apresentado em <em>proto_B.py</em></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Ficheiro de exemplo para submissão ao Mooshak</span>
+<span class="sd">Determinar os números pares de um intervalo</span>
 <span class="sd">(c) Margarida Madeira e Moura, 2020</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
-<span class="k">def</span> <span class="nf">converte_polegada_para_centimetro</span><span class="p">(</span><span class="n">dist_polegadas</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Função que converte uma distância de polegadas para centímetros.&quot;&quot;&quot;</span>
+<span class="k">def</span> <span class="nf">par</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Função que determina se um número é par.</span>
+<span class="sd">    </span>
+<span class="sd">    par(n) devolve True se n for par; caso contrário, devolve False&quot;&quot;&quot;</span>
+    <span class="c1">## Apague esta linha e acrescente aqui o seu código</span>
 
-    <span class="n">centimetros_por_polegada</span> <span class="o">=</span> <span class="mf">2.54</span>
-    <span class="n">resultado</span> <span class="o">=</span> <span class="n">dist_polegadas</span> <span class="o">*</span> <span class="n">centimetros_por_polegada</span>
-    <span class="k">return</span> <span class="n">resultado</span> 
-
-<span class="k">def</span> <span class="nf">test_converte_polegada_para_centimetro</span><span class="p">():</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
-    <span class="n">z</span> <span class="o">=</span> <span class="n">converte_polegada_para_centimetro</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">escreve</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Função que imprime um valor&quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
     
+<span class="k">def</span> <span class="nf">test_par</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Função de teste da função par</span>
+<span class="sd">    Apresenta o valor sse o número for par&quot;&quot;&quot;</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">par</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
+        <span class="n">escreve</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">pares_intervalo</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Função que apresenta os números pares de um intervalo&quot;&quot;&quot;</span>
+    
+    <span class="c1">## Apague esta linha e acrescente aqui o seu código</span>
+
+
+<span class="k">def</span> <span class="nf">test_intervalo_inteiros</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Função que lê os valores extremos de um intervalo de números inteiros&quot;&quot;&quot;</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+    <span class="n">valido</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="c1"># acrescente a validação</span>
+    <span class="c1"># # x tem que ser inferior a y</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">valido</span><span class="p">):</span>
+        <span class="n">pares_intervalo</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Valores inválidos.&#39;</span><span class="p">)</span>
+
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">test_converte_polegada_para_centimetro</span><span class="p">()</span>
+    <span class="n">test_par</span><span class="p">()</span>
+    <span class="c1"># test_intervalo_inteiros()</span>
 
 </pre></div>
 </div>
-<p>Para já, basta saber que as duas últimas linhas deste bloco de código permitem que tenhamos um programa completo mas, se precisarmos, poderemos usar este mesmo bloco de código como parte de um outro programa.</p>
-<p>Copie então este programa para um um novo ficheiro do Spyder, teste-o e submeta no problema B.</p>
+<p>Comece por completar a função <em>par</em>.</p>
+<p>Depois, comente a chamada à função <em>test_par</em> e descomente a linha seguinte que contém a chamada à função <em>test_intervalo_inteiros</em>.
+Depois, conclua a validação na função <em>test_intervalo_inteiros</em> e, finalmente, complete a função <em>pares_intervalo</em>.</p>
+<div class="section" id="id1">
+<h4>Casos de teste<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p><strong>Input 1</strong></p>
+<p>1
+5</p>
+<p><strong>Output 1</strong></p>
+<p>2
+4</p>
+<p><strong>Input 2</strong></p>
+<p>10
+1</p>
+<p><strong>Output 2</strong></p>
+<p>Valores inválidos.</p>
+<p><strong>Input 3</strong></p>
+<p>-5
+-1</p>
+<p><strong>Output 3</strong></p>
+<p>-4
+-2</p>
+<p>Submeta no problema B do Lab2.</p>
+</div>
+</div>
+<div class="section" id="tarefa-c">
+<h3>Tarefa C<a class="headerlink" href="#tarefa-c" title="Permalink to this headline">¶</a></h3>
+<p>Pretende-se determinar os números de um intervalo de inteiros que são múltiplos de três e múltiplos de cinco.</p>
+<div class="section" id="id2">
+<h4>Casos de teste<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<p><strong>Input 1</strong></p>
+<p>1
+20</p>
+<p><strong>Output 1</strong></p>
+<p>15</p>
+<p><strong>Input 2</strong></p>
+<p>10
+1</p>
+<p><strong>Output 2</strong></p>
+<p>Valores inválidos.</p>
+<p>Submeta no problema C do Lab2.</p>
+</div>
+</div>
+<div class="section" id="tarefa-d">
+<h3>Tarefa D<a class="headerlink" href="#tarefa-d" title="Permalink to this headline">¶</a></h3>
+<p>Pretende-se determinar um termo da <a class="reference external" href="https://www.wolframalpha.com/input/?i=fibonacci+sequence">sequência de Fibonacci</a>.</p>
+<p>Prepare um programa que leia um inteiro <span class="math notranslate nohighlight">\(n\)</span> e apresente o <span class="math notranslate nohighlight">\(n\)</span>-ésimo termo da sequência F(n), considerando que
+$<span class="math notranslate nohighlight">\( F(n) = F(n-1) + F(n-2), n \in N_0_+ \)</span><span class="math notranslate nohighlight">\(
+sendo \)</span>F(0) = 0<span class="math notranslate nohighlight">\( e \)</span> F(1) = 1$.</p>
+<p>Se o termo pedido não for válido, o programa apresenta a mensagem “Valor inválido” (sem as apspas).</p>
+<p>Inclua a validação do inteiro lido na função de teste.</p>
+<div class="section" id="id3">
+<h4>Casos de teste<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<p><strong>Input 1</strong></p>
+<p>-5</p>
+<p><strong>Output 1</strong></p>
+<p>Valor inválido.</p>
+<p><strong>Input 2</strong></p>
+<p>0</p>
+<p><strong>Output 2</strong></p>
+<p>0</p>
+<p><strong>Input 3</strong></p>
+<p>1</p>
+<p><strong>Output 3</strong></p>
+<p>1</p>
+<p><strong>Input 4</strong></p>
+<p>7</p>
+<p><strong>Output 4</strong></p>
+<p>13</p>
+<p>Submeta no problema D do Lab2.</p>
 </div>
 </div>
 </div>
@@ -426,8 +518,7 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="SubmissãoMooshak.html" title="previous page">Submissão ao Mooshak</a>
-    <a class='right-next' id="next-link" href="Lab1.html" title="next page">Lab1</a>
+    <a class='left-prev' id="prev-link" href="Lab1.html" title="previous page">Lab1</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
