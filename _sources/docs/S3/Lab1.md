@@ -31,12 +31,16 @@ Prepare um programa que contenha uma função *k2c* que converta uma temperatura
 
 **Input**
 
+```
 273.15
+```
 
 
 **Output**
 
+```
 0.0
+```
 
 ### Tarefa B
 
@@ -46,12 +50,16 @@ Prepare um programa que contenha uma função *c2k* que converta uma temperatura
 
 **Input**
 
+```
 37
+```
 
 
 **Output**
 
+```
 310.15
+```
 
 
 ### Tarefa C
@@ -62,11 +70,15 @@ Prepare um programa que contenha uma função *c2f* que converta uma temperatura
 
 **Input**
 
+```
 37
+```
 
 **Output**
 
+```
 98.60000000000001
+```
 
 ### Tarefa D
 
@@ -76,25 +88,33 @@ Prepare um programa que contenha uma função *f2c* que converta uma temperatura
 
 **Input**
 
+```
 98.6
+```
 
 **Output**
 
+```
 36.99999999999999
+```
 
 ### Tarefa E
 
-Prepare um programa que contenha uma função *k2f* (que usa as funções *k2c* e *c2f*)que converta uma temperatura em kelvin para graus Farenheit.
+Prepare um programa que contenha uma função *k2f* (que usa as funções *k2c* e *c2f*) que converta uma temperatura em kelvin para graus Farenheit.
 
 #### Caso de teste
 
 **Input**
 
+```
 273.15
+```
 
 **Output**
 
+```
 32.0
+```
 
 ### Tarefa F
 
@@ -104,9 +124,13 @@ Prepare um programa que contenha uma função *f2k* (que usa as funções *f2c* 
 
 **Input**
 
+```
 98.6
+```
 
 **Output**
 
+```
 310.15
+```
 

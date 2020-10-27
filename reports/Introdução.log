@@ -17,14 +17,14 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-x = arange(6) # 
+plot(x, x**2)
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mNameError[0m                                 Traceback (most recent call last)
-[0;32m<ipython-input-20-1c7d783cbb6d>[0m in [0;36m<module>[0;34m[0m
-[0;32m----> 1[0;31m [0mx[0m [0;34m=[0m [0marange[0m[0;34m([0m[0;36m6[0m[0;34m)[0m [0;31m#[0m[0;34m[0m[0;34m[0m[0m
+[0;32m<ipython-input-23-bf291f973427>[0m in [0;36m<module>[0;34m[0m
+[0;32m----> 1[0;31m [0mplot[0m[0;34m([0m[0mx[0m[0;34m,[0m [0mx[0m[0;34m**[0m[0;36m2[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m
-[0;31mNameError[0m: name 'arange' is not defined
-NameError: name 'arange' is not defined
+[0;31mNameError[0m: name 'plot' is not defined
+NameError: name 'plot' is not defined
 
