@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Lab2 &#8212; IPC</title>
+    <title>Lab3 &#8212; IPC</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
@@ -46,8 +46,8 @@
 <!-- Opengraph tags -->
 <meta property="og:url"         content="https://margaridamadeira.github.io/IPC-2020-21/docs/S4/Lab3.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Lab2" />
-<meta property="og:description" content="Lab2  Objetivos de aprendizagem  Com este guião, exercitaremos:  a validação de dados de entrada  o uso de condições no controlo de fluxo do programa (com if e " />
+<meta property="og:title"       content="Lab3" />
+<meta property="og:description" content="Lab3  Objetivos de aprendizagem  Com este guião, exercitaremos:  a utilização de strings  o uso de condições no controlo de fluxo do programa (if, while e for) " />
 <meta property="og:image"       content="https://margaridamadeira.github.io/IPC-2020-21/_static/IPC_wc.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -260,11 +260,6 @@
   <a class="reference internal nav-link" href="#objetivos-de-aprendizagem">
    Objetivos de aprendizagem
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#enunciado">
-   Enunciado
-  </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tarefa-a">
@@ -282,6 +277,16 @@
     <a class="reference internal nav-link" href="#tarefa-b">
      Tarefa B
     </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tarefa-c">
+     Tarefa C
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tarefa-d">
+     Tarefa D
+    </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id1">
@@ -290,31 +295,12 @@
      </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tarefa-c">
-     Tarefa C
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id2">
-       Casos de teste
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tarefa-d">
-     Tarefa D
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id3">
-       Casos de teste
-      </a>
-     </li>
-    </ul>
-   </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencias">
+   Referências
+  </a>
  </li>
 </ul>
 
@@ -326,251 +312,94 @@
         
               <div>
                 
-  <div class="section" id="lab2">
-<h1>Lab2<a class="headerlink" href="#lab2" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="lab3">
+<h1>Lab3<a class="headerlink" href="#lab3" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="objetivos-de-aprendizagem">
 <h2>Objetivos de aprendizagem<a class="headerlink" href="#objetivos-de-aprendizagem" title="Permalink to this headline">¶</a></h2>
 <p>Com este guião, exercitaremos:</p>
 <ol class="simple">
-<li><p>a validação de dados de entrada</p></li>
-<li><p>o uso de condições no controlo de fluxo do programa (com <em>if</em> e <em>while</em>)</p></li>
-<li><p>o desenvolvimento de programas</p></li>
+<li><p>a utilização de strings</p></li>
+<li><p>o uso de condições no controlo de fluxo do programa (<em>if</em>, <em>while</em> e <em>for</em>)</p></li>
+<li><p>a utilização de funções do Python</p></li>
 </ol>
 <p>e continuaremos a usar o Mooshak para verificar o resultado dos programas desenvolvidos.</p>
-</div>
-<div class="section" id="enunciado">
-<h2>Enunciado<a class="headerlink" href="#enunciado" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>http://rosalind.info/problems/dna/</p></li>
-<li><p>http://rosalind.info/problems/rna/</p></li>
-<li><p>http://rosalind.info/problems/revc/</p></li>
-</ul>
 <div class="section" id="tarefa-a">
 <h3>Tarefa A<a class="headerlink" href="#tarefa-a" title="Permalink to this headline">¶</a></h3>
-<p>Na aula teórica vimos o desenvolvimento de funções para o cálculo do fatorial de um número.
-Pretendemos agora incluir uma dessas funções num programa ( cf. <a class="reference internal" href="../S3/Lab0.html#resprogrcompl"><span class="std std-ref">Resolução</span></a>), incluindo na função de teste a verificação de que a entrada é válida.</p>
-<p>Note que o fatorial de um número está definido para números inteiros positivos (<span class="math notranslate nohighlight">\(N_0^+\)</span>). Ou seja, não se aceitam valores negativos ou strings.</p>
-<p>Assim, se o cálculo não puder ser efetuado, o seu programa deverá produzir a mensagem (sem as aspas):
-“A função fatorial está definida para números inteiros maiores ou iguais a zero.”
-a um pedido de cálculo ilegal.</p>
-<p>Prepare então um programa calcule o fatorial de um número e valide os dados de entrada.</p>
-<p><strong>Dicas</strong>:</p>
-<p>Veja a ajuda sobre a função <em>str.isnumeric</em></p>
-<p>Para os diferentes casos de input, experimente na consola do Spyder:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-<span class="n">temp</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">()</span>
-</pre></div>
-</div>
+<p><a class="reference external" href="http://rosalind.info/problems/dna/">Fonte</a></p>
 <div class="section" id="casos-de-teste">
 <h4>Casos de teste<a class="headerlink" href="#casos-de-teste" title="Permalink to this headline">¶</a></h4>
 <p><strong>Input 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 <p><strong>Output 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">120</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 <p><strong>Input 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">5.0</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 <p><strong>Output 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="n">função</span> <span class="n">fatorial</span> <span class="n">está</span> <span class="n">definida</span> <span class="n">para</span> <span class="n">números</span> <span class="n">inteiros</span> <span class="n">maiores</span> <span class="n">ou</span> <span class="n">iguais</span> <span class="n">a</span> <span class="n">zero</span><span class="o">.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
-<p><strong>Input 3</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="mi">5</span>
-</pre></div>
-</div>
-<p><strong>Output 3</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="n">função</span> <span class="n">fatorial</span> <span class="n">está</span> <span class="n">definida</span> <span class="n">para</span> <span class="n">números</span> <span class="n">inteiros</span> <span class="n">maiores</span> <span class="n">ou</span> <span class="n">iguais</span> <span class="n">a</span> <span class="n">zero</span><span class="o">.</span>
-</pre></div>
-</div>
-<p><strong>Input 4</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">asd</span>
-</pre></div>
-</div>
-<p><strong>Output 4</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="n">função</span> <span class="n">fatorial</span> <span class="n">está</span> <span class="n">definida</span> <span class="n">para</span> <span class="n">números</span> <span class="n">inteiros</span> <span class="n">maiores</span> <span class="n">ou</span> <span class="n">iguais</span> <span class="n">a</span> <span class="n">zero</span><span class="o">.</span>
-</pre></div>
-</div>
-<p>Submeta no problema A do Lab2.</p>
+<p>Submeta no problema A do Lab3.</p>
 </div>
 </div>
 <div class="section" id="tarefa-b">
 <h3>Tarefa B<a class="headerlink" href="#tarefa-b" title="Permalink to this headline">¶</a></h3>
-<p>Pretende-se determinar os números pares de um intervalo. Para o efeito, considere o esboço apresentado em <em>proto_B.py</em></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
-
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Determinar os números pares de um intervalo</span>
-<span class="sd">(c) Margarida Madeira e Moura, 2020</span>
-<span class="sd">&quot;&quot;&quot;</span>
-
-<span class="k">def</span> <span class="nf">par</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Função que determina se um número é par.</span>
-<span class="sd">    </span>
-<span class="sd">    par(n) devolve True se n for par; caso contrário, devolve False&quot;&quot;&quot;</span>
-    <span class="c1">## Apague esta linha e acrescente aqui o seu código</span>
-
-<span class="k">def</span> <span class="nf">escreve</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Função que imprime um valor&quot;&quot;&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-    
-<span class="k">def</span> <span class="nf">test_par</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;Função de teste da função par</span>
-<span class="sd">    Apresenta o valor sse o número for par&quot;&quot;&quot;</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">par</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
-        <span class="n">escreve</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">pares_intervalo</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Função que apresenta os números pares de um intervalo&quot;&quot;&quot;</span>
-    
-    <span class="c1">## Apague esta linha e acrescente aqui o seu código</span>
-
-
-<span class="k">def</span> <span class="nf">test_intervalo_inteiros</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;Função que lê os valores extremos de um intervalo de números inteiros&quot;&quot;&quot;</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
-    <span class="n">valido</span> <span class="o">=</span> <span class="kc">False</span>
-    <span class="c1"># acrescente a validação</span>
-    <span class="c1"># # x tem que ser inferior a y</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">valido</span><span class="p">):</span>
-        <span class="n">pares_intervalo</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Valores inválidos.&#39;</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">test_par</span><span class="p">()</span>
-    <span class="c1"># test_intervalo_inteiros()</span>
-
-</pre></div>
-</div>
-<p>Comece por completar a função <em>par</em>.</p>
-<p>Depois, comente a chamada à função <em>test_par</em> e descomente a linha seguinte que contém a chamada à função <em>test_intervalo_inteiros</em>.</p>
-<p>Depois, conclua a validação na função <em>test_intervalo_inteiros</em> e, finalmente, complete a função <em>pares_intervalo</em>.</p>
-<div class="section" id="id1">
-<h4>Casos de teste<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
-<p><strong>Input 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>
-<span class="mi">5</span>
-</pre></div>
-</div>
-<p><strong>Output 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span>
-<span class="mi">4</span>
-</pre></div>
-</div>
-<p><strong>Input 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span>
-<span class="mi">1</span>
-</pre></div>
-</div>
-<p><strong>Output 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Valores</span> <span class="n">inválidos</span><span class="o">.</span>
-</pre></div>
-</div>
-<p><strong>Input 3</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="mi">5</span>
-<span class="o">-</span><span class="mi">1</span>
-</pre></div>
-</div>
-<p><strong>Output 3</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="mi">4</span>
-<span class="o">-</span><span class="mi">2</span>
-</pre></div>
-</div>
-<p><strong>Input 4</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>
-<span class="mi">10</span>
-</pre></div>
-</div>
-<p><strong>Output 4</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span>
-<span class="mi">4</span>
-<span class="mi">6</span>
-<span class="mi">8</span>
-<span class="mi">10</span>
-</pre></div>
-</div>
-<p>Submeta no problema B do Lab2.</p>
-</div>
+<p><a class="reference external" href="http://rosalind.info/problems/rna/">Fonte</a></p>
+<p>Submeta no problema B do Lab3.</p>
 </div>
 <div class="section" id="tarefa-c">
 <h3>Tarefa C<a class="headerlink" href="#tarefa-c" title="Permalink to this headline">¶</a></h3>
-<p>Pretende-se determinar os números de um intervalo de inteiros que são múltiplos de três e múltiplos de cinco.</p>
-<div class="section" id="id2">
-<h4>Casos de teste<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
-<p><strong>Input 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>
-<span class="mi">20</span>
-</pre></div>
-</div>
-<p><strong>Output 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">15</span>
-</pre></div>
-</div>
-<p><strong>Input 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span>
-<span class="mi">1</span>
-</pre></div>
-</div>
-<p><strong>Output 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Valores</span> <span class="n">inválidos</span><span class="o">.</span>
-</pre></div>
-</div>
-<p>Submeta no problema C do Lab2.</p>
-</div>
+<p><a class="reference external" href="http://rosalind.info/problems/revc/">Fonte</a></p>
+<p>Submeta no problema C do Lab3.</p>
 </div>
 <div class="section" id="tarefa-d">
 <h3>Tarefa D<a class="headerlink" href="#tarefa-d" title="Permalink to this headline">¶</a></h3>
-<p>Pretende-se determinar um termo da <a class="reference external" href="https://www.wolframalpha.com/input/?i=fibonacci+sequence">sequência de Fibonacci</a>.</p>
-<p>Prepare um programa que leia um inteiro <span class="math notranslate nohighlight">\(n\)</span> e apresente o <span class="math notranslate nohighlight">\(n\)</span>-ésimo termo da sequência <span class="math notranslate nohighlight">\(F(n)\)</span>, considerando que</p>
-<p><span class="math notranslate nohighlight">\( F(n) = F(n-1) + F(n-2)\)</span> para <span class="math notranslate nohighlight">\(n \in N_0^+ \)</span></p>
-<p>sendo</p>
-<p><span class="math notranslate nohighlight">\(F(0) = 0\)</span> e <span class="math notranslate nohighlight">\( F(1) = 1\)</span>.</p>
-<p>Se o termo pedido não for válido, o programa apresenta a mensagem “Valor inválido.” (sem as aspas).</p>
-<p>Inclua a validação do inteiro lido na função de teste.</p>
-<div class="section" id="id3">
-<h4>Casos de teste<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id1">
+<h4>Casos de teste<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
 <p><strong>Input 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="mi">5</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 <p><strong>Output 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Valor</span> <span class="n">inválido</span><span class="o">.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 <p><strong>Input 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 <p><strong>Output 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 <p><strong>Input 3</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 <p><strong>Output 3</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 <p><strong>Input 4</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 <p><strong>Output 4</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">13</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
-<p>Submeta no problema D do Lab2.</p>
+<p>Submeta no problema D do Lab3.</p>
 </div>
 </div>
+</div>
+<div class="section" id="referencias">
+<h2>Referências<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h2>
+<p>As tarefas A, B e C são inspiradas nos exercícios da plataforma <a class="reference external" href="http://rosalind.info/problems/locations/">Rosalind</a>, sendo em cada uma das tarefas apresentada a fonte respetiva.</p>
 </div>
 </div>
 
