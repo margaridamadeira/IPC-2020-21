@@ -23,3 +23,7 @@
   - file: docs/S3/Lab1
   - file: docs/S3/Lab2
 
+- part: Semana 4
+  chapters:
+  - file: docs/S4/ProgPython2
+
