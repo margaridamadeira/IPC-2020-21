@@ -38,6 +38,7 @@
     <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2020-21/docs/S4/Lab3.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Programação em Python - parte 2" href="ProgPython2.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -47,7 +48,7 @@
 <meta property="og:url"         content="https://margaridamadeira.github.io/IPC-2020-21/docs/S4/Lab3.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Lab3" />
-<meta property="og:description" content="Lab3  Objetivos de aprendizagem  Com este guião, exercitaremos:  a utilização de strings  o uso de condições no controlo de fluxo do programa (if, while e for) " />
+<meta property="og:description" content="Lab3  Objetivos de aprendizagem  Com este guião, exercitaremos:  a utilização de strings  o uso de condições no controlo de fluxo do programa  a utilização de f" />
 <meta property="og:image"       content="https://margaridamadeira.github.io/IPC-2020-21/_static/IPC_wc.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -167,10 +168,15 @@
   Semana 4
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="ProgPython2.html">
    Programação em Python - parte 2
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Lab3
   </a>
  </li>
 </ul>
@@ -277,19 +283,21 @@
     <a class="reference internal nav-link" href="#tarefa-b">
      Tarefa B
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Casos de teste
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tarefa-c">
      Tarefa C
     </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tarefa-d">
-     Tarefa D
-    </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
+      <a class="reference internal nav-link" href="#id2">
        Casos de teste
       </a>
      </li>
@@ -319,29 +327,36 @@
 <p>Com este guião, exercitaremos:</p>
 <ol class="simple">
 <li><p>a utilização de strings</p></li>
-<li><p>o uso de condições no controlo de fluxo do programa (<em>if</em>, <em>while</em> e <em>for</em>)</p></li>
+<li><p>o uso de condições no controlo de fluxo do programa</p></li>
 <li><p>a utilização de funções do Python</p></li>
 </ol>
 <p>e continuaremos a usar o Mooshak para verificar o resultado dos programas desenvolvidos.</p>
 <div class="section" id="tarefa-a">
 <h3>Tarefa A<a class="headerlink" href="#tarefa-a" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="http://rosalind.info/problems/dna/">Fonte</a></p>
+<p>Considere o <a class="reference external" href="http://rosalind.info/problems/dna/">problema do DNA</a> em que se pretende apresentar, numa única linha, o número de carateres ‘A’, ‘C’, ‘G’ e ‘T’ existentes numa string.</p>
+<p>Sabendo que não existem linhas vazias, prepare uma solução que contenha a função visada e uma função de teste para a leitura de uma linha e escrita da resposta.</p>
+<p>Dica:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nome</span> <span class="o">=</span> <span class="s1">&#39;Maria&#39;</span>
+<span class="n">apelido</span> <span class="o">=</span> <span class="s1">&#39;Moura&#39;</span>
+<span class="n">nome_completo</span> <span class="o">=</span> <span class="n">nome</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">apelido</span>
+</pre></div>
+</div>
 <div class="section" id="casos-de-teste">
 <h4>Casos de teste<a class="headerlink" href="#casos-de-teste" title="Permalink to this headline">¶</a></h4>
 <p><strong>Input 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC</span>
 </pre></div>
 </div>
 <p><strong>Output 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">20</span> <span class="mi">12</span> <span class="mi">17</span> <span class="mi">21</span>
 </pre></div>
 </div>
 <p><strong>Input 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">AGATTTTAATTATGAATGAAAAGGGAAATATGTATATGTGTGGATTAAAAAAAGAGTGTATGATAGAAGA</span>
 </pre></div>
 </div>
 <p><strong>Output 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">32</span> <span class="mi">0</span> <span class="mi">17</span> <span class="mi">21</span>
 </pre></div>
 </div>
 <p>Submeta no problema A do Lab3.</p>
@@ -349,51 +364,54 @@
 </div>
 <div class="section" id="tarefa-b">
 <h3>Tarefa B<a class="headerlink" href="#tarefa-b" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="http://rosalind.info/problems/rna/">Fonte</a></p>
-<p>Submeta no problema B do Lab3.</p>
-</div>
-<div class="section" id="tarefa-c">
-<h3>Tarefa C<a class="headerlink" href="#tarefa-c" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="http://rosalind.info/problems/revc/">Fonte</a></p>
-<p>Submeta no problema C do Lab3.</p>
-</div>
-<div class="section" id="tarefa-d">
-<h3>Tarefa D<a class="headerlink" href="#tarefa-d" title="Permalink to this headline">¶</a></h3>
+<p>Considere agora a <a class="reference external" href="http://rosalind.info/problems/rna/">transcrição de DNA para RNA</a> em que se pretende obter uma string <span class="math notranslate nohighlight">\(u\)</span> a partir de uma string <span class="math notranslate nohighlight">\(t\)</span>, sendo que as ocorrências do carater ‘T’ em <span class="math notranslate nohighlight">\(t\)</span> são substituídas por ‘U’ em <span class="math notranslate nohighlight">\(u\)</span>.</p>
+<p>Sabendo que não existem linhas vazias, prepare uma solução que contenha a função visada e uma função de teste para a leitura de uma linha e escrita da resposta.</p>
 <div class="section" id="id1">
 <h4>Casos de teste<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
 <p><strong>Input 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GATGGAACTTGACTACGTAAATT</span>
 </pre></div>
 </div>
 <p><strong>Output 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GAUGGAACUUGACUACGUAAAUU</span>
 </pre></div>
 </div>
 <p><strong>Input 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">AGCAAAACAAACAGACA</span>
 </pre></div>
 </div>
 <p><strong>Output 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">AGCAAAACAAACAGACA</span>
 </pre></div>
 </div>
-<p><strong>Input 3</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<p>Submeta no problema B do Lab3.</p>
+</div>
+</div>
+<div class="section" id="tarefa-c">
+<h3>Tarefa C<a class="headerlink" href="#tarefa-c" title="Permalink to this headline">¶</a></h3>
+<p>Considere a determinação do <a class="reference external" href="http://rosalind.info/problems/revc/">complemento de uma cadeia</a> de DNA.</p>
+<p>Numa string de DNA os símbolos ‘A’ e ‘T’ são complementares assim como os símbolos ‘C’ e ‘G’. Pretende-se, a partir de uma string de DNA <span class="math notranslate nohighlight">\(s\)</span>, obter a string <span class="math notranslate nohighlight">\(s^c\)</span> o que é conseguido pela inversão dos símbolos de <span class="math notranslate nohighlight">\(s\)</span> e substituição de cada símbolo pelo símbolo complementar.</p>
+<p>Sabendo que não existem linhas vazias, prepare uma solução que contenha a função, ou funções, visada(s) e uma função de teste para a leitura de uma linha e escrita da resposta.</p>
+<div class="section" id="id2">
+<h4>Casos de teste<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<p><strong>Input 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GTCA</span>
+
 </pre></div>
 </div>
-<p><strong>Output 3</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<p><strong>Output 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TGAC</span>
 </pre></div>
 </div>
-<p><strong>Input 4</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<p><strong>Input 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">AAAACCCGGT</span>
 </pre></div>
 </div>
-<p><strong>Output 4</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<p><strong>Output 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ACCGGGTTTT</span>
 </pre></div>
 </div>
-<p>Submeta no problema D do Lab3.</p>
+<p>Submeta no problema C do Lab3.</p>
 </div>
 </div>
 </div>
@@ -431,6 +449,7 @@
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="ProgPython2.html" title="previous page">Programação em Python - parte 2</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
