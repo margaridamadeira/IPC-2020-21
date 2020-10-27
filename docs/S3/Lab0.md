@@ -18,7 +18,9 @@ Prepare um programa que apresente a mensagem "Hello world!" (sem as aspas).
 
 **Output**
 
+```
 Hello world!
+```
 
 Submeta no problema A do concurso IPC_L0.
 
@@ -54,11 +56,15 @@ Prepare um programa que leia uma distância em polegadas e apresente essa distâ
 
 **Input**
 
+```
 10
+```
 
 **Output**
 
+```
 25.4
+```
 
 Submeta no problema B do concurso IPC_L0.
 

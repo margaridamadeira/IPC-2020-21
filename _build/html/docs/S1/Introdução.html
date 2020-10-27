@@ -544,24 +544,10 @@ Vejamos alguns exemplos.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Signature:</span> abs<span class=" -Color -Color-Blue">(</span>x<span class=" -Color -Color-Blue">,</span> <span class=" -Color -Color-Blue">/)</span>
-<span class=" -Color -Color-Red">Docstring:</span> Return the absolute value of the argument.
-<span class=" -Color -Color-Red">Type:</span>      builtin_function_or_method
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>abs<span class="o">?</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Signature:</span> abs<span class=" -Color -Color-Blue">(</span>x<span class=" -Color -Color-Blue">,</span> <span class=" -Color -Color-Blue">/)</span>
-<span class=" -Color -Color-Red">Docstring:</span> Return the absolute value of the argument.
-<span class=" -Color -Color-Red">Type:</span>      builtin_function_or_method
 </pre></div>
 </div>
 </div>
@@ -645,83 +631,17 @@ abs(x, /)
 </div>
 </div>
 </div>
-<p>Outro exemplo do que usaremos é <em>Matplotlib</em>.</p>
+<p>Outro exemplo do que usaremos é <em>Matplotlib</em>.<br />
+Para ver a descrição, edite a linha abaixo e remova o comentário, isto é, apague o caracter ‘#’</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">?</span>matplotlib
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Docstring:</span>
-::
-
-  %matplotlib [-l] [gui]
-
-Set up matplotlib to work interactively.
-
-This function lets you activate matplotlib interactive support
-at any point during an IPython session. It does not import anything
-into the interactive namespace.
-
-If you are using the inline matplotlib backend in the IPython Notebook
-you can set which figure formats are enabled using the following::
-
-    In [1]: from IPython.display import set_matplotlib_formats
-
-    In [2]: set_matplotlib_formats(&#39;pdf&#39;, &#39;svg&#39;)
-
-The default for inline figures sets `bbox_inches` to &#39;tight&#39;. This can
-cause discrepancies between the displayed image and the identical
-image created using `savefig`. This behavior can be disabled using the
-`%config` magic::
-
-    In [3]: %config InlineBackend.print_figure_kwargs = {&#39;bbox_inches&#39;:None}
-
-In addition, see the docstring of
-`IPython.display.set_matplotlib_formats` and
-`IPython.display.set_matplotlib_close` for more information on
-changing additional behaviors of the inline backend.
-
-Examples
---------
-To enable the inline backend for usage with the IPython Notebook::
-
-    In [1]: %matplotlib inline
-
-In this case, where the matplotlib default is TkAgg::
-
-    In [2]: %matplotlib
-    Using matplotlib backend: TkAgg
-
-But you can explicitly request a different GUI backend::
-
-    In [3]: %matplotlib qt
-
-You can list the available backends using the -l/--list option::
-
-   In [4]: %matplotlib --list
-   Available matplotlib backends: [&#39;osx&#39;, &#39;qt4&#39;, &#39;qt5&#39;, &#39;gtk3&#39;, &#39;notebook&#39;, &#39;wx&#39;, &#39;qt&#39;, &#39;nbagg&#39;,
-   &#39;gtk&#39;, &#39;tk&#39;, &#39;inline&#39;]
-
-positional arguments:
-  gui         Name of the matplotlib backend to use (&#39;agg&#39;, &#39;gtk&#39;, &#39;gtk3&#39;,
-              &#39;inline&#39;, &#39;ipympl&#39;, &#39;nbagg&#39;, &#39;notebook&#39;, &#39;osx&#39;, &#39;pdf&#39;, &#39;ps&#39;,
-              &#39;qt&#39;, &#39;qt4&#39;, &#39;qt5&#39;, &#39;svg&#39;, &#39;tk&#39;, &#39;widget&#39;, &#39;wx&#39;). If given, the
-              corresponding matplotlib backend is used, otherwise it will be
-              matplotlib&#39;s default (which you can set in your matplotlib
-              config file).
-
-optional arguments:
-  -l, --list  Show available matplotlib backends
-<span class=" -Color -Color-Red">File:</span>      ~/anaconda3/envs/IPC-2020-21/lib/python3.7/site-packages/IPython/core/magics/pylab.py
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#matplotlib?</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>No futuro, para se trabalhar com vetores e matrizes, poderíamos usar <em>NumPy</em> ou outras alternativas.</p>
-<p>A instrução precedida de % é aquilo a que na terminologia do IPython se denomina <em>magic</em>, uma extensão à linguagem Python que facilita a interacção com o sistema. Introduziremos, quando necessário, outras magias do IPython.</p>
-<p>Neste caso e apenas para efeitos de demonstração, ativamos o matplotlib. No futuro, em vez de trazermos a caixa de ferramentas toda, escolhemos a ferramenta que precisamos.</p>
+<p>No futuro, para se trabalhar com vetores e matrizes, podemos usar <em>NumPy</em> ou outras alternativas.</p>
+<p>A instrução precedida de % é aquilo a que na terminologia do IPython se denomina <em>magic</em>, uma extensão à linguagem Python que facilita a interacção com o sistema. Introduziremos, quando necessário, outras magias do IPython. Para vermos os gráficos nesta página, fazemos</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -729,7 +649,16 @@ optional arguments:
 </div>
 </div>
 </div>
-<p>E já temos mais funcionalidades disponíveis, por exemplo, para gerar gráficos.</p>
+<p>Neste caso e para efeitos de demonstração, precisamos de algumas <em>peças</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span> <span class="n">plot</span><span class="p">,</span> <span class="n">pie</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="n">legend</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>E já temos algumas funcionalidades disponíveis, por exemplo, para gerar gráficos.</p>
 </div>
 <div class="section" id="geracao-de-graficos">
 <h4>Geração de gráficos<a class="headerlink" href="#geracao-de-graficos" title="Permalink to this headline">¶</a></h4>
@@ -737,7 +666,7 @@ optional arguments:
 Vejamos como faríamos para representar a função <span class="math notranslate nohighlight">\(f(x) = x² \)</span> quando o conjunto de partida é <span class="math notranslate nohighlight">\( \{0, 1, 2, 3, 4, 5 \} \)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">arange</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="c1"># </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="c1"># </span>
 </pre></div>
 </div>
 </div>
@@ -762,179 +691,39 @@ Vejamos como faríamos para representar a função <span class="math notranslate
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f8d5f5615d0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fde1a9be110&gt;]
 </pre></div>
 </div>
-<img alt="../../_images/Introdução_48_1.svg" src="../../_images/Introdução_48_1.svg" /></div>
+<img alt="../../_images/Introdução_50_1.png" src="../../_images/Introdução_50_1.png" />
+</div>
 </div>
 <p>E como faríamos para representar as funções seno e coseno no mesmo gráfico?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mf">0.1</span><span class="p">);</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mf">0.1</span><span class="p">);</span> 
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="mi">1</span><span class="o">+</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f8d5e5d2310&gt;,
- &lt;matplotlib.lines.Line2D at 0x7f8d5e5d2910&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fde12926e90&gt;,
+ &lt;matplotlib.lines.Line2D at 0x7fde128bc310&gt;]
 </pre></div>
 </div>
-<img alt="../../_images/Introdução_51_1.svg" src="../../_images/Introdução_51_1.svg" /></div>
+<img alt="../../_images/Introdução_53_1.png" src="../../_images/Introdução_53_1.png" />
+</div>
 </div>
 <p>Há outros tipos de gráficos para além do <em>plot</em>, e quando chegarmos lá veremos melhor. Uma <em>espreitadela</em> rápida ao que seremos capazes de fazer.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">?</span>pie
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Signature:</span>
-pie<span class=" -Color -Color-Blue">(</span>
-    x<span class=" -Color -Color-Blue">,</span>
-    explode<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
-    labels<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
-    colors<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
-    autopct<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
-    pctdistance<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Cyan">0.6</span><span class=" -Color -Color-Blue">,</span>
-    shadow<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">False</span><span class=" -Color -Color-Blue">,</span>
-    labeldistance<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Cyan">1.1</span><span class=" -Color -Color-Blue">,</span>
-    startangle<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Cyan">0</span><span class=" -Color -Color-Blue">,</span>
-    radius<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Cyan">1</span><span class=" -Color -Color-Blue">,</span>
-    counterclock<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">True</span><span class=" -Color -Color-Blue">,</span>
-    wedgeprops<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
-    textprops<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
-    center<span class=" -Color -Color-Blue">=(</span><span class=" -Color -Color-Cyan">0</span><span class=" -Color -Color-Blue">,</span> <span class=" -Color -Color-Cyan">0</span><span class=" -Color -Color-Blue">),</span>
-    frame<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">False</span><span class=" -Color -Color-Blue">,</span>
-    rotatelabels<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">False</span><span class=" -Color -Color-Blue">,</span>
-    <span class=" -Color -Color-Blue">*,</span>
-    normalize<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
-    data<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
-<span class=" -Color -Color-Blue">)</span>
-<span class=" -Color -Color-Red">Docstring:</span>
-Plot a pie chart.
-
-Make a pie chart of array *x*.  The fractional area of each wedge is
-given by ``x/sum(x)``.  If ``sum(x) &lt; 1``, then the values of *x* give
-the fractional area directly and the array will not be normalized. The
-resulting pie will have an empty wedge of size ``1 - sum(x)``.
-
-The wedges are plotted counterclockwise, by default starting from the
-x-axis.
-
-Parameters
-----------
-x : 1D array-like
-    The wedge sizes.
-
-explode : array-like, default: None
-    If not *None*, is a ``len(x)`` array which specifies the fraction
-    of the radius with which to offset each wedge.
-
-labels : list, default: None
-    A sequence of strings providing the labels for each wedge
-
-colors : array-like, default: None
-    A sequence of colors through which the pie chart will cycle.  If
-    *None*, will use the colors in the currently active cycle.
-
-autopct : None or str or callable, default: None
-    If not *None*, is a string or function used to label the wedges
-    with their numeric value.  The label will be placed inside the
-    wedge.  If it is a format string, the label will be ``fmt % pct``.
-    If it is a function, it will be called.
-
-pctdistance : float, default: 0.6
-    The ratio between the center of each pie slice and the start of
-    the text generated by *autopct*.  Ignored if *autopct* is *None*.
-
-shadow : bool, default: False
-    Draw a shadow beneath the pie.
-
-normalize: None or bool, default: None
-    When *True*, always make a full pie by normalizing x so that
-    ``sum(x) == 1``. *False* makes a partial pie if ``sum(x) &lt;= 1``
-    and raises a `ValueError` for ``sum(x) &gt; 1``.
-
-    When *None*, defaults to *True* if ``sum(x) &gt;= 1`` and *False* if
-    ``sum(x) &lt; 1``.
-
-    Please note that the previous default value of *None* is now
-    deprecated, and the default will change to *True* in the next
-    release. Please pass ``normalize=False`` explicitly if you want to
-    draw a partial pie.
-
-labeldistance : float or None, default: 1.1
-    The radial distance at which the pie labels are drawn.
-    If set to ``None``, label are not drawn, but are stored for use in
-    ``legend()``
-
-startangle : float, default: 0 degrees
-    The angle by which the start of the pie is rotated,
-    counterclockwise from the x-axis.
-
-radius : float, default: 1
-    The radius of the pie.
-
-counterclock : bool, default: True
-    Specify fractions direction, clockwise or counterclockwise.
-
-wedgeprops : dict, default: None
-    Dict of arguments passed to the wedge objects making the pie.
-    For example, you can pass in ``wedgeprops = {&#39;linewidth&#39;: 3}``
-    to set the width of the wedge border lines equal to 3.
-    For more details, look at the doc/arguments of the wedge object.
-    By default ``clip_on=False``.
-
-textprops : dict, default: None
-    Dict of arguments to pass to the text objects.
-
-center : (float, float), default: (0, 0)
-    The coordinates of the center of the chart.
-
-frame : bool, default: False
-    Plot axes frame with the chart if true.
-
-rotatelabels : bool, default: False
-    Rotate each label to the angle of the corresponding slice if true.
-
-Returns
--------
-patches : list
-    A sequence of `matplotlib.patches.Wedge` instances
-
-texts : list
-    A list of the label `.Text` instances.
-
-autotexts : list
-    A list of `.Text` instances for the numeric labels. This will only
-    be returned if the parameter *autopct* is not *None*.
-
-Notes
------
-The pie chart will probably look best if the figure and axes are
-square, or the Axes aspect is equal.
-This method sets the aspect ratio of the axis to &quot;equal&quot;.
-The axes aspect ratio can be controlled with `.Axes.set_aspect`.
-
-.. note::
-    In addition to the above described arguments, this function can take
-    a *data* keyword argument. If such a *data* argument is given,
-    the following arguments can also be string ``s``, which is
-    interpreted as ``data[s]`` (unless this raises an exception):
-    *x*, *explode*, *labels*, *colors*.
-
-    Objects passed as **data** must support item access (``data[s]``) and
-    membership test (``s in data``).
-<span class=" -Color -Color-Red">File:</span>      ~/anaconda3/envs/IPC-2020-21/lib/python3.7/site-packages/matplotlib/pyplot.py
-<span class=" -Color -Color-Red">Type:</span>      function
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Retire o comentário da linha abaixo para ver a documentação</span>
+<span class="c1">#pie?</span>
 </pre></div>
 </div>
 </div>
@@ -946,12 +735,12 @@ The axes aspect ratio can be controlled with `.Axes.set_aspect`.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>([&lt;matplotlib.patches.Wedge at 0x7f8d5e38e790&gt;,
-  &lt;matplotlib.patches.Wedge at 0x7f8d5e38ee10&gt;,
-  &lt;matplotlib.patches.Wedge at 0x7f8d5df83190&gt;,
-  &lt;matplotlib.patches.Wedge at 0x7f8d5df83710&gt;,
-  &lt;matplotlib.patches.Wedge at 0x7f8d5df83fd0&gt;,
-  &lt;matplotlib.patches.Wedge at 0x7f8d5df6e750&gt;],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>([&lt;matplotlib.patches.Wedge at 0x7fde518aa310&gt;,
+  &lt;matplotlib.patches.Wedge at 0x7fde12845110&gt;,
+  &lt;matplotlib.patches.Wedge at 0x7fde128456d0&gt;,
+  &lt;matplotlib.patches.Wedge at 0x7fde12845c90&gt;,
+  &lt;matplotlib.patches.Wedge at 0x7fde127d1350&gt;,
+  &lt;matplotlib.patches.Wedge at 0x7fde127d1a10&gt;],
  [Text(0.17207795223283864, 1.086457168210212, &#39;45&#39;),
   Text(-0.8899187180267097, -0.6465637441936393, &#39;30&#39;),
   Text(0.3399186987098807, -1.0461621663333946, &#39;10&#39;),
@@ -960,7 +749,8 @@ The axes aspect ratio can be controlled with `.Axes.set_aspect`.
   Text(1.0994572168309389, -0.03455182134657518, &#39;1&#39;)])
 </pre></div>
 </div>
-<img alt="../../_images/Introdução_54_1.svg" src="../../_images/Introdução_54_1.svg" /></div>
+<img alt="../../_images/Introdução_56_1.png" src="../../_images/Introdução_56_1.png" />
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -971,285 +761,8 @@ The axes aspect ratio can be controlled with `.Axes.set_aspect`.
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">?</span>dataplot
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Signature:</span> dataplot<span class=" -Color -Color-Blue">(*</span>args<span class=" -Color -Color-Blue">,</span> scalex<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">True</span><span class=" -Color -Color-Blue">,</span> scaley<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">True</span><span class=" -Color -Color-Blue">,</span> data<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span> <span class=" -Color -Color-Blue">**</span>kwargs<span class=" -Color -Color-Blue">)</span>
-<span class=" -Color -Color-Red">Docstring:</span>
-Plot y versus x as lines and/or markers.
-
-Call signatures::
-
-    plot([x], y, [fmt], *, data=None, **kwargs)
-    plot([x], y, [fmt], [x2], y2, [fmt2], ..., **kwargs)
-
-The coordinates of the points or line nodes are given by *x*, *y*.
-
-The optional parameter *fmt* is a convenient way for defining basic
-formatting like color, marker and linestyle. It&#39;s a shortcut string
-notation described in the *Notes* section below.
-
-&gt;&gt;&gt; plot(x, y)        # plot x and y using default line style and color
-&gt;&gt;&gt; plot(x, y, &#39;bo&#39;)  # plot x and y using blue circle markers
-&gt;&gt;&gt; plot(y)           # plot y using x as index array 0..N-1
-&gt;&gt;&gt; plot(y, &#39;r+&#39;)     # ditto, but with red plusses
-
-You can use `.Line2D` properties as keyword arguments for more
-control on the appearance. Line properties and *fmt* can be mixed.
-The following two calls yield identical results:
-
-&gt;&gt;&gt; plot(x, y, &#39;go--&#39;, linewidth=2, markersize=12)
-&gt;&gt;&gt; plot(x, y, color=&#39;green&#39;, marker=&#39;o&#39;, linestyle=&#39;dashed&#39;,
-...      linewidth=2, markersize=12)
-
-When conflicting with *fmt*, keyword arguments take precedence.
-
-
-**Plotting labelled data**
-
-There&#39;s a convenient way for plotting objects with labelled data (i.e.
-data that can be accessed by index ``obj[&#39;y&#39;]``). Instead of giving
-the data in *x* and *y*, you can provide the object in the *data*
-parameter and just give the labels for *x* and *y*::
-
-&gt;&gt;&gt; plot(&#39;xlabel&#39;, &#39;ylabel&#39;, data=obj)
-
-All indexable objects are supported. This could e.g. be a `dict`, a
-`pandas.DataFrame` or a structured numpy array.
-
-
-**Plotting multiple sets of data**
-
-There are various ways to plot multiple sets of data.
-
-- The most straight forward way is just to call `plot` multiple times.
-  Example:
-
-  &gt;&gt;&gt; plot(x1, y1, &#39;bo&#39;)
-  &gt;&gt;&gt; plot(x2, y2, &#39;go&#39;)
-
-- Alternatively, if your data is already a 2d array, you can pass it
-  directly to *x*, *y*. A separate data set will be drawn for every
-  column.
-
-  Example: an array ``a`` where the first column represents the *x*
-  values and the other columns are the *y* columns::
-
-  &gt;&gt;&gt; plot(a[0], a[1:])
-
-- The third way is to specify multiple sets of *[x]*, *y*, *[fmt]*
-  groups::
-
-  &gt;&gt;&gt; plot(x1, y1, &#39;g^&#39;, x2, y2, &#39;g-&#39;)
-
-  In this case, any additional keyword argument applies to all
-  datasets. Also this syntax cannot be combined with the *data*
-  parameter.
-
-By default, each line is assigned a different style specified by a
-&#39;style cycle&#39;. The *fmt* and line property parameters are only
-necessary if you want explicit deviations from these defaults.
-Alternatively, you can also change the style cycle using
-:rc:`axes.prop_cycle`.
-
-
-Parameters
-----------
-x, y : array-like or scalar
-    The horizontal / vertical coordinates of the data points.
-    *x* values are optional and default to ``range(len(y))``.
-
-    Commonly, these parameters are 1D arrays.
-
-    They can also be scalars, or two-dimensional (in that case, the
-    columns represent separate data sets).
-
-    These arguments cannot be passed as keywords.
-
-fmt : str, optional
-    A format string, e.g. &#39;ro&#39; for red circles. See the *Notes*
-    section for a full description of the format strings.
-
-    Format strings are just an abbreviation for quickly setting
-    basic line properties. All of these and more can also be
-    controlled by keyword arguments.
-
-    This argument cannot be passed as keyword.
-
-data : indexable object, optional
-    An object with labelled data. If given, provide the label names to
-    plot in *x* and *y*.
-
-    .. note::
-        Technically there&#39;s a slight ambiguity in calls where the
-        second label is a valid *fmt*. ``plot(&#39;n&#39;, &#39;o&#39;, data=obj)``
-        could be ``plt(x, y)`` or ``plt(y, fmt)``. In such cases,
-        the former interpretation is chosen, but a warning is issued.
-        You may suppress the warning by adding an empty format string
-        ``plot(&#39;n&#39;, &#39;o&#39;, &#39;&#39;, data=obj)``.
-
-Returns
--------
-list of `.Line2D`
-    A list of lines representing the plotted data.
-
-Other Parameters
-----------------
-scalex, scaley : bool, default: True
-    These parameters determine if the view limits are adapted to the
-    data limits. The values are passed on to `autoscale_view`.
-
-**kwargs : `.Line2D` properties, optional
-    *kwargs* are used to specify properties like a line label (for
-    auto legends), linewidth, antialiasing, marker face color.
-    Example::
-
-    &gt;&gt;&gt; plot([1, 2, 3], [1, 2, 3], &#39;go-&#39;, label=&#39;line 1&#39;, linewidth=2)
-    &gt;&gt;&gt; plot([1, 2, 3], [1, 4, 9], &#39;rs&#39;, label=&#39;line 2&#39;)
-
-    If you make multiple lines with one plot call, the kwargs
-    apply to all those lines.
-
-    Here is a list of available `.Line2D` properties:
-
-    Properties:
-    agg_filter: a filter function, which takes a (m, n, 3) float array and a dpi value, and returns a (m, n, 3) array
-    alpha: float or None
-    animated: bool
-    antialiased or aa: bool
-    clip_box: `.Bbox`
-    clip_on: bool
-    clip_path: Patch or (Path, Transform) or None
-    color or c: color
-    contains: unknown
-    dash_capstyle: {&#39;butt&#39;, &#39;round&#39;, &#39;projecting&#39;}
-    dash_joinstyle: {&#39;miter&#39;, &#39;round&#39;, &#39;bevel&#39;}
-    dashes: sequence of floats (on/off ink in points) or (None, None)
-    data: (2, N) array or two 1D arrays
-    drawstyle or ds: {&#39;default&#39;, &#39;steps&#39;, &#39;steps-pre&#39;, &#39;steps-mid&#39;, &#39;steps-post&#39;}, default: &#39;default&#39;
-    figure: `.Figure`
-    fillstyle: {&#39;full&#39;, &#39;left&#39;, &#39;right&#39;, &#39;bottom&#39;, &#39;top&#39;, &#39;none&#39;}
-    gid: str
-    in_layout: bool
-    label: object
-    linestyle or ls: {&#39;-&#39;, &#39;--&#39;, &#39;-.&#39;, &#39;:&#39;, &#39;&#39;, (offset, on-off-seq), ...}
-    linewidth or lw: float
-    marker: marker style string, `~.path.Path` or `~.markers.MarkerStyle`
-    markeredgecolor or mec: color
-    markeredgewidth or mew: float
-    markerfacecolor or mfc: color
-    markerfacecoloralt or mfcalt: color
-    markersize or ms: float
-    markevery: None or int or (int, int) or slice or List[int] or float or (float, float) or List[bool]
-    path_effects: `.AbstractPathEffect`
-    picker: unknown
-    pickradius: float
-    rasterized: bool or None
-    sketch_params: (scale: float, length: float, randomness: float)
-    snap: bool or None
-    solid_capstyle: {&#39;butt&#39;, &#39;round&#39;, &#39;projecting&#39;}
-    solid_joinstyle: {&#39;miter&#39;, &#39;round&#39;, &#39;bevel&#39;}
-    transform: `matplotlib.transforms.Transform`
-    url: str
-    visible: bool
-    xdata: 1D array
-    ydata: 1D array
-    zorder: float
-
-See Also
---------
-scatter : XY scatter plot with markers of varying size and/or color (
-    sometimes also called bubble chart).
-
-Notes
------
-**Format Strings**
-
-A format string consists of a part for color, marker and line::
-
-    fmt = &#39;[marker][line][color]&#39;
-
-Each of them is optional. If not provided, the value from the style
-cycle is used. Exception: If ``line`` is given, but no ``marker``,
-the data will be a line without markers.
-
-Other combinations such as ``[color][marker][line]`` are also
-supported, but note that their parsing may be ambiguous.
-
-**Markers**
-
-=============    ===============================
-character        description
-=============    ===============================
-``&#39;.&#39;``          point marker
-``&#39;,&#39;``          pixel marker
-``&#39;o&#39;``          circle marker
-``&#39;v&#39;``          triangle_down marker
-``&#39;^&#39;``          triangle_up marker
-``&#39;&lt;&#39;``          triangle_left marker
-``&#39;&gt;&#39;``          triangle_right marker
-``&#39;1&#39;``          tri_down marker
-``&#39;2&#39;``          tri_up marker
-``&#39;3&#39;``          tri_left marker
-``&#39;4&#39;``          tri_right marker
-``&#39;s&#39;``          square marker
-``&#39;p&#39;``          pentagon marker
-``&#39;*&#39;``          star marker
-``&#39;h&#39;``          hexagon1 marker
-``&#39;H&#39;``          hexagon2 marker
-``&#39;+&#39;``          plus marker
-``&#39;x&#39;``          x marker
-``&#39;D&#39;``          diamond marker
-``&#39;d&#39;``          thin_diamond marker
-``&#39;|&#39;``          vline marker
-``&#39;_&#39;``          hline marker
-=============    ===============================
-
-**Line Styles**
-
-=============    ===============================
-character        description
-=============    ===============================
-``&#39;-&#39;``          solid line style
-``&#39;--&#39;``         dashed line style
-``&#39;-.&#39;``         dash-dot line style
-``&#39;:&#39;``          dotted line style
-=============    ===============================
-
-Example format strings::
-
-    &#39;b&#39;    # blue markers with default shape
-    &#39;or&#39;   # red circles
-    &#39;-g&#39;   # green solid line
-    &#39;--&#39;   # dashed line with default color
-    &#39;^k:&#39;  # black triangle_up markers connected by a dotted line
-
-**Colors**
-
-The supported color abbreviations are the single letter codes
-
-=============    ===============================
-character        color
-=============    ===============================
-``&#39;b&#39;``          blue
-``&#39;g&#39;``          green
-``&#39;r&#39;``          red
-``&#39;c&#39;``          cyan
-``&#39;m&#39;``          magenta
-``&#39;y&#39;``          yellow
-``&#39;k&#39;``          black
-``&#39;w&#39;``          white
-=============    ===============================
-
-and the ``&#39;CN&#39;`` colors that index into the default property cycle.
-
-If the color is the only part of the format string, you can
-additionally use any  `matplotlib.colors` spec, e.g. full names
-(``&#39;green&#39;``) or hex strings (``&#39;#008000&#39;``).
-<span class=" -Color -Color-Red">File:</span>      ~/anaconda3/envs/IPC-2020-21/lib/python3.7/site-packages/matplotlib/pyplot.py
-<span class=" -Color -Color-Red">Type:</span>      function
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Retire o comentário da linha abaixo para ver a documentação</span>
+<span class="c1">#?dataplot</span>
 </pre></div>
 </div>
 </div>
@@ -1261,10 +774,11 @@ additionally use any  `matplotlib.colors` spec, e.g. full names
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f8d5e17a790&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fde127ee150&gt;]
 </pre></div>
 </div>
-<img alt="../../_images/Introdução_57_1.svg" src="../../_images/Introdução_57_1.svg" /></div>
+<img alt="../../_images/Introdução_59_1.png" src="../../_images/Introdução_59_1.png" />
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1273,10 +787,11 @@ additionally use any  `matplotlib.colors` spec, e.g. full names
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f8d5e140b50&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fde1276ebd0&gt;]
 </pre></div>
 </div>
-<img alt="../../_images/Introdução_58_1.svg" src="../../_images/Introdução_58_1.svg" /></div>
+<img alt="../../_images/Introdução_60_1.png" src="../../_images/Introdução_60_1.png" />
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1285,10 +800,11 @@ additionally use any  `matplotlib.colors` spec, e.g. full names
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f8d5dd5d5d0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fde126df8d0&gt;]
 </pre></div>
 </div>
-<img alt="../../_images/Introdução_59_1.svg" src="../../_images/Introdução_59_1.svg" /></div>
+<img alt="../../_images/Introdução_61_1.png" src="../../_images/Introdução_61_1.png" />
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1300,10 +816,11 @@ additionally use any  `matplotlib.colors` spec, e.g. full names
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f8d5de8f3d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fde126c4f90&gt;
 </pre></div>
 </div>
-<img alt="../../_images/Introdução_60_1.svg" src="../../_images/Introdução_60_1.svg" /></div>
+<img alt="../../_images/Introdução_62_1.png" src="../../_images/Introdução_62_1.png" />
+</div>
 </div>
 </div>
 </div>

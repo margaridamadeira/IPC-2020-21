@@ -177,26 +177,30 @@ log(e**5)
 
 log2(1024)-log10(1000)
 
-Outro exemplo do que usaremos é *Matplotlib*.
+Outro exemplo do que usaremos é *Matplotlib*.  
+Para ver a descrição, edite a linha abaixo e remova o comentário, isto é, apague o caracter '#'
 
-?matplotlib
+#matplotlib?
 
-No futuro, para se trabalhar com vetores e matrizes, poderíamos usar *NumPy* ou outras alternativas.
+No futuro, para se trabalhar com vetores e matrizes, podemos usar *NumPy* ou outras alternativas. 
 
-A instrução precedida de % é aquilo a que na terminologia do IPython se denomina *magic*, uma extensão à linguagem Python que facilita a interacção com o sistema. Introduziremos, quando necessário, outras magias do IPython.
-
-Neste caso e apenas para efeitos de demonstração, ativamos o matplotlib. No futuro, em vez de trazermos a caixa de ferramentas toda, escolhemos a ferramenta que precisamos.
+A instrução precedida de % é aquilo a que na terminologia do IPython se denomina *magic*, uma extensão à linguagem Python que facilita a interacção com o sistema. Introduziremos, quando necessário, outras magias do IPython. Para vermos os gráficos nesta página, fazemos
 
 %matplotlib inline
 
-E já temos mais funcionalidades disponíveis, por exemplo, para gerar gráficos.
+Neste caso e para efeitos de demonstração, precisamos de algumas *peças*. 
+
+import numpy as np
+from matplotlib.pyplot import plot, pie, axis, legend
+
+E já temos algumas funcionalidades disponíveis, por exemplo, para gerar gráficos.
 
 #### Geração de gráficos
 
 A representação gráfica é uma parte importante e, felizmente, não é complicada.
 Vejamos como faríamos para representar a função $f(x) = x² $ quando o conjunto de partida é $ \{0, 1, 2, 3, 4, 5 \} $
 
-x = arange(6) # 
+x = np.arange(6) # 
 
 # O que está afinal no eixo do x
 print (x)
@@ -205,19 +209,21 @@ plot(x, x**2)
 
 E como faríamos para representar as funções seno e coseno no mesmo gráfico?
 
-x=arange(0,10,0.1); 
+x=np.arange(0,10,0.1); 
 
-plot(x, sin(x), 'r', x, 1+cos(x),'b')
+plot(x, np.sin(x), 'r', x, np.cos(x),'b')
 
 Há outros tipos de gráficos para além do *plot*, e quando chegarmos lá veremos melhor. Uma *espreitadela* rápida ao que seremos capazes de fazer.
 
-?pie
+# Retire o comentário da linha abaixo para ver a documentação
+#pie?
 
 pie([45,30,10,10,4,1], labels=[45,30,10,19,4,1],frame=0)
 
 from matplotlib.pyplot import plot as dataplot 
 
-?dataplot
+# Retire o comentário da linha abaixo para ver a documentação
+#?dataplot
 
 dataplot([1,2,3,4,5])
 
