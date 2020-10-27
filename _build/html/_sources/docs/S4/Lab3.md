@@ -1,316 +1,134 @@
-# Lab2
+# Lab3
 
 ## Objetivos de aprendizagem
 
 Com este guião, exercitaremos:
 
-1. a validação de dados de entrada
-1. o uso de condições no controlo de fluxo do programa (com *if* e *while*) 
-1. o desenvolvimento de programas
+1. a utilização de strings
+1. o uso de condições no controlo de fluxo do programa (*if*, *while* e *for*) 
+1. a utilização de funções do Python
 
 e continuaremos a usar o Mooshak para verificar o resultado dos programas desenvolvidos.
 
-## Enunciado
-- http://rosalind.info/problems/dna/
-- http://rosalind.info/problems/rna/
-- http://rosalind.info/problems/revc/
+
+
 ### Tarefa A
 
-Na aula teórica vimos o desenvolvimento de funções para o cálculo do fatorial de um número. 
-Pretendemos agora incluir uma dessas funções num programa ( cf. {ref}`ResProgrCompl`), incluindo na função de teste a verificação de que a entrada é válida.
+Considere o [problema do DNA](http://rosalind.info/problems/dna/) em que se pretende apresentar, numa única linha, o número de carateres 'A', 'C', 'G' e 'T' existentes numa string.
 
-Note que o fatorial de um número está definido para números inteiros positivos ($N_0^+$). Ou seja, não se aceitam valores negativos ou strings. 
+Sabendo que não existem linhas vazias, prepare uma solução que contenha a função visada e uma função de teste para a leitura de uma linha e escrita da resposta.
 
-Assim, se o cálculo não puder ser efetuado, o seu programa deverá produzir a mensagem (sem as aspas):
-    "A função fatorial está definida para números inteiros maiores ou iguais a zero."
-a um pedido de cálculo ilegal.
+Dica:
 
-Prepare então um programa calcule o fatorial de um número e valide os dados de entrada.
-
-**Dicas**:
-
-Veja a ajuda sobre a função *str.isnumeric*
-
-Para os diferentes casos de input, experimente na consola do Spyder:
 ```
-temp = input()
-temp.isnumeric()
+nome = 'Maria'
+apelido = 'Moura'
+nome_completo = nome + ' ' + apelido
 ```
+
 
 #### Casos de teste 
 
 **Input 1**
 
 ```
-5
+AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC
 ```
 
 **Output 1**
 
 ```
-120
+20 12 17 21
 ```
 
 **Input 2**
 
 ```
-5.0
+AGATTTTAATTATGAATGAAAAGGGAAATATGTATATGTGTGGATTAAAAAAAGAGTGTATGATAGAAGA
 ```
 
 **Output 2**
 
 ```
-A função fatorial está definida para números inteiros maiores ou iguais a zero.
-```
-
-**Input 3**
-
-```
--5
-```
-
-**Output 3**
-
-```
-A função fatorial está definida para números inteiros maiores ou iguais a zero.
-```
-
-**Input 4**
-
-```
-asd
-```
-
-**Output 4**
-
-```
-A função fatorial está definida para números inteiros maiores ou iguais a zero.
+32 0 17 21
 ```
 
 
-Submeta no problema A do Lab2.
+Submeta no problema A do Lab3.
 
 ### Tarefa B
 
-Pretende-se determinar os números pares de um intervalo. Para o efeito, considere o esboço apresentado em *proto_B.py*
+Considere agora a [transcrição de DNA para RNA](http://rosalind.info/problems/rna/) em que se pretende obter uma string $u$ a partir de uma string $t$, sendo que as ocorrências do carater 'T' em $t$ são substituídas por 'U' em $u$.
 
-```
-# -*- coding: utf-8 -*-
+Sabendo que não existem linhas vazias, prepare uma solução que contenha a função visada e uma função de teste para a leitura de uma linha e escrita da resposta.
 
-"""
-Determinar os números pares de um intervalo
-(c) Margarida Madeira e Moura, 2020
-"""
-
-def par(n):
-    """Função que determina se um número é par.
-    
-    par(n) devolve True se n for par; caso contrário, devolve False"""
-    ## Apague esta linha e acrescente aqui o seu código
-
-def escreve(n):
-    """Função que imprime um valor"""
-    print(n)
-    
-def test_par():
-    """Função de teste da função par
-    Apresenta o valor sse o número for par"""
-    x = int(input())
-    if (par(x)):
-        escreve(x)
-
-def pares_intervalo(x, y):
-    """Função que apresenta os números pares de um intervalo"""
-    
-    ## Apague esta linha e acrescente aqui o seu código
-
-
-def test_intervalo_inteiros():
-    """Função que lê os valores extremos de um intervalo de números inteiros"""
-    x = int(input())
-    y = int(input())
-    valido = False
-    # acrescente a validação
-    # # x tem que ser inferior a y
-    if (valido):
-        pares_intervalo(x,y)
-    else:
-        print('Valores inválidos.')
-
-if __name__ == '__main__':
-    test_par()
-    # test_intervalo_inteiros()
-
-```
-
-
-Comece por completar a função *par*. 
-
-Depois, comente a chamada à função *test_par* e descomente a linha seguinte que contém a chamada à função *test_intervalo_inteiros*. 
-
-Depois, conclua a validação na função *test_intervalo_inteiros* e, finalmente, complete a função *pares_intervalo*.
-
-#### Casos de teste
+#### Casos de teste 
 
 **Input 1**
 
 ```
-1
-5
+GATGGAACTTGACTACGTAAATT
 ```
 
 **Output 1**
 
 ```
-2
-4
+GAUGGAACUUGACUACGUAAAUU
 ```
 
 **Input 2**
 
 ```
-10
-1
+AGCAAAACAAACAGACA
 ```
 
 **Output 2**
 
 ```
-Valores inválidos.
+AGCAAAACAAACAGACA
 ```
 
-**Input 3**
-
-```
--5
--1
-```
-
-**Output 3**
-
-```
--4
--2
-```
-
-**Input 4**
-
-```
-1
-10
-```
-
-**Output 4**
-
-```
-2
-4
-6
-8
-10
-```
-
-Submeta no problema B do Lab2.
+Submeta no problema B do Lab3.
 
 ### Tarefa C
 
-Pretende-se determinar os números de um intervalo de inteiros que são múltiplos de três e múltiplos de cinco.
+Considere a determinação das [estruturas secundárias e terciárias](http://rosalind.info/problems/revc/) de DNA. 
 
-#### Casos de teste
+Numa string de DNA os símbolos 'A' e 'T' são complementares assim como os símbolos 'C' e 'G'. Pretende-se, a partir de uma string de DNA $s$, obter a string $s^c$ o que é conseguido pela inversão dos símbolos de $s$ e substituição de cada símbolo pelo símbolo complementar.
+
+Sabendo que não existem linhas vazias, prepare uma solução que contenha a função visada e uma função de teste para a leitura de uma linha e escrita da resposta.
+
+#### Casos de teste 
 
 **Input 1**
 
 ```
-1
-20
+GTCA
+
 ```
 
 **Output 1**
 
 ```
-15
+TGAC
 ```
 
 **Input 2**
 
 ```
-10
-1
+AAAACCCGGT
 ```
 
 **Output 2**
 
 ```
-Valores inválidos.
+ACCGGGTTTT
 ```
 
-Submeta no problema C do Lab2.
-
-### Tarefa D
-
-Pretende-se determinar um termo da [sequência de Fibonacci](https://www.wolframalpha.com/input/?i=fibonacci+sequence).
-
-Prepare um programa que leia um inteiro $n$ e apresente o $n$-ésimo termo da sequência $F(n)$, considerando que
-
-$ F(n) = F(n-1) + F(n-2)$ para $n \in N_0^+ $
-
-sendo 
-
-$F(0) = 0$ e $ F(1) = 1$.
-
-Se o termo pedido não for válido, o programa apresenta a mensagem "Valor inválido." (sem as aspas).
-
-Inclua a validação do inteiro lido na função de teste.
-
-#### Casos de teste
-
-**Input 1**
-
-```
--5
-```
-
-**Output 1**
-
-```
-Valor inválido.
-```
-
-**Input 2**
-
-```
-0
-```
-
-**Output 2**
-
-```
-0
-```
-
-**Input 3**
-
-```
-1
-```
-
-**Output 3**
-
-```
-1
-```
-
-**Input 4**
-
-```
-7
-```
-
-**Output 4**
-
-```
-13
-```
+Submeta no problema C do Lab3.
 
 
-Submeta no problema D do Lab2.
+
+## Referências 
+
+As tarefas A, B e C são inspiradas nos exercícios da plataforma [Rosalind](http://rosalind.info/problems/locations/), sendo em cada uma das tarefas apresentada a fonte respetiva.
