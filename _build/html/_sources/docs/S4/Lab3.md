@@ -92,11 +92,11 @@ Submeta no problema B do Lab3.
 
 ### Tarefa C
 
-Considere a determinação das [estruturas secundárias e terciárias](http://rosalind.info/problems/revc/) de DNA. 
+Considere a determinação do [complemento de uma cadeia](http://rosalind.info/problems/revc/) de DNA. 
 
 Numa string de DNA os símbolos 'A' e 'T' são complementares assim como os símbolos 'C' e 'G'. Pretende-se, a partir de uma string de DNA $s$, obter a string $s^c$ o que é conseguido pela inversão dos símbolos de $s$ e substituição de cada símbolo pelo símbolo complementar.
 
-Sabendo que não existem linhas vazias, prepare uma solução que contenha a função visada e uma função de teste para a leitura de uma linha e escrita da resposta.
+Sabendo que não existem linhas vazias, prepare uma solução que contenha a função, ou funções, visada(s) e uma função de teste para a leitura de uma linha e escrita da resposta.
 
 #### Casos de teste 
 
