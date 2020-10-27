@@ -5,7 +5,7 @@
 Com este guião, exercitaremos:
 
 1. a utilização de strings
-1. o uso de condições no controlo de fluxo do programa (*if*, *while* e *for*) 
+1. o uso de condições no controlo de fluxo do programa 
 1. a utilização de funções do Python
 
 e continuaremos a usar o Mooshak para verificar o resultado dos programas desenvolvidos.
