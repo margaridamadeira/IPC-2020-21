@@ -1,21 +1,41 @@
 
-
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Primeiros programas &#8212; IPC</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="../../_static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/spanels-index--0afa1ebdab0bb23b98b56d34c23d9f57.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/spanels-variables--ffc7f74dcb1b9eecba2dbcbc22818714.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -24,9 +44,9 @@
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
@@ -41,15 +61,15 @@
     <link rel="next" title="Programação em Python" href="../S3/ProgPython.html" />
     <link rel="prev" title="Começar a programar" href="IniciarProgramar.html" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="docsearch:language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
 
 
 <!-- Opengraph tags -->
 <meta property="og:url"         content="https://margaridamadeira.github.io/IPC-2020-21/docs/S2/Temperaturas.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Primeiros programas" />
-<meta property="og:description" content="Primeiros programas  Tema: Sistema métrico internacional (SI units).  Temperatura  Cartoon kelvin  Eis o Dr. Kelvin. Sim, o tema de hoje é a conversão de temper" />
+<meta property="og:description" content="Primeiros programas  Tema: Sistema métrico internacional SI units.  Temperatura  Eis o Dr. Kelvin. Sim, o tema de hoje é a conversão de temperatura entre várias" />
 <meta property="og:image"       content="https://margaridamadeira.github.io/IPC-2020-21/_static/IPC_wc.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -88,12 +108,12 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../Pre/Apresentação.html">
+  <a class="reference internal" href="../Pre/Apresenta%C3%A7%C3%A3o.html">
    Apresentação geral
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Pre/Familiarização.html">
+  <a class="reference internal" href="../Pre/Familiariza%C3%A7%C3%A3o.html">
    Sobre a parte prática
   </a>
  </li>
@@ -105,7 +125,7 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../S1/Introdução.html">
+  <a class="reference internal" href="../S1/Introdu%C3%A7%C3%A3o.html">
    Introdução
   </a>
  </li>
@@ -144,7 +164,7 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../S3/SubmissãoMooshak.html">
+  <a class="reference internal" href="../S3/Submiss%C3%A3oMooshak.html">
    Submissão ao Mooshak
   </a>
  </li>
@@ -178,6 +198,59 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../S4/Lab3.html">
    Lab3
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 5
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S5/ProgPython3.html">
+   Programação em Python - parte 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S5/Lab4.html">
+   Lab4
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 6
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S6/FestaOutubro2019.html">
+   Festa de outubro de 2019
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 7
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S7/Festa.html">
+   Festa de Programação
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 8
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S8/Lab5.html">
+   Lab5
   </a>
  </li>
 </ul>
@@ -222,9 +295,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/docs/S2/Temperaturas.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/docs/S2/Temperaturas.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
+                data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -249,37 +322,17 @@
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/margaridamadeira/IPC-2020-21/master?urlpath=tree/docs/docs/S2/Temperaturas.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/margaridamadeira/IPC-2020-21/blob/master/docs/docs/S2/Temperaturas.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="../../_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
 
     </div>
 
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
+        
         <div class="tocsection onthispage pt-5 pb-3">
             <i class="fas fa-list"></i> Contents
         </div>
@@ -309,24 +362,23 @@
     <a class="reference internal nav-link" href="#tarefa-4">
      Tarefa 4
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#tarefa-5">
-       Tarefa 5
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#tarefa-6">
-       Tarefa 6
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tarefa-5">
+     Tarefa 5
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tarefa-6">
+     Tarefa 6
+    </a>
    </li>
   </ul>
  </li>
 </ul>
 
         </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -336,14 +388,12 @@
                 
   <div class="section" id="primeiros-programas">
 <h1>Primeiros programas<a class="headerlink" href="#primeiros-programas" title="Permalink to this headline">¶</a></h1>
-<p>Tema: Sistema métrico internacional (<a class="reference external" href="https://doi.org/10.6028/NIST.SP.1247">SI units</a>).</p>
+<p>Tema: Sistema métrico internacional <a class="reference external" href="https://doi.org/10.6028/NIST.SP.1247">SI units</a>.</p>
 <div class="section" id="temperatura">
 <h2>Temperatura<a class="headerlink" href="#temperatura" title="Permalink to this headline">¶</a></h2>
-<img alt="Cartoon kelvin" src="../../_images/kelvin_front_web.jpg" />
 <p>Eis o <a class="reference external" href="https://www.nist.gov/sites/default/files/styles/220_x_220_limit/public/images/2016/08/29/kelvin_front_web.jpg?itok=1RygGZAs">Dr. Kelvin</a>. Sim, o tema de hoje é a conversão de <a class="reference external" href="https://www.nist.gov/pml/weights-and-measures/si-units-temperature">temperatura</a> entre várias unidades.</p>
-<p>A unidade padrão de medida da temperatura é kelvin (K), mas não é algo que usemos no dia-a-dia. Normalmente trabalhamos com graus Celsius (C) e alguns preferem referir-se à temperatura em graus Fahrenheit (F).</p>
-<p>Quando falamos em <em>zero absoluto</em>, estamos a referir-nos a 0 K.
-Se nos perguntarem a que temperaturas a água congela e ferve, se calhar respondemos 0⁰ e 100⁰. Felizmente que um grau Celsius corresponde a um intervalo de 1 K. Sabendo que 0⁰C corresponde a 273.15 K, já podemos converter de Celsius para kelvin e vice-versa.</p>
+<p>A unidade padrão de medida da temperatura é Kelvin (K), mas não é algo que usemos no dia-a-dia. Normalmente trabalhamos com graus Celsius (C) e alguns preferem referir-se à temperatura em graus Fahrenheit (F).</p>
+<p>Quando falamos em <em>zero absoluto</em>, estamos a referir-nos a 0 K. Se nos perguntarem a que temperaturas a água congela e ferve, se calhar respondemos 0⁰ e 100⁰. Felizmente que um grau Celsius corresponde a um intervalo de 1 K. Sabendo que 0⁰C corresponde a 273.15 K, já podemos converter de Celsius para Kelvin e vice-versa.</p>
 <p>Para a conversão de e para Fahrenheit, precisamos saber que 0⁰C corresponde a 32⁰F e que um intervalo de um grau Celsius corresponde a um intervalo de 1.8 graus Fahrenheit.</p>
 <div class="section" id="tarefa-1">
 <h3>Tarefa 1<a class="headerlink" href="#tarefa-1" title="Permalink to this headline">¶</a></h3>
@@ -360,15 +410,15 @@ Se nos perguntarem a que temperaturas a água congela e ferve, se calhar respond
 <div class="section" id="tarefa-4">
 <h3>Tarefa 4<a class="headerlink" href="#tarefa-4" title="Permalink to this headline">¶</a></h3>
 <p>Faça uma função <em>f2c</em> que converta uma temperatura em graus Fahrenheit para graus Celsius.</p>
+</div>
 <div class="section" id="tarefa-5">
-<h4>Tarefa 5<a class="headerlink" href="#tarefa-5" title="Permalink to this headline">¶</a></h4>
-<p>Usando as funções <em>k2c</em> e <em>c2f</em>, faça uma função <em>k2f</em> que converta uma temperatura em kelvin para graus Farenheit.</p>
+<h3>Tarefa 5<a class="headerlink" href="#tarefa-5" title="Permalink to this headline">¶</a></h3>
+<p>Usando as funções <em>k2c</em> e <em>c2f</em>, faça uma função k2f que converta uma temperatura em kelvin para graus Farenheit.</p>
 </div>
 <div class="section" id="tarefa-6">
-<h4>Tarefa 6<a class="headerlink" href="#tarefa-6" title="Permalink to this headline">¶</a></h4>
-<p>Usando as funções <em>f2c</em> e <em>c2k</em>, faça uma função <em>f2k</em> que converta uma temperatura em graus Fahrenheit para kelvin.</p>
+<h3>Tarefa 6<a class="headerlink" href="#tarefa-6" title="Permalink to this headline">¶</a></h3>
+<p>Usando as funções <em>f2c</em> e <em>c2k</em>, faça uma função f2k que converta uma temperatura em graus Fahrenheit para kelvin.</p>
 <p>Posteriormente serão dadas instruções para submeter este trabalho.</p>
-</div>
 </div>
 </div>
 </div>
@@ -382,16 +432,16 @@ Se nos perguntarem a que temperaturas a água congela e ferve, se calhar respond
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "Python 3.7.8 64-bit ('IPC-2020-21': conda)"
+            mode: "python"
         },
         kernelOptions: {
-            kernelName: "Python 3.7.8 64-bit ('IPC-2020-21': conda)",
+            kernelName: "python3",
             path: "./docs/S2"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'Python 3.7.8 64-bit ('IPC-2020-21': conda)'</script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
@@ -421,7 +471,10 @@ Se nos perguntarem a que temperaturas a água congela e ferve, se calhar respond
       </div>
     </div>
 
-    <script src="../../_static/js/index.js"></script>
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
     
   </body>
 </html>
