@@ -1,0 +1,500 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submissão ao Mooshak &#8212; IPC</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2020-21/docs/S3/SubmissãoMooshak.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Lab0" href="Lab0.html" />
+    <link rel="prev" title="Programação em Python" href="ProgPython.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://margaridamadeira.github.io/IPC-2020-21/docs/S3/SubmissãoMooshak.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Submissão ao Mooshak" />
+<meta property="og:description" content="Submissão ao Mooshak  Para que possamos verificar se os nossos exercícios de programação estão corretos, usaremos o Mooshak, que suporta a avaliação automática." />
+<meta property="og:image"       content="https://margaridamadeira.github.io/IPC-2020-21/_static/IPC_wc.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/IPC_wc.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">IPC</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <p class="caption">
+ <span class="caption-text">
+  Preâmbulo
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Pre/Apresenta%C3%A7%C3%A3o.html">
+   Apresentação geral
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Pre/Familiariza%C3%A7%C3%A3o.html">
+   Sobre a parte prática
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 1
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S1/Introdu%C3%A7%C3%A3o.html">
+   Introdução
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S1/Primeiros_passos.html">
+   Aula prática
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 2
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S2/IniciarProgramar.html">
+   Começar a programar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S2/Temperaturas.html">
+   Primeiros programas
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 3
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="ProgPython.html">
+   Programação em Python
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Submissão ao Mooshak
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab0.html">
+   Lab0
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab1.html">
+   Lab1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab2.html">
+   Lab2
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 4
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S4/ProgPython2.html">
+   Programação em Python - parte 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S4/Lab3.html">
+   Lab3
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 5
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S5/ProgPython3.html">
+   Programação em Python - parte 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S5/Lab4.html">
+   Lab4
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 6
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S6/FestaOutubro2019.html">
+   Festa de outubro de 2019
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 7
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S7/Festa.html">
+   Festa de Programação
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 8
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S8/Lab5.html">
+   Lab5
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/docs/S3/SubmissãoMooshak.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/margaridamadeira/IPC-2020-21"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aceder">
+   Aceder
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#entrar">
+   Entrar
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submissao">
+   Submissão
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#escolher-o-problema">
+     Escolher o problema
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#submeter-programa">
+     Submeter programa
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="submissao-ao-mooshak">
+<span id="submmooshak"></span><h1>Submissão ao Mooshak<a class="headerlink" href="#submissao-ao-mooshak" title="Permalink to this headline">¶</a></h1>
+<p>Para que possamos verificar se os nossos exercícios de programação estão corretos, usaremos o <em>Mooshak</em>, que suporta a avaliação automática. Desta forma, pode-se em submeter várias vezes cada programa e saber se os resultados estão certos. E as submissões podem ser feitas pela internet, sem ser necessário estar estar na universidade.</p>
+<p>Mas é de notar que o Mooshak só verifica se os resultados estão corretos. Para pontuar, ainda será necessário que o programa seja visto - e eventualmente discutido - com o/a professor(a).</p>
+<p>Vamos começar por ver, de forma geral, como é uma submissão.
+Depois, no Guião do Lab 0, encontrará informação detalhada para usar este concurso.</p>
+<div class="section" id="aceder">
+<h2>Aceder<a class="headerlink" href="#aceder" title="Permalink to this headline">¶</a></h2>
+<p>Começe por guardar nos favoritos do seu explorador de internet a localização onde, na nossa disciplina, faremos as <a class="reference external" href="http://deei-mooshak.ualg.pt/~mmadeira">submissões ao Mooshak</a>.</p>
+<p>Na página de apresentação (<a class="reference internal" href="#login"><span class="std std-numref">Fig. 1</span></a>), escolha <em>Login</em>.</p>
+<div class="figure align-default" id="login">
+<a class="reference internal image-reference" href="../../_images/fig1.png"><img alt="../../_images/fig1.png" src="../../_images/fig1.png" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Página de apresentação do Mooshak.</span><a class="headerlink" href="#login" title="Permalink to this image">¶</a></p>
+</div>
+<p>Verá então a página de entrada (<a class="reference internal" href="#entrada"><span class="std std-numref">Fig. 2</span></a>).</p>
+<div class="figure align-default" id="entrada">
+<a class="reference internal image-reference" href="../../_images/fig2.png"><img alt="../../_images/fig2.png" src="../../_images/fig2.png" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Página de entrada do Mooshak.</span><a class="headerlink" href="#entrada" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="entrar">
+<h2>Entrar<a class="headerlink" href="#entrar" title="Permalink to this headline">¶</a></h2>
+<p>Para entrar, escolhemos o concurso e preenchemos as credenciais, isto é, utilizador e palavra-chave.</p>
+<p>Para seguir este exemplo, escolha o concurso <strong>IPC_L0</strong> e use as credenciais que lhe foram enviadas e escolha Login (<a class="reference internal" href="#id1"><span class="std std-numref">Fig. 3</span></a>).</p>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="../../_images/fig3.png"><img alt="../../_images/fig3.png" src="../../_images/fig3.png" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Entrar no concurso</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="submissao">
+<h2>Submissão<a class="headerlink" href="#submissao" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="escolher-o-problema">
+<h3>Escolher o problema<a class="headerlink" href="#escolher-o-problema" title="Permalink to this headline">¶</a></h3>
+<p>Na sua página de submissão, use os botões do Problema para ver os enunciados (A e B na <a class="reference internal" href="#pagina-submissao"><span class="std std-numref">Fig. 4</span></a>) e escolher o problema em que vai submeter o seu programa.</p>
+<div class="figure align-default" id="pagina-submissao">
+<a class="reference internal image-reference" href="../../_images/fig4.png"><img alt="../../_images/fig4.png" src="../../_images/fig4.png" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Página de submissão.</span><a class="headerlink" href="#pagina-submissao" title="Permalink to this image">¶</a></p>
+</div>
+<p>No concurso <strong>IPC_LO</strong>, ao escolher o problema A verá a <a class="reference internal" href="#probla"><span class="std std-numref">Fig. 5</span></a></p>
+<div class="figure align-default" id="probla">
+<a class="reference internal image-reference" href="../../_images/fig5.png"><img alt="../../_images/fig5.png" src="../../_images/fig5.png" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">O problema A do concurso.</span><a class="headerlink" href="#probla" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="submeter-programa">
+<h3>Submeter programa<a class="headerlink" href="#submeter-programa" title="Permalink to this headline">¶</a></h3>
+<p>Para submeter o seu programa com a resposta ao Problema A, escolha o botão de Choose File. Escolha o ficheiro com a sua resposta e o nome do ficheiro aparecerá em frente ao botão Choose file. Selecione então o botão Submeter.</p>
+<div class="figure align-default" id="submeter">
+<a class="reference internal image-reference" href="../../_images/fig51.png"><img alt="../../_images/fig51.png" src="../../_images/fig51.png" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Submeter um programa.</span><a class="headerlink" href="#submeter" title="Permalink to this image">¶</a></p>
+</div>
+<p>É-lhe pedida a confirmação da submissão da solução</p>
+<div class="figure align-default" id="confirm">
+<a class="reference internal image-reference" href="../../_images/fig52.png"><img alt="../../_images/fig52.png" src="../../_images/fig52.png" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">Confirmação da submissão.</span><a class="headerlink" href="#confirm" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>Se o seu programa passou todos os testes, a resposta é aceite.</p></li>
+</ol>
+<div class="figure align-default" id="resultado">
+<a class="reference internal image-reference" href="../../_images/fig53.png"><img alt="../../_images/fig53.png" src="../../_images/fig53.png" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Resultado da submissão.</span><a class="headerlink" href="#resultado" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs/S3"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="ProgPython.html" title="previous page">Programação em Python</a>
+    <a class='right-next' id="next-link" href="Lab0.html" title="next page">Lab0</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Margarida Madeira e Moura<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

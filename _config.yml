@@ -7,7 +7,7 @@ logo: 'IPC_wc.png'
 #######################################################################################
 # Execution settings
 execute:
-  execute_notebooks           : cache
+  execute_notebooks           : force
 
 #######################################################################################
 # HTML-specific settings

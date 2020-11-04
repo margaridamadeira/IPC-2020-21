@@ -28,4 +28,21 @@
   - file: docs/S4/ProgPython2
   - file: docs/S4/Lab3
 
+- part: Semana 5
+  chapters:
+  - file: docs/S5/ProgPython3
+  - file: docs/S5/Lab4
+
+- part: Semana 6
+  chapters:
+  - file: docs/S6/FestaOutubro2019
+
+- part: Semana 7
+  chapters:
+  - file: docs/S7/Festa
+
+- part: Semana 8
+  chapters:
+  - file: docs/S8/Lab5
+
 
