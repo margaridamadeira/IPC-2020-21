@@ -69,7 +69,7 @@
 <meta property="og:url"         content="https://margaridamadeira.github.io/IPC-2020-21/docs/S5/ProgPython3.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Programação em Python - parte 3" />
-<meta property="og:description" content="Programação em Python - parte 3  Vamos ver mais alguns aspetos da linguagem Python, nomeadamente:  a utilização de listas  a leitura da consola, vários valores " />
+<meta property="og:description" content="Programação em Python - parte 3  Objetivos de aprendizagem  Vamos ver mais alguns aspetos da linguagem Python, nomeadamente:  a utilização de listas  a leitura " />
 <meta property="og:image"       content="https://margaridamadeira.github.io/IPC-2020-21/_static/IPC_wc.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -225,6 +225,11 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
+  <a class="reference internal" href="../S6/ProgPython4.html">
+   Programação em Python - parte 4
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../S6/FestaOutubro2019.html">
    Festa de outubro de 2019
   </a>
@@ -356,6 +361,11 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objetivos-de-aprendizagem">
+   Objetivos de aprendizagem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tipo-de-dados-lista">
    Tipo de dados: lista
   </a>
@@ -387,22 +397,17 @@
        Introdução
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#range">
-       Range
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#outros-usos-de-listas">
-       Outros usos de listas
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#exemplo">
-       Exemplo
-      </a>
-     </li>
     </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uso-de-lista-e-range">
+     Uso de lista e range
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemplo">
+     Exemplo
+    </a>
    </li>
   </ul>
  </li>
@@ -429,12 +434,15 @@
                 
   <div class="section" id="programacao-em-python-parte-3">
 <h1>Programação em Python - parte 3<a class="headerlink" href="#programacao-em-python-parte-3" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="objetivos-de-aprendizagem">
+<h2>Objetivos de aprendizagem<a class="headerlink" href="#objetivos-de-aprendizagem" title="Permalink to this headline">¶</a></h2>
 <p>Vamos ver mais alguns aspetos da linguagem Python, nomeadamente:</p>
 <ol class="simple">
 <li><p>a utilização de listas</p></li>
 <li><p>a leitura da consola, vários valores por linha e até ao fim dos dados</p></li>
 <li><p>escrita formatada</p></li>
 </ol>
+</div>
 <div class="section" id="tipo-de-dados-lista">
 <h2>Tipo de dados: lista<a class="headerlink" href="#tipo-de-dados-lista" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="recordemos">
@@ -871,8 +879,9 @@ Experimente, no Spyder, fazer</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="range">
-<h4>Range<a class="headerlink" href="#range" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="uso-de-lista-e-range">
+<h3>Uso de lista e range<a class="headerlink" href="#uso-de-lista-e-range" title="Permalink to this headline">¶</a></h3>
 <p>Já falámos de <em>range</em>. Na verdade, <strong>range</strong> é um tipo (uma classe) e representa uma sequência imutável de números inteiros e é muito útil para ciclos específicos.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -927,9 +936,6 @@ Experimente, no Spyder, fazer</p>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="outros-usos-de-listas">
-<h4>Outros usos de listas<a class="headerlink" href="#outros-usos-de-listas" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">quadrados</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
@@ -945,7 +951,7 @@ Experimente, no Spyder, fazer</p>
 </div>
 </div>
 <div class="section" id="exemplo">
-<h4>Exemplo<a class="headerlink" href="#exemplo" title="Permalink to this headline">¶</a></h4>
+<h3>Exemplo<a class="headerlink" href="#exemplo" title="Permalink to this headline">¶</a></h3>
 <p>Neste outro exemplo, queremos saber qual é o maior elemento da lista e onde está.
 Não vamos fazer duas funções, devolvemos dois valores a partir da mesma função.</p>
 <p>Saber qual é o maior elemento consegue-se com uma estratégia simples: é o último elemento de uma lista ordenada.</p>
@@ -1096,7 +1102,6 @@ O maior elemento é o 7 e está na posição 2
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x = 7  y = 2
 </pre></div>
-</div>
 </div>
 </div>
 </div>
