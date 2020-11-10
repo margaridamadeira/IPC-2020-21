@@ -3,6 +3,8 @@
 
 # # Programação em Python - parte 3
 # 
+# ## Objetivos de aprendizagem 
+# 
 # Vamos ver mais alguns aspetos da linguagem Python, nomeadamente:
 # 
 # 
@@ -301,8 +303,8 @@ t_lista
 #         list.<Tab>
 #         primos_até_10.<Tab>
 
-# #### Range
-# 
+# ### Uso de lista e range
+
 # Já falámos de *range*. Na verdade, **range** é um tipo (uma classe) e representa uma sequência imutável de números inteiros e é muito útil para ciclos específicos.
 
 # In[31]:
@@ -334,8 +336,6 @@ t_range = range(inic, fim, passo)
 t_range[3]
 
 
-# #### Outros usos de listas
-
 # In[35]:
 
 
@@ -343,7 +343,7 @@ quadrados = [x**2 for x in range(10)]
 quadrados
 
 
-# #### Exemplo
+# ### Exemplo
 # 
 # Neste outro exemplo, queremos saber qual é o maior elemento da lista e onde está.
 # Não vamos fazer duas funções, devolvemos dois valores a partir da mesma função.

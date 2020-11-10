@@ -35,6 +35,7 @@
 
 - part: Semana 6
   chapters:
+  - file: docs/S6/ProgPython4
   - file: docs/S6/FestaOutubro2019
 
 - part: Semana 7

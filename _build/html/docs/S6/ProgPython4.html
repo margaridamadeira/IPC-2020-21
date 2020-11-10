@@ -1,0 +1,948 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programação em Python - parte 4 &#8212; IPC</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2020-21/docs/S6/ProgPython4.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Festa de outubro de 2019" href="FestaOutubro2019.html" />
+    <link rel="prev" title="Lab4" href="../S5/Lab4.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://margaridamadeira.github.io/IPC-2020-21/docs/S6/ProgPython4.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Programação em Python - parte 4" />
+<meta property="og:description" content="Programação em Python - parte 4  Objetivos de aprendizagem  Já vimos alguns tipos de dados. Vamos agora conhecer mais alguns tipos de dados, nomeadamente:  tupl" />
+<meta property="og:image"       content="https://margaridamadeira.github.io/IPC-2020-21/_static/IPC_wc.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/IPC_wc.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">IPC</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <p class="caption">
+ <span class="caption-text">
+  Preâmbulo
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Pre/Apresenta%C3%A7%C3%A3o.html">
+   Apresentação geral
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Pre/Familiariza%C3%A7%C3%A3o.html">
+   Sobre a parte prática
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 1
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S1/Introdu%C3%A7%C3%A3o.html">
+   Introdução
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S1/Primeiros_passos.html">
+   Aula prática
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 2
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S2/IniciarProgramar.html">
+   Começar a programar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S2/Temperaturas.html">
+   Primeiros programas
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 3
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S3/ProgPython.html">
+   Programação em Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S3/Submiss%C3%A3oMooshak.html">
+   Submissão ao Mooshak
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S3/Lab0.html">
+   Lab0
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S3/Lab1.html">
+   Lab1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S3/Lab2.html">
+   Lab2
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 4
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S4/ProgPython2.html">
+   Programação em Python - parte 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S4/Lab3.html">
+   Lab3
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 5
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S5/ProgPython3.html">
+   Programação em Python - parte 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S5/Lab4.html">
+   Lab4
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 6
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Programação em Python - parte 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="FestaOutubro2019.html">
+   Festa de outubro de 2019
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 7
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S7/Festa.html">
+   Festa de Programação
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 8
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S8/Lab5.html">
+   Lab5
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/docs/S6/ProgPython4.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/margaridamadeira/IPC-2020-21"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/margaridamadeira/IPC-2020-21/master?urlpath=tree/docs/docs/S6/ProgPython4.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objetivos-de-aprendizagem">
+   Objetivos de aprendizagem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tuplos-conjuntos-e-dicionarios">
+   Tuplos, conjuntos e dicionários
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#enquadramento">
+     Enquadramento
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tuplos">
+     Tuplos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conjuntos">
+     Conjuntos
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#operacoes-sobre-conjuntos">
+       Operações sobre conjuntos
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dicionarios">
+     Dicionários
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#leitura-recomendada">
+     Leitura recomendada
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="programacao-em-python-parte-4">
+<h1>Programação em Python - parte 4<a class="headerlink" href="#programacao-em-python-parte-4" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="objetivos-de-aprendizagem">
+<h2>Objetivos de aprendizagem<a class="headerlink" href="#objetivos-de-aprendizagem" title="Permalink to this headline">¶</a></h2>
+<p>Já vimos alguns tipos de dados. Vamos agora conhecer mais alguns tipos de dados, nomeadamente:</p>
+<ul class="simple">
+<li><p>tuplos</p></li>
+<li><p>conjuntos</p></li>
+<li><p>dicionários</p></li>
+</ul>
+</div>
+<div class="section" id="tuplos-conjuntos-e-dicionarios">
+<h2>Tuplos, conjuntos e dicionários<a class="headerlink" href="#tuplos-conjuntos-e-dicionarios" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="enquadramento">
+<h3>Enquadramento<a class="headerlink" href="#enquadramento" title="Permalink to this headline">¶</a></h3>
+<p>Já sabemos que se o valor que está associado a um objeto é sempre o mesmo, o tipo diz-se <em>imutável</em>; se existirem métodos para alterar o valor associado a um objeto então o tipo diz-se <em>mutável</em>.</p>
+<p>E sabemos que as strings e as listas têm algumas operações em comum, como indexação e corte. As strings são imutáveis e as listas são mutáveis.
+As strings e as listas (e range) são tipos de sequências.</p>
+</div>
+<div class="section" id="tuplos">
+<h3>Tuplos<a class="headerlink" href="#tuplos" title="Permalink to this headline">¶</a></h3>
+<p>Os tuplos, tal como as listas, são um tipo de dados composto usado para agrupar outros valores. Este tipo de dados é também designado iterável ou sequencial.</p>
+<p>Um tuplo pode ser escrito como uma sequência de valores separados por vírgula e contidos entre parênteses <strong>curvos</strong>. E o tuplo é um tipo <strong>imutável</strong>.</p>
+<p>Por exemplo,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">;</span>
+<span class="n">t</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1, 2, 3, 4, 5)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se tentasse mudar um dos elementos fazendo</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>t[2] = 5
+</pre></div>
+</div>
+<p>produziria erro. Isto acontece porque <em>t</em> é um tuplo</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tuple
+</pre></div>
+</div>
+</div>
+</div>
+<p>Já vimos  uma utilização muito conveniente dos tuplos, na troca do conteúdo das variáveis.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">y</span><span class="p">,</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x =&#39;</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;e y =&#39;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x = 10 e y = 5
+</pre></div>
+</div>
+</div>
+</div>
+<p>E não foi preciso uma variável auxiliar.
+Se se pretender que uma função devolva dois (ou mais) valores, podemos usar tuplos como fizemos na função <em>maior_onde</em> da aula passada, aqui repetida.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A minha lista de teste</span>
+<span class="n">tt_lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">16</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A minha função que devolve dois valores</span>
+<span class="k">def</span> <span class="nf">maior_onde</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Função que devolve o maior valor de uma lista e o seu índice.&quot;&quot;&quot;</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="nb">list</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">v</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+    <span class="n">maior</span> <span class="o">=</span> <span class="n">v</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">onde</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">maior</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">maior</span><span class="p">,</span> <span class="n">onde</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ao aplicar a função à minha lista de teste, crio um tuplo</span>
+<span class="n">maior_onde</span><span class="p">(</span><span class="n">tt_lista</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(7, 2)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">maior_onde</span><span class="p">(</span><span class="n">tt_lista</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;x =&#39;</span><span class="p">,</span> <span class="n">x</span> <span class="p">,</span><span class="s1">&#39; y =&#39;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x = 7  y = 2
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para dois valores, podemos atribuir os elementos do tuplo a variáveis. Mas podemos lidar diretamente com o tuplo desta forma</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">resultado</span> <span class="o">=</span> <span class="n">maior_onde</span><span class="p">(</span><span class="n">tt_lista</span><span class="p">)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">resultado</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tuple
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;O maior elemento é o </span><span class="si">{0:d}</span><span class="s1"> e está na posição </span><span class="si">{1:d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">resultado</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">resultado</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>O maior elemento é o 7 e está na posição 2
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para criar um tuplo, basta-me uma vírgula ou parênteses curvos</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ex1_tuplo</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
+<span class="n">ex2_tuplo</span> <span class="o">=</span> <span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">ex1_tuplo</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tuple
+</pre></div>
+</div>
+</div>
+</div>
+<p>Podemos saber quantos elementos temos num tuplo</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">resultado</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">ex1_tuplo</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">ex2_tuplo</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2, 1, 0)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="conjuntos">
+<h3>Conjuntos<a class="headerlink" href="#conjuntos" title="Permalink to this headline">¶</a></h3>
+<p>Python também inclui um tipo de dados para conjuntos. Um conjunto em Python é entendido como uma coleção não ordenada sem elementos duplicados. Tipicamente os conjuntos são usados para verificar pertença, eliminar elementos repetidos, sendo também usados para apoiar operações matemáticas como união, interseção e diferença.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Inicialização com enumeração</span>
+<span class="n">vogais</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;u&#39;</span><span class="p">}</span>
+<span class="n">semi_vogais</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">}</span> <span class="c1"># em inglês</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Forma alternativa de inicialização </span>
+<span class="n">letras</span> <span class="o">=</span> <span class="p">{</span><span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">97</span><span class="p">,</span><span class="mi">97</span><span class="o">+</span><span class="mi">26</span><span class="p">)}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">letras</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;g&#39;, &#39;s&#39;, &#39;x&#39;, &#39;i&#39;, &#39;e&#39;, &#39;a&#39;, &#39;r&#39;, &#39;w&#39;, &#39;b&#39;, &#39;q&#39;, &#39;l&#39;, &#39;m&#39;, &#39;d&#39;, &#39;h&#39;, &#39;u&#39;, &#39;n&#39;, &#39;z&#39;, &#39;y&#39;, &#39;j&#39;, &#39;o&#39;, &#39;v&#39;, &#39;f&#39;, &#39;p&#39;, &#39;k&#39;, &#39;t&#39;, &#39;c&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">consoantes</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span> <span class="c1"># Inicialização de um conjunto vazio, desnecessário no caso presente</span>
+<span class="n">consoantes</span> <span class="o">=</span> <span class="n">letras</span> <span class="o">-</span> <span class="n">vogais</span> <span class="o">-</span> <span class="n">semi_vogais</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">consoantes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;g&#39;, &#39;s&#39;, &#39;x&#39;, &#39;l&#39;, &#39;m&#39;, &#39;d&#39;, &#39;p&#39;, &#39;h&#39;, &#39;n&#39;, &#39;z&#39;, &#39;r&#39;, &#39;j&#39;, &#39;v&#39;, &#39;b&#39;, &#39;f&#39;, &#39;q&#39;, &#39;k&#39;, &#39;t&#39;, &#39;c&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="operacoes-sobre-conjuntos">
+<h4>Operações sobre conjuntos<a class="headerlink" href="#operacoes-sobre-conjuntos" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criar um conjunto vazio</span>
+<span class="n">numeros</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+<span class="c1"># Verificar o tipo</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">numeros</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>set
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numeros_ate_50</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">)}</span>
+
+<span class="n">pares_ate_50</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">numeros_ate_50</span> <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="o">%</span><span class="k">2</span> == 0) }
+
+<span class="n">multiplos_3_ate_50</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">numeros_ate_50</span> <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="o">%</span><span class="k">3</span> == 0) }
+
+<span class="n">multiplos_5_ate_50</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">numeros_ate_50</span> <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="o">%</span><span class="k">5</span> == 0) }
+
+<span class="n">multiplos_7_ate_50</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">numeros_ate_50</span> <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="o">%</span><span class="k">7</span> == 0) }
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Multiplos de 5 que não são pares</span>
+<span class="n">multiplos_5_ate_50</span> <span class="o">-</span> <span class="n">pares_ate_50</span>                  <span class="c1"># a e não b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{5, 15, 25, 35, 45}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Reunião</span>
+<span class="n">multiplos</span> <span class="o">=</span> <span class="n">pares_ate_50</span> <span class="o">|</span> <span class="n">multiplos_3_ate_50</span> <span class="o">|</span> \
+            <span class="n">multiplos_5_ate_50</span> <span class="o">|</span> <span class="n">multiplos_7_ate_50</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">primeiros_primos</span> <span class="o">=</span> <span class="n">numeros_ate_50</span> <span class="o">-</span> <span class="n">multiplos</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">primeiros_primos</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 37, 41, 11, 43, 13, 47, 17, 19, 23, 29, 31}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># As letras comuns</span>
+<span class="n">a</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="s1">&#39;bioengenharia&#39;</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="s1">&#39;matemática&#39;</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">&amp;</span> <span class="n">b</span>                              <span class="c1"># a e b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;a&#39;, &#39;e&#39;, &#39;i&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># as letras que existindo numa palavra não existem na outra</span>
+<span class="n">a</span> <span class="o">^</span> <span class="n">b</span>                              <span class="c1"># a ou exclusivo b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;b&#39;, &#39;c&#39;, &#39;g&#39;, &#39;h&#39;, &#39;m&#39;, &#39;n&#39;, &#39;o&#39;, &#39;r&#39;, &#39;t&#39;, &#39;á&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="dicionarios">
+<h3>Dicionários<a class="headerlink" href="#dicionarios" title="Permalink to this headline">¶</a></h3>
+<p>A melhor forma de entender os dicionários é talvez como um conjunto não ordenado de pares chave:valor ( <em>key: value</em>).
+Notacionalmente, usam-se chavetas para representar dicionários.</p>
+<p>A chave pode ser de qualquer tipo imutável, como strings ou inteiros. O valor pode ser de qualquer tipo.</p>
+<p>Para sabermos se uma chave existe no dicionário, usamos <strong>in</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">telefone</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;UAlg&#39;</span><span class="p">:</span> <span class="mi">289800100</span><span class="p">,</span> <span class="s1">&#39;FCT&#39;</span><span class="p">:</span> <span class="mi">289800953</span><span class="p">,</span> <span class="s1">&#39;FE&#39;</span><span class="p">:</span> <span class="mi">289800915</span> <span class="p">}</span>
+<span class="n">telefone</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;UAlg&#39;: 289800100, &#39;FCT&#39;: 289800953, &#39;FE&#39;: 289800915}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">telefone</span><span class="p">[</span><span class="s1">&#39;UAlg&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>289800100
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Eliminar um elemento</span>
+<span class="k">del</span> <span class="n">telefone</span><span class="p">[</span><span class="s1">&#39;FE&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">telefone</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;UAlg&#39;: 289800100, &#39;FCT&#39;: 289800953}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Alterar o valor</span>
+<span class="n">telefone</span><span class="p">[</span><span class="s1">&#39;UAlg&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">289800900</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Adicionar um elemento</span>
+<span class="n">telefone</span><span class="p">[</span><span class="s1">&#39;FE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">289800915</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">telefone</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;UAlg&#39;, &#39;FCT&#39;, &#39;FE&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">telefone</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[289800900, 289800953, 289800915]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;UAlg&#39;</span> <span class="ow">in</span> <span class="n">telefone</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;FCT&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">telefone</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Percorrer o dicionário</span>
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">telefone</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;O número da </span><span class="si">{0:s}</span><span class="s1"> é </span><span class="si">{1:d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>O número da UAlg é 289800900
+O número da FCT é 289800953
+O número da FE é 289800915
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="leitura-recomendada">
+<h3>Leitura recomendada<a class="headerlink" href="#leitura-recomendada" title="Permalink to this headline">¶</a></h3>
+<p>O tutorial sobre <a class="reference external" href="https://docs.python.org/pt-br/3.8/tutorial/datastructures.html">Estruturas de dados</a>, em particular:</p>
+<ul class="simple">
+<li><p>revisão de <a class="reference external" href="https://docs.python.org/pt-br/3.8/tutorial/datastructures.html#more-on-lists">listas</a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/pt-br/3.8/tutorial/datastructures.html#tuples-and-sequences">tuplos</a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/pt-br/3.8/tutorial/datastructures.html#sets">conjuntos</a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/pt-br/3.8/tutorial/datastructures.html#dictionaries">dicionários</a></p></li>
+</ul>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs/S6"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../S5/Lab4.html" title="previous page">Lab4</a>
+    <a class='right-next' id="next-link" href="FestaOutubro2019.html" title="next page">Festa de outubro de 2019</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Margarida Madeira e Moura<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

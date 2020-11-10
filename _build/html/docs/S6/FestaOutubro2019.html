@@ -59,7 +59,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Festa de Programação" href="../S7/Festa.html" />
-    <link rel="prev" title="Lab4" href="../S5/Lab4.html" />
+    <link rel="prev" title="Programação em Python - parte 4" href="ProgPython4.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -69,7 +69,7 @@
 <meta property="og:url"         content="https://margaridamadeira.github.io/IPC-2020-21/docs/S6/FestaOutubro2019.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Festa de outubro de 2019" />
-<meta property="og:description" content="Festa de outubro de 2019  A qualidade da água  Fazemos vários tipos de análises, como por exemplo, qualidade da água ou existência de químicos em produtos alime" />
+<meta property="og:description" content="Festa de outubro de 2019  Esta foi a primeira festa do ano letivo de 2019-2020.  Reúna todos os seus materiais para consulta durante a festa e os seus programas" />
 <meta property="og:image"       content="https://margaridamadeira.github.io/IPC-2020-21/_static/IPC_wc.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -224,6 +224,11 @@
  </span>
 </p>
 <ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="ProgPython4.html">
+   Programação em Python - parte 4
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Festa de outubro de 2019
@@ -339,8 +344,23 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objetivo-de-aprendizagem">
+   Objetivo de aprendizagem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-qualidade-da-agua">
    A qualidade da água
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#migracao">
+   Migração
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#trabalho-e-mais-trabalho">
+   Trabalho e mais trabalho
   </a>
  </li>
 </ul>
@@ -356,9 +376,111 @@
                 
   <div class="section" id="festa-de-outubro-de-2019">
 <h1>Festa de outubro de 2019<a class="headerlink" href="#festa-de-outubro-de-2019" title="Permalink to this headline">¶</a></h1>
+<p>Esta foi a primeira festa do ano letivo de 2019-2020.</p>
+<p>Reúna todos os seus materiais para consulta durante a festa e os seus programas anteriores (e os que estão no Mooshak pode sempre ir lá buscá-los).
+Prepare uma pasta para cada problema que vai abordar, e a versão inicial da sua resolução.
+E idealmente, reserve três horas e tente resolver os exercícios da festa.</p>
+<div class="section" id="objetivo-de-aprendizagem">
+<h2>Objetivo de aprendizagem<a class="headerlink" href="#objetivo-de-aprendizagem" title="Permalink to this headline">¶</a></h2>
+<p>Com este este exercício, exercitaremos uma festa de programação.</p>
+</div>
 <div class="section" id="a-qualidade-da-agua">
 <h2>A qualidade da água<a class="headerlink" href="#a-qualidade-da-agua" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="cascata">
+<a class="reference internal image-reference" href="../../_images/waterfall.png"><img alt="../../_images/waterfall.png" src="../../_images/waterfall.png" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Imagem de <a class="reference external" href="http://www.palao.es/">Sergio Palao</a> (CC)BY-NC-SA</span><a class="headerlink" href="#cascata" title="Permalink to this image">¶</a></p>
+</div>
 <p>Fazemos vários tipos de análises, como por exemplo, qualidade da água ou existência de químicos em produtos alimentares. Para a produção de relatórios, queremos determinar a conformidade dos produtos analisados, sabendo os valores de referência e tolerância admissível. Um produto analisado está conforme se a variação percentual acumulada não exceder a tolerância admissível. A variação percentual acumulada, como o nome indica, é a soma das diferenças percentuais.</p>
+<p>Por exemplo, se a referência de um parâmetro for 200 e o resultado for 190 ou 210, a variação percentual em ambos os casos não excedeu <span class="math notranslate nohighlight">\(5\%\)</span>.</p>
+<p>Considere então que queremos verificar se há desvio superior a <span class="math notranslate nohighlight">\(5\%\)</span> quando os valores de referência são <span class="math notranslate nohighlight">\(150.2\)</span> e <span class="math notranslate nohighlight">\(2.5\)</span>.
+Se os valores das análises indicassem <span class="math notranslate nohighlight">\(167.4\)</span> e <span class="math notranslate nohighlight">\(2.5\)</span>, o produto não estaria conforme, pois o primeiro valor tem uma variação superior a <span class="math notranslate nohighlight">\(5\%\)</span>. Se os valores das análises fossem <span class="math notranslate nohighlight">\(150.2\)</span> e <span class="math notranslate nohighlight">\(2.8\)</span>, ou <span class="math notranslate nohighlight">\(157.2\)</span> e <span class="math notranslate nohighlight">\(2.55\)</span> o produto também não estaria conforme.</p>
+<p>Acontece que a tolerância e os valores de referência variam consoante o tipo de análise.</p>
+<p>As duas primeiras linhas que o programa receberá contêm a tolerância e os valores de referência. Em cada uma das linhas seguintes apresentam-se  os resultados da análise a um produto. Se os resultados da análise a um produto estiverem dentro da tolerância admitida, escreva “OK” (sem as aspas); caso contrário, escreva “Fail” (sem as aspas).</p>
+<p>Prepare um programa (incluindo main e função de teste) que verifique a conformidade dos resultados das análises e submeta na tarefa <strong>A</strong> do concurso IPC_F1_2019.</p>
+<p><strong>Caso de teste</strong></p>
+<p><strong>Input</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">0.05</span>
+<span class="mf">150.2</span> <span class="mf">2.5</span>
+<span class="mf">167.4</span> <span class="mf">2.5</span>
+<span class="mf">150.2</span> <span class="mf">2.8</span>
+<span class="mf">157.2</span> <span class="mf">2.55</span>
+<span class="mf">150.2</span> <span class="mf">2.55</span>
+<span class="mf">157.2</span> <span class="mf">2.5</span>
+</pre></div>
+</div>
+<p><strong>Output</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fail</span>
+<span class="n">Fail</span>
+<span class="n">Fail</span>
+<span class="n">OK</span>
+<span class="n">OK</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="migracao">
+<h2>Migração<a class="headerlink" href="#migracao" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="aves">
+<a class="reference internal image-reference" href="../../_images/flocks.png"><img alt="../../_images/flocks.png" src="../../_images/flocks.png" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Imagem de <a class="reference external" href="http://www.palao.es/">Sergio Palao</a> (CC)BY-NC-SA</span><a class="headerlink" href="#aves" title="Permalink to this image">¶</a></p>
+</div>
+<p>Queremos avaliar, de forma muito geral, o padrão migratório de algumas aves que nidificam na Ria Formosa. Dispomos de anilhas que, colocadas numa pata de uma ave, regista a localização. Essas anilhas já são inteligentes e a informação de percursos curtos não é considerada.
+Quando, após um ano, se recolhem as anilhas, obtêm-se as coordenadas (latitude e longitude) da origem e destino de cada etapa. A latitude, Norte ou Sul, indica a distância ao equador; a longitude, Este ou Oeste, indica a distância ao meridiano primário. A latitude e longitude são indicadas em graus e minutos e incluem uma letra que indica o hemisfério. Assumimos que cada minuto de grau corresponde a 1 852 metros e sabemos que cada grau tem 60 minutos.</p>
+<p>Para cada ave, pretendemos saber a distância total percorrida e a distância da maior etapa.</p>
+<p>O programa lerá tantas linhas quantas as etapas registadas. Em cada linha teremos duas coordenadas, cada uma com seis partículas, a saber: graus de latitude, minutos de latitude, hemisfério (N ou S), graus de longitude, minutos de longitude e hemisfério (E ou W). Graus e minutos são números inteiros e o hemisfério é uma letra.</p>
+<p>Ao terminar a leitura, o programa escreverá na mesma linha dois valores reais em notação científica separados pelo carater espaço que correspondem à distância total e à percorrida e à distância da maior etapa.</p>
+<p>Prepare um programa (incluindo main e função de teste) que verifique a conformidade dos resultados das análises e submeta na tarefa <strong>B</strong> do concurso IPC_F1_2019.</p>
+<p><strong>Caso de teste</strong></p>
+<p><strong>Input 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">00</span> <span class="mi">00</span> <span class="n">N</span> <span class="mi">00</span> <span class="mi">00</span> <span class="n">E</span> <span class="mi">37</span> <span class="mi">01</span> <span class="n">N</span> <span class="mi">07</span> <span class="mi">49</span> <span class="n">W</span>
+</pre></div>
+</div>
+<p><strong>Output 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">4.206e+06</span> <span class="mf">4.206e+06</span>
+</pre></div>
+</div>
+<p><strong>Input 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">37</span> <span class="mi">01</span> <span class="n">N</span> <span class="mi">07</span> <span class="mi">49</span> <span class="n">W</span> <span class="mi">38</span> <span class="mi">43</span> <span class="n">N</span> <span class="mi">09</span> <span class="mi">08</span> <span class="n">W</span>
+<span class="mi">38</span> <span class="mi">43</span> <span class="n">N</span> <span class="mi">09</span> <span class="mi">08</span> <span class="n">W</span> <span class="mi">41</span> <span class="mi">09</span> <span class="n">N</span> <span class="mi">08</span> <span class="mi">37</span> <span class="n">W</span>
+<span class="mi">41</span> <span class="mi">09</span> <span class="n">N</span> <span class="mi">08</span> <span class="mi">37</span> <span class="n">W</span> <span class="mi">37</span> <span class="mi">01</span> <span class="n">N</span> <span class="mi">07</span> <span class="mi">49</span> <span class="n">W</span>
+</pre></div>
+</div>
+<p><strong>Output 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">9.837e+05</span> <span class="mf">4.681e+05</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="trabalho-e-mais-trabalho">
+<h2>Trabalho e mais trabalho<a class="headerlink" href="#trabalho-e-mais-trabalho" title="Permalink to this headline">¶</a></h2>
+<p>Estavamos a testar formas de eliminar um fungo das batatas quando se notou que tínhamos conseguido eliminar completamente um outro fungo. Acontece que o nosso preparado já está muito complexo e agora, para isolar os elementos responsáveis, vou ter que refazer as experiências.</p>
+<p>De forma a podermos distribuir o trabalho e não deixarmos nenhuma combinação por testar, preciso de um programa que me crie todas as variações. É claro, não quero repetir trabalho. Assim, numero cada substância usada e preciso de obter todas as possíveis variações, ou seja, os subconjuntos do conjunto inicial com todas as substâncias.</p>
+<p>Por exemplo, se tiver lido para a minha lista inicial os números <span class="math notranslate nohighlight">\(1\)</span> e <span class="math notranslate nohighlight">\(2\)</span>, terei os subconjuntos</p>
+<p>[], [1], [2], [1, 2]</p>
+<p>Se tiver na lista inicial os números <span class="math notranslate nohighlight">\(4\)</span>, <span class="math notranslate nohighlight">\(7\)</span> e <span class="math notranslate nohighlight">\(11\)</span>, terei os subconjuntos</p>
+<p>[], [4], [7], [4, 7], [11], [4, 11], [7, 11], [4, 7, 11]</p>
+<p>O seu programa deverá ler o número de elementos e essa quantidade de números inteiros. Deverá apresentar, numa única linha, os subconjuntos por ordem crescente. Note que se pretende a lista com as sublistas.</p>
+<p>Prepare um programa (incluindo main e função de teste) que determine os divisores de um número e submeta na tarefa C do concurso IPC_F1_2019.</p>
+<p><strong>Caso de teste</strong></p>
+<p><strong>Input 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+</pre></div>
+</div>
+<p><strong>Output 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[[],</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p><strong>Input 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span>
+<span class="mi">4</span>
+<span class="mi">7</span>
+<span class="mi">11</span>
+</pre></div>
+</div>
+<p><strong>Output 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[[],</span> <span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">11</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">11</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">]]</span>
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -390,7 +512,7 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="../S5/Lab4.html" title="previous page">Lab4</a>
+    <a class='left-prev' id="prev-link" href="ProgPython4.html" title="previous page">Programação em Python - parte 4</a>
     <a class='right-next' id="next-link" href="../S7/Festa.html" title="next page">Festa de Programação</a>
 
     </div>
