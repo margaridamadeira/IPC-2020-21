@@ -72,7 +72,7 @@ Imagem de [Sergio Palao](http://www.palao.es/) (CC)BY-NC-SA
 ```
 
 Queremos avaliar, de forma muito geral, o padrão migratório de algumas aves que nidificam na Ria Formosa. Dispomos de anilhas que, colocadas numa pata de uma ave, regista a localização. Essas anilhas já são inteligentes e a informação de percursos curtos não é considerada.
-Quando, após um ano, se recolhem as anilhas, obtêm-se as coordenadas (latitude e longitude) da origem e destino de cada etapa. A latitude, Norte ou Sul, indica a distância ao equador; a longitude, Este ou Oeste, indica a distância ao meridiano primário. A latitude e longitude são indicadas em graus e minutos e incluem uma letra que indica o hemisfério. Assumimos que cada minuto de grau corresponde a 1 852 metros e sabemos que cada grau tem 60 minutos.
+Quando, após um ano, se recolhem as anilhas, obtêm-se as coordenadas (latitude e longitude) da origem e destino de cada etapa. A latitude, Norte ou Sul, indica a distância ao equador; a longitude, Este ou Oeste, indica a distância ao meridiano primário. A latitude e longitude são indicadas em graus e minutos e incluem uma letra que indica o hemisfério. Assumimos que cada minuto de grau corresponde a <del>1852</del> 1 853 metros e sabemos que cada grau tem 60 minutos.
 
 Para cada ave, pretendemos saber a distância total percorrida e a distância da maior etapa.
 
