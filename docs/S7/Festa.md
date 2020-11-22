@@ -235,8 +235,7 @@ name: Tabela Periódica
 [Exposição “Desafios da Tabela Periódica”, na Biblioteca da UAlg](https://ualg.pt/pt/content/exposicao-desafios-da-tabela-periodica-pode-ser-visitada-na-biblioteca-da-ualg)
 ```
 
-Fonte: [Problema C do ToPAS 2016](https://eventos.fct.unl.pt/sites/default/files/topas-lx/files/
-problemas_topaslx_2016.pdf)
+Fonte: [Problema C do ToPAS 2016](https://eventos.fct.unl.pt/sites/default/files/topas-lx/files/problemas_topaslx_2016.pdf)
 
 Quando o Rui estava a estudar Química, escrevendo fórmulas
 de compostos no caderno (como $CaCO_3$ , $Na_2CO_3$ e $H_ 2SO_4$ ),
