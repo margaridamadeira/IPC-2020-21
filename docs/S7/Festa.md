@@ -6,9 +6,9 @@
 
 <hr> 
 
-### Informação sobre a Festa de Programação
+## Informação sobre a Festa de Programação
 
-#### Regras
+### Regras
 
 É permitida a consulta aos materiais e recursos da unidade curricular, acessíveis pela Tutoria Eletrónica, bem como à documentação em linha do Python no site [python.org](https://docs.python.org/pt-br/3.8/).
 
@@ -20,7 +20,7 @@ Foi recomendado que trouxessem já programas começados e com algumas variantes 
 
 _Não_ é permitido a consulta ou partilha de código de colegas e _não_ é permitida qualquer ajuda exterior ou consulta de outros locais não autorizados. 
 
-#### Avaliação da Festa
+### Avaliação da Festa
 
 Esta Festa de Programação tem três tarefas e a duração máxima de três horas.
 Cada tarefa submetida durante a festa no concurso IPC_F1, aceite e validada vale 15 pontos.
@@ -29,7 +29,7 @@ Note que ao ser pedido "um programa em Python" isso significa escrever a funçã
 
 A validação, feita pela professora, consiste na apresentação da solução pelo aluno. Submissões que não cumpram os requisitos técnicos ou cuja qualidade seja muito baixa serão invalidadas. As validações poderão ser feitas durante a Festa ou durante as aulas da próxima semana.
 
-##### Após a Festa
+### Após a Festa
 
 Os mesmos problemas estarão disponíveis após a Festa, durante a próxima semana, mas cada uma dessas submissões, aceite e validada valerá 5 pontos.
 
