@@ -8,7 +8,7 @@ Com este guião exercitaremos:
 1. escrita formatada
 1. uso de dicionários
 
-### Elementos da tabela periódica
+## Elementos da tabela periódica
 
 Em 2019 celebraram-se os 150 anos desde que Dmitry Mendeleev descobriu o sistema periódico. A Assembleia Geral das Nações Unidas e a UNESCO proclamaram 2019 como o ano internacional da tabela periódica dos elementos químicos.
 
@@ -20,7 +20,7 @@ Vamos pois juntar-nos à celebração e calcular o peso de algumas moléculas.
 
 
 
-#### Descrição do caso
+### Descrição do caso
 
 O fluxo elementar dos programas é ler, processar, escrever. Ao começarmos por ler e escrever sabemos que estamos a tratar *bem* os dados e podemos depois concentrar a atenção no processamento.
 
@@ -46,16 +46,14 @@ Temos pois seis campos de dados em cada linha. Comece por identificar o tipo (em
 
 Deverá ter concluído que número, período e grupo são inteiros positivos, que o símbolo e o nome do elemento são strings e que a massa atómica é um float. 
 
-#### Tarefa A: ler e escrever
+### Tarefa A: ler e escrever
 A primeira tarefa é preparar um *script* em python que leia da consola linhas com as propriedades de elementos e, para cada linha, apresente a informação com o formato desejado.
 
 Pretende-se ler obter uma listagem com o nome do elemento justificado à direita, o símbolo entre parênteses e finalmente a massa atómica em notação científica com três casas decimais. Para efeito de formatação, considere que a dimensão de 15 e dois carateres para os campos nome e símbolo, respetivamente.
 
 O ficheiro não terá mais de 150 linhas e cada linha não terá mais de oitenta caracteres.
 
-Submeta no problema A do concurso IPC_2021_P5.
-
-##### Caso de teste
+#### Caso de teste
 
 **Input**
 
@@ -85,7 +83,9 @@ Submeta no problema A do concurso IPC_2021_P5.
        Fluorine (F ) 1.900e+01
 ```
 
-#### Tarefa B: organizar por símbolo químico
+Submeta no problema A do concurso IPC_2021_L5.
+
+### Tarefa B: organizar por símbolo químico
 
 Agora que já conseguimos ler e escrever dados, podemos avançar para algo mais interessante. Vamos organizar os elementos por símbolo químico e usar  um novo tipo de dados, dicionário, para apresentar a informação dos elementos que nos forem pedidos.
 
@@ -95,9 +95,7 @@ Prepare o seu programa para ler o número de elementos a considerar para o dicio
 
 É requerido que guarde a informação num dicionário considerando que a chave (*key*) é o símbolo químico.
 
-Submeta no problema B do concurso IPC_2021_P5.
-
-##### Casos de teste
+#### Casos de teste
 
 **Input 1**
 
@@ -147,8 +145,9 @@ None
          Oxygen (O ) 1.600e+01
 ```
 
+Submeta no problema B do concurso IPC_2021_L5.
 
-#### Tarefa C: calcular peso de moléculas
+### Tarefa C: calcular peso de moléculas
 
 Já estamos quase a concluir. Se se recorda da Química, ótimo. Senão, relembramos algumas fórmulas moleculares simples.
 
@@ -167,9 +166,7 @@ Parece complicado? Não é! Consideremos a água, $H_2 O$. OS elementos são $H$
 
 Prepare o seu programa para ler o número de elementos a considerar, as linhas com esses elementos e as fórmulas moleculares pretendidas e apresentar, para cada molécula, a massa molecular em notação científica com três casas decimais. 
 
-Submeta no problema C do concurso IPC_2021_P5.
-
-##### Caso de teste
+#### Caso de teste
 
 **Input**
 
@@ -194,3 +191,5 @@ CO2
 1.802e+01
 4.401e+01
 ```
+
+Submeta no problema C do concurso IPC_2021_L5.
