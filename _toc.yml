@@ -47,4 +47,8 @@
   - file: docs/S8/Algoritmia
   - file: docs/S8/Lab5
 
+- part: Semana 9
+  chapters:
+  - file: docs/S9/CriarSoluções
+
 

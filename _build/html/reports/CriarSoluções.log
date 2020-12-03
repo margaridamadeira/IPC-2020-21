@@ -1,0 +1,80 @@
+Traceback (most recent call last):
+  File "/home/mmadeira/anaconda3/envs/IPC-2020-21/lib/python3.7/site-packages/jupyter_cache/executors/utils.py", line 56, in single_nb_execution
+    record_timing=False,
+  File "/home/mmadeira/anaconda3/envs/IPC-2020-21/lib/python3.7/site-packages/nbclient/client.py", line 1087, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/home/mmadeira/anaconda3/envs/IPC-2020-21/lib/python3.7/site-packages/nbclient/util.py", line 74, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/home/mmadeira/anaconda3/envs/IPC-2020-21/lib/python3.7/site-packages/nbclient/util.py", line 53, in just_run
+    return loop.run_until_complete(coro)
+  File "/home/mmadeira/anaconda3/envs/IPC-2020-21/lib/python3.7/asyncio/base_events.py", line 587, in run_until_complete
+    return future.result()
+  File "/home/mmadeira/anaconda3/envs/IPC-2020-21/lib/python3.7/site-packages/nbclient/client.py", line 541, in async_execute
+    cell, index, execution_count=self.code_cells_executed + 1
+  File "/home/mmadeira/anaconda3/envs/IPC-2020-21/lib/python3.7/site-packages/nbclient/client.py", line 832, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/home/mmadeira/anaconda3/envs/IPC-2020-21/lib/python3.7/site-packages/nbclient/client.py", line 740, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# -*- coding: utf-8 -*-
+
+"""
+kelvin para farenheit, usando import e doctest
+(c) Margarida Madeira e Moura, 2020
+"""
+
+
+from k2c import k2c
+from c2f import c2f
+
+def k2f(kelvins: float) -> float:
+    """Função que converte uma temperatura de kelvin para farenheit.
+    
+    Exemplos:
+    >>> k2f(273.15)
+    32.0
+    >>> k2f(373.15)
+    212.0
+    >>> k2f(373.15) # errado
+    212.5
+    
+    """
+    return c2f(k2c(kelvins))
+
+
+def test_k2f():
+    x = float(input())
+    z = k2f(x)
+    print(z)
+    
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()
+    test_k2f()
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mStdinNotImplementedError[0m                  Traceback (most recent call last)
+[0;32m<ipython-input-16-807d2fccdb32>[0m in [0;36m<module>[0;34m[0m
+[1;32m     33[0m     [0;32mimport[0m [0mdoctest[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     34[0m     [0mdoctest[0m[0;34m.[0m[0mtestmod[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 35[0;31m     [0mtest_k2f[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m
+[0;32m<ipython-input-16-807d2fccdb32>[0m in [0;36mtest_k2f[0;34m()[0m
+[1;32m     26[0m [0;34m[0m[0m
+[1;32m     27[0m [0;32mdef[0m [0mtest_k2f[0m[0;34m([0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 28[0;31m     [0mx[0m [0;34m=[0m [0mfloat[0m[0;34m([0m[0minput[0m[0;34m([0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     29[0m     [0mz[0m [0;34m=[0m [0mk2f[0m[0;34m([0m[0mx[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     30[0m     [0mprint[0m[0;34m([0m[0mz[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/anaconda3/envs/IPC-2020-21/lib/python3.7/site-packages/ipykernel/kernelbase.py[0m in [0;36mraw_input[0;34m(self, prompt)[0m
+[1;32m    856[0m         [0;32mif[0m [0;32mnot[0m [0mself[0m[0;34m.[0m[0m_allow_stdin[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    857[0m             raise StdinNotImplementedError(
+[0;32m--> 858[0;31m                 [0;34m"raw_input was called, but this frontend does not support input requests."[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    859[0m             )
+[1;32m    860[0m         return self._input_request(str(prompt),
+
+[0;31mStdinNotImplementedError[0m: raw_input was called, but this frontend does not support input requests.
+StdinNotImplementedError: raw_input was called, but this frontend does not support input requests.
+
