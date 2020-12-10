@@ -51,4 +51,10 @@
   chapters:
   - file: docs/S9/CriarSoluções
 
+- part: Semana 10
+  chapters:
+  - file: docs/S10/Ficheiros
+  - file: docs/S10/What
+
+
 
