@@ -54,7 +54,7 @@ f = open('entrada.txt', 'r')
 f.readlines()[1]
 
 
-# devolve a terceira linha do objeto de ficheiro *f*.
+# devolve a segunda linha do objeto de ficheiro *f*.
 # 
 # Aproveitando a ideia, uma forma alternativa de ler linhas é iterar sobre o objeto de ficheiro, com
 # 
