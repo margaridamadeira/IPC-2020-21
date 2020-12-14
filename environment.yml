@@ -152,5 +152,6 @@ dependencies:
     - terminado==0.8.3
     - wcwidth==0.2.5
     - webencodings==0.5.1
+    - wget==3.2
     - widgetsnbextension==3.5.1
 prefix: /home/mmadeira/anaconda3/envs/IPC-2020-21

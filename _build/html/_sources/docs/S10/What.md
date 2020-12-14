@@ -100,7 +100,7 @@ GUGCAUGCAAUGAAUGAACUAAU
 **Output 3**
 
 ```
-MQ*MT*
+MQ*MN*
 ```
 
 **Input 4**

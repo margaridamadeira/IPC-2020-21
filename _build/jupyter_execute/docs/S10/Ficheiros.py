@@ -178,6 +178,27 @@ with open('saida.txt', 'w') as f:
 
 # Considere o ficheiro 10LG.pdb, de [Protein Databank](http://www.rcsb.org/pdb/explore/explore.do?structureId=1olg) com informação sobre a proteína [p53](https://pt.wikipedia.org/wiki/P53).
 # 
+# Se o ficheiro não estiver na directoria corrente, descarregamos.
+
+# In[12]:
+
+
+import wget, os
+
+
+# In[13]:
+
+
+# help(wget.download)
+
+
+# In[14]:
+
+
+if '1OLG.pdb' not in os.listdir():
+    wget.download("http://files.rcsb.org/download/1OLG.pdb", out="1OLG.pdb")
+
+
 # ### Extrair informação
 # 
 # Queremos isolar os registos ATOM da primeira cadeia e escrevê-los para um novo ficheiro.
@@ -185,9 +206,8 @@ with open('saida.txt', 'w') as f:
 # Consultando a [especificação do formato PDB](http://www.wwpdb.org/documentation/file-format-content/format33/sect9.html#ATOM), notamos que a coluna 22 nas linhas *ATOM* correspondem ao *ID* da cadeia (que corresponderá à posição 21 da *string* em Python).
 # 
 # Podemos usar mais que um ficheiro no bloco *with* e usamos um ficheiro para a leitura e outro para a escrita.
-# 
 
-# In[12]:
+# In[15]:
 
 
 with open('1OLG.pdb', 'r') as f_in, open('atoms_chain_A.txt', 'w') as f_out:
@@ -199,7 +219,7 @@ with open('1OLG.pdb', 'r') as f_in, open('atoms_chain_A.txt', 'w') as f_out:
 
 # Vejamos as primeiras 10 linhas.
 
-# In[13]:
+# In[16]:
 
 
 with open('atoms_chain_A.txt') as f:
@@ -217,3 +237,9 @@ with open('atoms_chain_A.txt') as f:
 # 
 # Quantos átomos de cada elemento existem?
 # 
+
+# In[ ]:
+
+
+
+
