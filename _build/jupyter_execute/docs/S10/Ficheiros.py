@@ -237,9 +237,3 @@ with open('atoms_chain_A.txt') as f:
 # 
 # Quantos átomos de cada elemento existem?
 # 
-
-# In[ ]:
-
-
-
-
