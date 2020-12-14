@@ -692,6 +692,29 @@ Para uma escrita bem sucedida há que ter em atenção que:</p>
 <h2>Exercício exemplificativo<a class="headerlink" href="#exercicio-exemplificativo" title="Permalink to this headline">¶</a></h2>
 <p>(adaptado de <a class="reference external" href="https://justinbois.github.io/bootcamp/2020/lessons/l11_file_io.html">Introduction to Programming in the Biological Sciences Bootcamp - Lesson 11</a>, (c)2020 Justin Bois, CC-BY 4.0)</p>
 <p>Considere o ficheiro 10LG.pdb, de <a class="reference external" href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1olg">Protein Databank</a> com informação sobre a proteína <a class="reference external" href="https://pt.wikipedia.org/wiki/P53">p53</a>.</p>
+<p>Se o ficheiro não estiver na directoria corrente, descarregamos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">wget</span><span class="o">,</span> <span class="nn">os</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># help(wget.download)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="s1">&#39;1OLG.pdb&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">():</span>
+    <span class="n">wget</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s2">&quot;http://files.rcsb.org/download/1OLG.pdb&quot;</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="s2">&quot;1OLG.pdb&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="section" id="extrair-informacao">
 <h3>Extrair informação<a class="headerlink" href="#extrair-informacao" title="Permalink to this headline">¶</a></h3>
 <p>Queremos isolar os registos ATOM da primeira cadeia e escrevê-los para um novo ficheiro.</p>
