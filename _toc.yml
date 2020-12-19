@@ -56,5 +56,7 @@
   - file: docs/S10/Ficheiros
   - file: docs/S10/What
 
-
-
+- part: Semana 11
+  chapters:
+  - file: docs/S11/T11
+  - file: docs/S11/Festa2
