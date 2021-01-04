@@ -60,3 +60,7 @@
   chapters:
   - file: docs/S11/T11
   - file: docs/S11/Festa2
+
+- part: Semana 12
+  chapters:
+  - file: docs/S12/ProgFuncional
