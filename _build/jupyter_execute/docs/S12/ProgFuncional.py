@@ -321,7 +321,7 @@ list(map(lambda x: x*x*x, range(10)))
 # 
 # Sobre suporte ao paradigma funcional https://docs.python.org/3/howto/functional.html
 
-# ### Exercícios exemplificativos
+# ### Exercícios
 # 
 # Sem usar ciclos for, implemente soluções para os seguintes casos:
 # Considere que temos vários nomes
