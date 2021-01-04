@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lab3 &#8212; IPC</title>
+    <title>Lab7 &#8212; IPC</title>
     
   <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -55,21 +55,20 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2020-21/docs/S4/Lab3.html" />
+    <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2020-21/docs/S12/ExercFicheiros.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Programação em Python - parte 3" href="../S5/ProgPython3.html" />
-    <link rel="prev" title="Programação em Python - parte 2" href="ProgPython2.html" />
+    <link rel="prev" title="Programação orientada por objetos" href="Objetos.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
 
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="https://margaridamadeira.github.io/IPC-2020-21/docs/S4/Lab3.html" />
+<meta property="og:url"         content="https://margaridamadeira.github.io/IPC-2020-21/docs/S12/ExercFicheiros.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Lab3" />
-<meta property="og:description" content="Lab3  Objetivos de aprendizagem  Com este guião, exercitaremos:  a utilização de strings  o uso de condições no controlo de fluxo do programa  a utilização de f" />
+<meta property="og:title"       content="Lab7" />
+<meta property="og:description" content="Lab7  Objetivos de aprendizagem  Com este guião, exercitaremos a leitura e escrita de ficheiros e a comunicação aberta em ciência usando Jupyter notebooks.  Gaf" />
 <meta property="og:image"       content="https://margaridamadeira.github.io/IPC-2020-21/_static/IPC_wc.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -189,14 +188,14 @@
   Semana 4
  </span>
 </p>
-<ul class="current nav sidenav_l1">
+<ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="ProgPython2.html">
+  <a class="reference internal" href="../S4/ProgPython2.html">
    Programação em Python - parte 2
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S4/Lab3.html">
    Lab3
   </a>
  </li>
@@ -315,19 +314,19 @@
   Semana 12
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../S12/ProgFuncional.html">
+  <a class="reference internal" href="ProgFuncional.html">
    Programação funcional
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../S12/Objetos.html">
+  <a class="reference internal" href="Objetos.html">
    Programação orientada por objetos
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../S12/ExercFicheiros.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Lab7
   </a>
  </li>
@@ -373,7 +372,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/docs/S4/Lab3.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/docs/S12/ExercFicheiros.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -420,42 +419,26 @@
   <a class="reference internal nav-link" href="#objetivos-de-aprendizagem">
    Objetivos de aprendizagem
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gafanhotos">
+   Gafanhotos
+  </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tarefa-a">
      Tarefa A
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#casos-de-teste">
-       Casos de teste
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tarefa-b">
      Tarefa B
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
-       Casos de teste
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tarefa-c">
-     Tarefa C
+     Tarefa c
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id2">
-       Casos de teste
-      </a>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
@@ -475,104 +458,56 @@
         
               <div>
                 
-  <div class="section" id="lab3">
-<h1>Lab3<a class="headerlink" href="#lab3" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="lab7">
+<h1>Lab7<a class="headerlink" href="#lab7" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="objetivos-de-aprendizagem">
 <h2>Objetivos de aprendizagem<a class="headerlink" href="#objetivos-de-aprendizagem" title="Permalink to this headline">¶</a></h2>
-<p>Com este guião, exercitaremos:</p>
-<ol class="simple">
-<li><p>a utilização de strings</p></li>
-<li><p>o uso de condições no controlo de fluxo do programa</p></li>
-<li><p>a utilização de funções do Python</p></li>
-</ol>
-<p>e continuaremos a usar o Mooshak para verificar o resultado dos programas desenvolvidos.</p>
+<p>Com este guião, exercitaremos a leitura e escrita de ficheiros e a comunicação aberta em ciência usando <em>Jupyter notebooks</em>.</p>
+</div>
+<div class="section" id="gafanhotos">
+<h2>Gafanhotos<a class="headerlink" href="#gafanhotos" title="Permalink to this headline">¶</a></h2>
+<p>Vamos analisar alguns aspetos da distribuição de Ortrópedes em Castro Marim <a class="bibtex reference internal" href="#pina2017orthoptera" id="id1">[PVR+17b]</a>
+a partir do ficheiro disponibilizado no material suplementar <a class="bibtex reference internal" href="#pina2017orthoptera-data" id="id2">[PVR+17a]</a>.</p>
+<p>Prepare um <em>Jupyter Notebook</em> demonstre a execução das três tarefas descritas e submeta na Tutoria.</p>
 <div class="section" id="tarefa-a">
 <h3>Tarefa A<a class="headerlink" href="#tarefa-a" title="Permalink to this headline">¶</a></h3>
-<p>Considere o <a class="reference external" href="http://rosalind.info/problems/dna/">problema do DNA</a> em que se pretende apresentar, numa única linha, o número de carateres ‘A’, ‘C’, ‘G’ e ‘T’ existentes numa string.</p>
-<p>Sabendo que não existem linhas vazias, prepare uma solução que contenha a função visada e uma função de teste para a leitura de uma linha e escrita da resposta.</p>
-<p>Dica:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nome</span> <span class="o">=</span> <span class="s1">&#39;Maria&#39;</span>
-<span class="n">apelido</span> <span class="o">=</span> <span class="s1">&#39;Moura&#39;</span>
-<span class="n">nome_completo</span> <span class="o">=</span> <span class="n">nome</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">apelido</span>
-</pre></div>
-</div>
-<div class="section" id="casos-de-teste">
-<h4>Casos de teste<a class="headerlink" href="#casos-de-teste" title="Permalink to this headline">¶</a></h4>
-<p><strong>Input 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC</span>
-</pre></div>
-</div>
-<p><strong>Output 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">20</span> <span class="mi">12</span> <span class="mi">17</span> <span class="mi">21</span>
-</pre></div>
-</div>
-<p><strong>Input 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">AGATTTTAATTATGAATGAAAAGGGAAATATGTATATGTGTGGATTAAAAAAAGAGTGTATGATAGAAGA</span>
-</pre></div>
-</div>
-<p><strong>Output 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">32</span> <span class="mi">0</span> <span class="mi">17</span> <span class="mi">21</span>
-</pre></div>
-</div>
-<p>Submeta no problema A do Lab3.</p>
-</div>
+<p>Pretende-se a identificação das cinco espécies com mais registos na zona de eucaliptal e o número de indivíduos dessas espécies.</p>
+<p><strong>Input</strong></p>
+<p>O ficheiro <em>zookeys-691-019-s001.csv</em> que deve descarregar.</p>
+<p><strong>Output</strong></p>
+<p>O output tem apenas cinco linhas, contendo em cada a string que representa a espécie e o número de indivíduos dessa espécie.
+As espécies devem ser listadas por ordem decrescente de indivíduos.</p>
 </div>
 <div class="section" id="tarefa-b">
 <h3>Tarefa B<a class="headerlink" href="#tarefa-b" title="Permalink to this headline">¶</a></h3>
-<p>Considere agora a <a class="reference external" href="http://rosalind.info/problems/rna/">transcrição de DNA para RNA</a> em que se pretende obter uma string <span class="math notranslate nohighlight">\(u\)</span> a partir de uma string <span class="math notranslate nohighlight">\(t\)</span>, sendo que as ocorrências do carater ‘T’ em <span class="math notranslate nohighlight">\(t\)</span> são substituídas por ‘U’ em <span class="math notranslate nohighlight">\(u\)</span>.</p>
-<p>Sabendo que não existem linhas vazias, prepare uma solução que contenha a função visada e uma função de teste para a leitura de uma linha e escrita da resposta.</p>
-<div class="section" id="id1">
-<h4>Casos de teste<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
-<p><strong>Input 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GATGGAACTTGACTACGTAAATT</span>
-</pre></div>
-</div>
-<p><strong>Output 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GAUGGAACUUGACUACGUAAAUU</span>
-</pre></div>
-</div>
-<p><strong>Input 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">AGCAAAACAAACAGACA</span>
-</pre></div>
-</div>
-<p><strong>Output 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">AGCAAAACAAACAGACA</span>
-</pre></div>
-</div>
-<p>Submeta no problema B do Lab3.</p>
-</div>
+<p>Pretende-se a identificação das cinco espécies com mais registos independentemente do tipo de habitat e o número de indivíduos de cada uma dessas espécies.</p>
+<p><strong>Input</strong></p>
+<p>O ficheiro <em>zookeys-691-019-s001.csv</em> que deve descarregar.</p>
+<p><strong>Output</strong></p>
+<p>O output tem apenas cinco linhas, contendo em cada a string que representa a espécie e o número de indivíduos dessa espécie.
+As espécies devem ser listadas por ordem crescente de indivíduos.</p>
 </div>
 <div class="section" id="tarefa-c">
-<h3>Tarefa C<a class="headerlink" href="#tarefa-c" title="Permalink to this headline">¶</a></h3>
-<p>Considere a determinação do <a class="reference external" href="http://rosalind.info/problems/revc/">complemento de uma cadeia</a> de DNA.</p>
-<p>Numa string de DNA os símbolos ‘A’ e ‘T’ são complementares assim como os símbolos ‘C’ e ‘G’. Pretende-se, a partir de uma string de DNA <span class="math notranslate nohighlight">\(s\)</span>, obter a string <span class="math notranslate nohighlight">\(s^c\)</span> o que é conseguido pela inversão dos símbolos de <span class="math notranslate nohighlight">\(s\)</span> e substituição de cada símbolo pelo símbolo complementar.</p>
-<p>Sabendo que não existem linhas vazias, prepare uma solução que contenha a função, ou funções, visada(s) e uma função de teste para a leitura de uma linha e escrita da resposta.</p>
-<div class="section" id="id2">
-<h4>Casos de teste<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
-<p><strong>Input 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GTCA</span>
-
-</pre></div>
-</div>
-<p><strong>Output 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TGAC</span>
-</pre></div>
-</div>
-<p><strong>Input 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">AAAACCCGGT</span>
-</pre></div>
-</div>
-<p><strong>Output 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ACCGGGTTTT</span>
-</pre></div>
-</div>
-<p>Submeta no problema C do Lab3.</p>
-</div>
+<h3>Tarefa c<a class="headerlink" href="#tarefa-c" title="Permalink to this headline">¶</a></h3>
+<p>Pretende-se a percentagem de ocorrência de cada espécie, independentemente do tipo de habitat.</p>
+<p><strong>Input</strong></p>
+<p>O ficheiro <em>zookeys-691-019-s001.csv</em> que deve descarregar.</p>
+<p><strong>Output</strong></p>
+<p>O output tem tantas linhas como espécies amostradas, contendo em cada a string que representa a espécie e a percentagem de indivíduos dessa espécie, em formato científico com três casas decimais.
+As espécies devem ser listadas por ordem alfabética.</p>
 </div>
 </div>
 <div class="section" id="referencias">
 <h2>Referências<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h2>
-<p>As tarefas A, B e C são inspiradas nos exercícios da plataforma <a class="reference external" href="http://rosalind.info/problems/locations/">Rosalind</a>, sendo em cada uma das tarefas apresentada a fonte respetiva.</p>
+<p id="bibtex-bibliography-docs/S12/ExercFicheiros-0"><dl class="citation">
+<dt class="bibtex label" id="pina2017orthoptera-data"><span class="brackets"><a class="fn-backref" href="#id2">PVR+17a</a></span></dt>
+<dd><p>Sílvia Pina, Sasha Vasconcelos, Luís Reino, Joana Santana, Pedro Beja, Juan S Sánchez-Oliver, Inês Catry, Francisco Moreira, and Sónia Ferreira. Supplementary material 1 from: the orthoptera of castro verde special protection area (southern portugal): new data and conservation value. <em>ZooKeys</em>, pages 19, 2017. <a class="reference external" href="https://doi.org/https://doi.org/10.3897/zookeys.691.14842.suppl1">doi:https://doi.org/10.3897/zookeys.691.14842.suppl1</a>.</p>
+</dd>
+<dt class="bibtex label" id="pina2017orthoptera"><span class="brackets"><a class="fn-backref" href="#id1">PVR+17b</a></span></dt>
+<dd><p>Sílvia Pina, Sasha Vasconcelos, Luís Reino, Joana Santana, Pedro Beja, Juan S Sánchez-Oliver, Inês Catry, Francisco Moreira, and Sónia Ferreira. The orthoptera of castro verde special protection area (southern portugal): new data and conservation value. <em>ZooKeys</em>, pages 19, 2017.</p>
+</dd>
+</dl>
+</p>
 </div>
 </div>
 
@@ -589,7 +524,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./docs/S4"
+            path: "./docs/S12"
         },
         predefinedOutput: true
     }
@@ -604,8 +539,7 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="ProgPython2.html" title="previous page">Programação em Python - parte 2</a>
-    <a class='right-next' id="next-link" href="../S5/ProgPython3.html" title="next page">Programação em Python - parte 3</a>
+    <a class='left-prev' id="prev-link" href="Objetos.html" title="previous page">Programação orientada por objetos</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
