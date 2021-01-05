@@ -312,7 +312,7 @@ list(map(lambda x: x*x*x, range(10)))
 # 
 # As operações de **map** produzem uma sequência de valores pela aplicação da função a cada elemento do objeto iterável.
 # 
-# A expressão *lambda* permite criar
+# A expressão *lambda* permite criar uma transformação pela aplicação de uma instrução.
 
 # ### Bibliografia
 # 

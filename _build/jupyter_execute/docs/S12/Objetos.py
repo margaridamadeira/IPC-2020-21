@@ -52,6 +52,8 @@ a, b = 'Bom ', 'dia'
 a + b
 
 
+# o operador '+' representa a concatenação.
+
 # Porquê?
 # 
 # Porque efetivamente o que temos é
@@ -161,9 +163,9 @@ r.imprimir()
 s.imprimir()
 
 
-# Python prevê que se existir um método designado **__str__* esse método será usado na instrução de print do objeto. 
+# Python prevê que se existir um método designado **\_\_str\_\_** esse método será usado na instrução de print do objeto. 
 # 
-# Alteremos então a nossa classe criando, no método *__str__* a string a apresentar.
+# Alteremos então a nossa classe criando, no método \_\_str\_\_ a string a apresentar.
 
 # In[14]:
 
