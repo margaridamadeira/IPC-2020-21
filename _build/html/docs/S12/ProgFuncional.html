@@ -576,7 +576,7 @@ Segmentando obtemos a segunda metade da lista : [12, 14, 16, 18, 20]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;list_iterator at 0x7fdd79da18d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;list_iterator at 0x7fe1d87a9850&gt;
 </pre></div>
 </div>
 </div>
@@ -725,6 +725,7 @@ Terminado!
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Experimente, retirando o comentário da linha abaixo</span>
+<span class="c1"># para ler dois inteiros</span>
 <span class="c1"># a, b = [int(x) for x in input().split()]</span>
 </pre></div>
 </div>
@@ -1007,6 +1008,26 @@ Considere que temos vários nomes</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Ana&#39;, &#39;Maria&#39;, &#39;Silva&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>E se quisermos o nome como uma única string, poderíamos fazer</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">novo_nome</span> <span class="o">=</span> <span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span><span class="o">+</span><span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">y</span><span class="p">,</span> <span class="n">nome_corrigido</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">novo_nome</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ana Maria Silva
 </pre></div>
 </div>
 </div>

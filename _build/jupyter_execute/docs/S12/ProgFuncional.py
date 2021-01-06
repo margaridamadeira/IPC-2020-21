@@ -162,6 +162,7 @@ c=[1, 3, 5, 8, 10, 15, 17]
 
 
 # Experimente, retirando o comentário da linha abaixo
+# para ler dois inteiros
 # a, b = [int(x) for x in input().split()]
 
 
@@ -379,4 +380,18 @@ print(nome)
 
 
 print(nome_corrigido)
+
+
+# E se quisermos o nome como uma única string, poderíamos fazer
+
+# In[35]:
+
+
+novo_nome = reduce(lambda x, y: x+' ' + y, nome_corrigido)
+
+
+# In[36]:
+
+
+print(novo_nome)
 
