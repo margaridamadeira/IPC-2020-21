@@ -64,5 +64,20 @@
 - part: Semana 12
   chapters:
   - file: docs/S12/ProgFuncional
-  - file: docs/S12/Objetos
   - file: docs/S12/ExercFicheiros
+
+- part: Semana 13
+  chapters:
+  - file: docs/S13/Objetos
+  - file: docs/S13/Bibliotecas
+    sections:
+    - file: docs/S13/NumPy_intro
+    - file: docs/S13/Matplotlib
+    - file: docs/S13/Introd_Pandas
+    - file: docs/S13/Pandas_acesso
+    - file: docs/S13/Apresent_sympy
+    - file: docs/S13/BibliotecasRef
+
+- part: Semana 14
+  chapters:
+  - file: docs/S14/FestaJaneiro

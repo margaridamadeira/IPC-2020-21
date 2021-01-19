@@ -1,0 +1,1522 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Introdução ao NumPy &#8212; IPC</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2020-21/docs/S13/NumPy_intro.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Introdução ao Matplotlib" href="Matplotlib.html" />
+    <link rel="prev" title="Desenvolvimento de soluções usando bibliotecas" href="Bibliotecas.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://margaridamadeira.github.io/IPC-2020-21/docs/S13/NumPy_intro.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Introdução ao NumPy" />
+<meta property="og:description" content="Introdução ao NumPy  NumPy é particularmente útil para produzir soluções rápidas de processamento vetorial.  Leitura inicial: https://numpy.org/devdocs/user/qui" />
+<meta property="og:image"       content="https://margaridamadeira.github.io/IPC-2020-21/_static/IPC_wc.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/IPC_wc.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">IPC</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <p class="caption">
+ <span class="caption-text">
+  Preâmbulo
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Pre/Apresentação.html">
+   Apresentação geral
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Pre/Familiarização.html">
+   Sobre a parte prática
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 1
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S1/Introdução.html">
+   Introdução
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S1/Primeiros_passos.html">
+   Aula prática
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 2
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S2/IniciarProgramar.html">
+   Começar a programar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S2/Temperaturas.html">
+   Primeiros programas
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 3
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S3/ProgPython.html">
+   Programação em Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S3/SubmissãoMooshak.html">
+   Submissão ao Mooshak
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S3/Lab0.html">
+   Lab0
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S3/Lab1.html">
+   Lab1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S3/Lab2.html">
+   Lab2
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 4
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S4/ProgPython2.html">
+   Programação em Python - parte 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S4/Lab3.html">
+   Lab3
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 5
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S5/ProgPython3.html">
+   Programação em Python - parte 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S5/Lab4.html">
+   Lab4
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 6
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S6/ProgPython4.html">
+   Programação em Python - parte 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S6/FestaOutubro2019.html">
+   Festa de outubro de 2019
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 7
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S7/Festa.html">
+   Festa de Programação
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 8
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S8/Algoritmia.html">
+   Criação de soluções
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S8/Lab5.html">
+   Lab5
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 9
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S9/CriarSoluções.html">
+   Criação de soluções - parte 2
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 10
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S10/Ficheiros.html">
+   Ficheiros
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S10/What.html">
+   Lab6
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 11
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S11/T11.html">
+   Esclarecimento de dúvidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S11/Festa2.html">
+   Festa de Programação
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 12
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S12/ProgFuncional.html">
+   Programação funcional
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S12/ExercFicheiros.html">
+   Lab7
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 13
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Objetos.html">
+   Programação orientada por objetos
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="Bibliotecas.html">
+   Desenvolvimento de soluções usando bibliotecas
+  </a>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Introdução ao NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Matplotlib.html">
+     Introdução ao Matplotlib
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Introd_Pandas.html">
+     Introdução ao Pandas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Pandas_acesso.html">
+     Seleção de elementos no pandas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Apresent_sympy.html">
+     Introdução ao SymPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="BibliotecasRef.html">
+     Referências
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 14
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S14/FestaJaneiro.html">
+   Festa de Programação
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/docs/S13/NumPy_intro.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/margaridamadeira/IPC-2020-21"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/margaridamadeira/IPC-2020-21/master?urlpath=tree/docs/docs/S13/NumPy_intro.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#documentacao">
+   Documentação
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#alguns-exemplos">
+   Alguns exemplos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operacoes-elementares">
+   Operações elementares
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercicios">
+   Exercícios
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="introducao-ao-numpy">
+<h1>Introdução ao NumPy<a class="headerlink" href="#introducao-ao-numpy" title="Permalink to this headline">¶</a></h1>
+<p><em>NumPy</em> é particularmente útil para produzir soluções rápidas de processamento vetorial.</p>
+<p>Leitura inicial:
+https://numpy.org/devdocs/user/quickstart.html</p>
+<p>Leitura recomendada:
+http://www.scipy-lectures.org/intro/numpy</p>
+<p>Documentação de referência:
+http://docs.scipy.org/</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Um exemplo</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="n">a</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 1, 2, 3])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]])</span>
+<span class="n">b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0, 1, 2],
+       [3, 4, 5]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># dimensão da matriz</span>
+<span class="n">b</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2, 3)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="documentacao">
+<h2>Documentação<a class="headerlink" href="#documentacao" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Acesso à documentação </span>
+<span class="n">help</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on built-in function array in module numpy:
+
+array(...)
+    array(object, dtype=None, *, copy=True, order=&#39;K&#39;, subok=False, ndmin=0)
+    
+    Create an array.
+    
+    Parameters
+    ----------
+    object : array_like
+        An array, any object exposing the array interface, an object whose
+        __array__ method returns an array, or any (nested) sequence.
+    dtype : data-type, optional
+        The desired data-type for the array.  If not given, then the type will
+        be determined as the minimum type required to hold the objects in the
+        sequence.
+    copy : bool, optional
+        If true (default), then the object is copied.  Otherwise, a copy will
+        only be made if __array__ returns a copy, if obj is a nested sequence,
+        or if a copy is needed to satisfy any of the other requirements
+        (`dtype`, `order`, etc.).
+    order : {&#39;K&#39;, &#39;A&#39;, &#39;C&#39;, &#39;F&#39;}, optional
+        Specify the memory layout of the array. If object is not an array, the
+        newly created array will be in C order (row major) unless &#39;F&#39; is
+        specified, in which case it will be in Fortran order (column major).
+        If object is an array the following holds.
+    
+        ===== ========= ===================================================
+        order  no copy                     copy=True
+        ===== ========= ===================================================
+        &#39;K&#39;   unchanged F &amp; C order preserved, otherwise most similar order
+        &#39;A&#39;   unchanged F order if input is F and not C, otherwise C order
+        &#39;C&#39;   C order   C order
+        &#39;F&#39;   F order   F order
+        ===== ========= ===================================================
+    
+        When ``copy=False`` and a copy is made for other reasons, the result is
+        the same as if ``copy=True``, with some exceptions for `A`, see the
+        Notes section. The default order is &#39;K&#39;.
+    subok : bool, optional
+        If True, then sub-classes will be passed-through, otherwise
+        the returned array will be forced to be a base-class array (default).
+    ndmin : int, optional
+        Specifies the minimum number of dimensions that the resulting
+        array should have.  Ones will be pre-pended to the shape as
+        needed to meet this requirement.
+    
+    Returns
+    -------
+    out : ndarray
+        An array object satisfying the specified requirements.
+    
+    See Also
+    --------
+    empty_like : Return an empty array with shape and type of input.
+    ones_like : Return an array of ones with shape and type of input.
+    zeros_like : Return an array of zeros with shape and type of input.
+    full_like : Return a new array with shape of input filled with value.
+    empty : Return a new uninitialized array.
+    ones : Return a new array setting values to one.
+    zeros : Return a new array setting values to zero.
+    full : Return a new array of given shape filled with value.
+    
+    
+    Notes
+    -----
+    When order is &#39;A&#39; and `object` is an array in neither &#39;C&#39; nor &#39;F&#39; order,
+    and a copy is forced by a change in dtype, then the order of the result is
+    not necessarily &#39;C&#39; as expected. This is likely a bug.
+    
+    Examples
+    --------
+    &gt;&gt;&gt; np.array([1, 2, 3])
+    array([1, 2, 3])
+    
+    Upcasting:
+    
+    &gt;&gt;&gt; np.array([1, 2, 3.0])
+    array([ 1.,  2.,  3.])
+    
+    More than one dimension:
+    
+    &gt;&gt;&gt; np.array([[1, 2], [3, 4]])
+    array([[1, 2],
+           [3, 4]])
+    
+    Minimum dimensions 2:
+    
+    &gt;&gt;&gt; np.array([1, 2, 3], ndmin=2)
+    array([[1, 2, 3]])
+    
+    Type provided:
+    
+    &gt;&gt;&gt; np.array([1, 2, 3], dtype=complex)
+    array([ 1.+0.j,  2.+0.j,  3.+0.j])
+    
+    Data-type consisting of more than one element:
+    
+    &gt;&gt;&gt; x = np.array([(1,2),(3,4)],dtype=[(&#39;a&#39;,&#39;&lt;i4&#39;),(&#39;b&#39;,&#39;&lt;i4&#39;)])
+    &gt;&gt;&gt; x[&#39;a&#39;]
+    array([1, 3])
+    
+    Creating an array from sub-classes:
+    
+    &gt;&gt;&gt; np.array(np.mat(&#39;1 2; 3 4&#39;))
+    array([[1, 2],
+           [3, 4]])
+    
+    &gt;&gt;&gt; np.array(np.mat(&#39;1 2; 3 4&#39;), subok=True)
+    matrix([[1, 2],
+            [3, 4]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Em alternativa</span>
+np.array<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ou ainda</span>
+<span class="n">np</span><span class="o">.</span><span class="n">lookfor</span><span class="p">(</span><span class="s1">&#39;create array&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Search results for &#39;create array&#39;
+---------------------------------
+numpy.array
+    Create an array.
+numpy.memmap
+    Create a memory-map to an array stored in a *binary* file on disk.
+numpy.diagflat
+    Create a two-dimensional array with the flattened input as a diagonal.
+numpy.fromiter
+    Create a new 1-dimensional array from an iterable object.
+numpy.partition
+    Return a partitioned copy of an array.
+numpy.ctypeslib.as_array
+    Create a numpy array from a ctypes array or POINTER.
+numpy.ma.diagflat
+    Create a two-dimensional array with the flattened input as a diagonal.
+numpy.ma.make_mask
+    Create a boolean mask from an array.
+numpy.lib.Arrayterator
+    Buffered iterator for big arrays.
+numpy.ctypeslib.as_ctypes
+    Create and return a ctypes object from a numpy array.  Actually
+numpy.ma.mrecords.fromarrays
+    Creates a mrecarray from a (flat) list of masked arrays.
+numpy.ma.mvoid.__new__
+    Create a new masked array from scratch.
+numpy.ma.MaskedArray.__new__
+    Create a new masked array from scratch.
+numpy.ma.mrecords.fromtextfile
+    Creates a mrecarray from data stored in the file `filename`.
+numpy.asarray
+    Convert the input to an array.
+numpy.ndarray
+    ndarray(shape, dtype=float, buffer=None, offset=0,
+numpy.recarray
+    Construct an ndarray that allows field access using attributes.
+numpy.chararray
+    chararray(shape, itemsize=1, unicode=False, buffer=None, offset=0,
+numpy.exp
+    Calculate the exponential of all elements in the input array.
+numpy.pad
+    Pad an array.
+numpy.asanyarray
+    Convert the input to an ndarray, but pass ndarray subclasses through.
+numpy.cbrt
+    Return the cube-root of an array, element-wise.
+numpy.copy
+    Return an array copy of the given object.
+numpy.diag
+    Extract a diagonal or construct a diagonal array.
+numpy.exp2
+    Calculate `2**p` for all `p` in the input array.
+numpy.fmax
+    Element-wise maximum of array elements.
+numpy.fmin
+    Element-wise minimum of array elements.
+numpy.load
+    Load arrays or pickled objects from ``.npy``, ``.npz`` or pickled files.
+numpy.modf
+    Return the fractional and integral parts of an array, element-wise.
+numpy.rint
+    Round elements of the array to the nearest integer.
+numpy.sort
+    Return a sorted copy of an array.
+numpy.sqrt
+    Return the non-negative square-root of an array, element-wise.
+numpy.array_equiv
+    Returns True if input arrays are shape consistent and all elements equal.
+numpy.dtype
+    Create a data type object.
+numpy.expm1
+    Calculate ``exp(x) - 1`` for all elements in the array.
+numpy.isnan
+    Test element-wise for NaN and return result as a boolean array.
+numpy.isnat
+    Test element-wise for NaT (not a time) and return result as a boolean array.
+numpy.log10
+    Return the base 10 logarithm of the input array, element-wise.
+numpy.log1p
+    Return the natural logarithm of one plus the input array, element-wise.
+numpy.power
+    First array elements raised to powers from second array, element-wise.
+numpy.ufunc
+    Functions that operate element by element on whole arrays.
+numpy.choose
+    Construct an array from an index array and a set of arrays to choose from.
+numpy.nditer
+    Efficient multi-dimensional iterator object to iterate over arrays.
+numpy.maximum
+    Element-wise maximum of array elements.
+numpy.minimum
+    Element-wise minimum of array elements.
+numpy.swapaxes
+    Interchange two axes of an array.
+numpy.full_like
+    Return a full array with the same shape and type as a given array.
+numpy.ones_like
+    Return an array of ones with the same shape and type as a given array.
+numpy.bitwise_or
+    Compute the bit-wise OR of two arrays element-wise.
+numpy.empty_like
+    Return a new array with the same shape and type as a given array.
+numpy.zeros_like
+    Return an array of zeros with the same shape and type as a given array.
+numpy.asarray_chkfinite
+    Convert the input to an array, checking for NaNs or Infs.
+numpy.bitwise_and
+    Compute the bit-wise AND of two arrays element-wise.
+numpy.bitwise_xor
+    Compute the bit-wise XOR of two arrays element-wise.
+numpy.float_power
+    First array elements raised to powers from second array, element-wise.
+numpy.ma.exp
+    Calculate the exponential of all elements in the input array.
+numpy.diag_indices
+    Return the indices to access the main diagonal of an array.
+numpy.nested_iters
+    Create nditers for use in nested loops
+numpy.ma.mrecords.MaskedRecords.__new__
+    Create a new masked array from scratch.
+numpy.ma.sqrt
+    Return the non-negative square-root of an array, element-wise.
+numpy.ma.log10
+    Return the base 10 logarithm of the input array, element-wise.
+numpy.chararray.tolist
+    a.tolist()
+numpy.put_along_axis
+    Put values into the destination array by matching 1d index and data slices.
+numpy.ma.choose
+    Use an index array to construct a new array from a set of choices.
+numpy.ma.maximum
+    Element-wise maximum of array elements.
+numpy.ma.minimum
+    Element-wise minimum of array elements.
+numpy.savez_compressed
+    Save several arrays into a single file in compressed ``.npz`` format.
+numpy.matlib.rand
+    Return a matrix of random values with given shape.
+numpy.datetime_as_string
+    Convert an array of datetimes into an array of strings.
+numpy.ma.bitwise_or
+    Compute the bit-wise OR of two arrays element-wise.
+numpy.ma.bitwise_and
+    Compute the bit-wise AND of two arrays element-wise.
+numpy.ma.bitwise_xor
+    Compute the bit-wise XOR of two arrays element-wise.
+numpy.ma.make_mask_none
+    Return a boolean mask of the given shape, filled with False.
+numpy.ma.tests.test_subclassing.MSubArray.__new__
+    Create a new masked array from scratch.
+numpy.core._multiarray_umath.clip
+    Clip (limit) the values in an array.
+numpy.ma.tests.test_subclassing.SubMaskedArray.__new__
+    Create a new masked array from scratch.
+numpy.ma.mrecords.fromrecords
+    Creates a MaskedRecords from a list of records.
+numpy.core._multiarray_umath.empty_like
+    Return a new array with the same shape and type as a given array.
+numpy.core._dtype._construction_repr
+    Creates a string repr of the dtype, excluding the &#39;dtype()&#39; part
+numpy.abs
+    Calculate the absolute value element-wise.
+numpy.add
+    Add arguments element-wise.
+numpy.cos
+    Cosine element-wise.
+numpy.log
+    Natural logarithm, element-wise.
+numpy.lib.recfunctions.require_fields
+    Casts a structured array to a new dtype using assignment by field-name.
+numpy.mod
+    Return element-wise remainder of division.
+numpy.sin
+    Trigonometric sine, element-wise.
+numpy.tan
+    Compute tangent element-wise.
+numpy.ceil
+    Return the ceiling of the input, element-wise.
+numpy.conj
+    Return the complex conjugate, element-wise.
+numpy.cosh
+    Hyperbolic cosine, element-wise.
+numpy.fabs
+    Compute the absolute values element-wise.
+numpy.fmod
+    Return the element-wise remainder of division.
+numpy.less
+    Return the truth value of (x1 &lt; x2) element-wise.
+numpy.log2
+    Base-2 logarithm of `x`.
+numpy.sign
+    Returns an element-wise indication of the sign of a number.
+numpy.sinh
+    Hyperbolic sine, element-wise.
+numpy.tanh
+    Compute hyperbolic tangent element-wise.
+numpy.core._multiarray_umath.datetime_as_string
+    Convert an array of datetimes into an array of strings.
+numpy.equal
+    Return (x1 == x2) element-wise.
+numpy.floor
+    Return the floor of the input, element-wise.
+numpy.frexp
+    Decompose the elements of x into mantissa and twos exponent.
+numpy.hypot
+    Given the &quot;legs&quot; of a right triangle, return its hypotenuse.
+numpy.isinf
+    Test element-wise for positive or negative infinity.
+numpy.ldexp
+    Returns x1 * 2**x2, element-wise.
+numpy.trunc
+    Return the truncated value of the input, element-wise.
+numpy.arccos
+    Trigonometric inverse cosine, element-wise.
+numpy.arcsin
+    Inverse sine, element-wise.
+numpy.arctan
+    Trigonometric inverse tangent, element-wise.
+numpy.around
+    Evenly round to the given number of decimals.
+numpy.divide
+    Returns a true division of the inputs, element-wise.
+numpy.divmod
+    Return element-wise quotient and remainder simultaneously.
+numpy.source
+    Print or write to a file the source code for a NumPy object.
+numpy.square
+    Return the element-wise square of the input.
+numpy.arccosh
+    Inverse hyperbolic cosine, element-wise.
+numpy.arcsinh
+    Inverse hyperbolic sine element-wise.
+numpy.arctan2
+    Element-wise arc tangent of ``x1/x2`` choosing the quadrant correctly.
+numpy.arctanh
+    Inverse hyperbolic tangent element-wise.
+numpy.deg2rad
+    Convert angles from degrees to radians.
+numpy.degrees
+    Convert angles from radians to degrees.
+numpy.greater
+    Return the truth value of (x1 &gt; x2) element-wise.
+numpy.rad2deg
+    Convert angles from radians to degrees.
+numpy.radians
+    Convert angles from degrees to radians.
+numpy.signbit
+    Returns element-wise True where signbit is set (less than zero).
+numpy.spacing
+    Return the distance between x and the nearest adjacent number.
+numpy.copysign
+    Change the sign of x1 to that of x2, element-wise.
+numpy.diagonal
+    Return specified diagonals.
+numpy.isfinite
+    Test element-wise for finiteness (not infinity or not Not a Number).
+numpy.multiply
+    Multiply arguments element-wise.
+numpy.negative
+    Numerical negative, element-wise.
+numpy.subtract
+    Subtract arguments, element-wise.
+numpy.heaviside
+    Compute the Heaviside step function.
+numpy.logaddexp
+    Logarithm of the sum of exponentiations of the inputs.
+numpy.nextafter
+    Return the next floating-point value after x1 towards x2, element-wise.
+numpy.not_equal
+    Return (x1 != x2) element-wise.
+numpy.left_shift
+    Shift the bits of an integer to the left.
+numpy.less_equal
+    Return the truth value of (x1 =&lt; x2) element-wise.
+numpy.logaddexp2
+    Logarithm of the sum of exponentiations of the inputs in base-2.
+numpy.logical_or
+    Compute the truth value of x1 OR x2 element-wise.
+numpy.nan_to_num
+    Replace NaN with zero and infinity with large finite numbers (default
+numpy.reciprocal
+    Return the reciprocal of the argument, element-wise.
+numpy.bitwise_not
+    Compute bit-wise inversion, or bit-wise NOT, element-wise.
+numpy.einsum_path
+    Evaluates the lowest cost contraction order for an einsum expression by
+numpy.histogram2d
+    Compute the bi-dimensional histogram of two data samples.
+numpy.logical_and
+    Compute the truth value of x1 AND x2 element-wise.
+numpy.logical_not
+    Compute the truth value of NOT x element-wise.
+numpy.logical_xor
+    Compute the truth value of x1 XOR x2, element-wise.
+numpy.right_shift
+    Shift the bits of an integer to the right.
+numpy.ma.abs
+    Calculate the absolute value element-wise.
+numpy.ma.add
+    Add arguments element-wise.
+numpy.ma.cos
+    Cosine element-wise.
+numpy.ma.log
+    Natural logarithm, element-wise.
+numpy.ma.mod
+    Return element-wise remainder of division.
+numpy.ma.sin
+    Trigonometric sine, element-wise.
+numpy.ma.tan
+    Compute tangent element-wise.
+numpy.floor_divide
+    Return the largest integer smaller or equal to the division of the inputs.
+numpy.ma.ceil
+    Return the ceiling of the input, element-wise.
+numpy.ma.cosh
+    Hyperbolic cosine, element-wise.
+numpy.fft.ifft
+    Compute the one-dimensional inverse discrete Fourier Transform.
+numpy.ma.fabs
+    Compute the absolute values element-wise.
+numpy.ma.fmod
+    Return the element-wise remainder of division.
+numpy.ma.less
+    Return the truth value of (x1 &lt; x2) element-wise.
+numpy.ma.log2
+    Base-2 logarithm of `x`.
+numpy.ma.sinh
+    Hyperbolic sine, element-wise.
+numpy.ma.tanh
+    Compute hyperbolic tangent element-wise.
+numpy.greater_equal
+    Return the truth value of (x1 &gt;= x2) element-wise.
+numpy.fft.ifftn
+    Compute the N-dimensional inverse discrete Fourier Transform.
+numpy.ma.equal
+    Return (x1 == x2) element-wise.
+numpy.ma.floor
+    Return the floor of the input, element-wise.
+numpy.ma.hypot
+    Given the &quot;legs&quot; of a right triangle, return its hypotenuse.
+numpy.busdaycalendar
+    A business day calendar object that efficiently stores information
+numpy.ma.tests.test_subclassing.SubArray
+    ndarray(shape, dtype=float, buffer=None, offset=0,
+numpy.ma.arccos
+    Trigonometric inverse cosine, element-wise.
+numpy.ma.arcsin
+    Inverse sine, element-wise.
+numpy.ma.arctan
+    Trigonometric inverse tangent, element-wise.
+numpy.ma.divide
+    Returns a true division of the inputs, element-wise.
+numpy.lib.recfunctions.unstructured_to_structured
+    Converts and n-D unstructured array into an (n-1)-D structured array.
+numpy.ma.arccosh
+    Inverse hyperbolic cosine, element-wise.
+numpy.ma.arcsinh
+    Inverse hyperbolic sine element-wise.
+numpy.ma.arctan2
+    Element-wise arc tangent of ``x1/x2`` choosing the quadrant correctly.
+numpy.ma.arctanh
+    Inverse hyperbolic tangent element-wise.
+numpy.ma.greater
+    Return the truth value of (x1 &gt; x2) element-wise.
+numpy.ma.multiply
+    Multiply arguments element-wise.
+numpy.ma.negative
+    Numerical negative, element-wise.
+numpy.ma.subtract
+    Subtract arguments, element-wise.
+numpy.ma.conjugate
+    Return the complex conjugate, element-wise.
+numpy.ma.not_equal
+    Return (x1 != x2) element-wise.
+numpy.ma.remainder
+    Return element-wise remainder of division.
+numpy.ma.empty_like
+    empty_like(prototype, dtype=None, order=&#39;K&#39;, subok=True, shape=None)
+numpy.ma.less_equal
+    Return the truth value of (x1 =&lt; x2) element-wise.
+numpy.ma.logical_or
+    Compute the truth value of x1 OR x2 element-wise.
+numpy.ma.logical_and
+    Compute the truth value of x1 AND x2 element-wise.
+numpy.ma.logical_not
+    Compute the truth value of NOT x element-wise.
+numpy.ma.logical_xor
+    Compute the truth value of x1 XOR x2, element-wise.
+numpy.ma.true_divide
+    Returns a true division of the inputs, element-wise.
+numpy.ma.floor_divide
+    Return the largest integer smaller or equal to the division of the inputs.
+numpy.ma.greater_equal
+    Return the truth value of (x1 &gt;= x2) element-wise.
+numpy.lib.tests.test_stride_tricks.SimpleSubClass
+    ndarray(shape, dtype=float, buffer=None, offset=0,
+numpy.core.tests.test_function_base.PhysicalQuantity2
+    ndarray(shape, dtype=float, buffer=None, offset=0,
+numpy.ma.tests.test_subclassing.ComplicatedSubArray
+    ndarray(shape, dtype=float, buffer=None, offset=0,
+numpy.lib.tests.test_stride_tricks.VerySimpleSubClass
+    ndarray(shape, dtype=float, buffer=None, offset=0,
+numpy.testing._gen_alignment_data
+    generator producing data with different alignment and offsets
+numpy.random.RandomState.rand
+    Random values in a given shape.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ou ainda</span>
+np.con*<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="alguns-exemplos">
+<h2>Alguns exemplos<a class="headerlink" href="#alguns-exemplos" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># matriz com 1s</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span> 
+<span class="n">a</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1., 1., 1.],
+       [1., 1., 1.],
+       [1., 1., 1.]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># matriz com 0s</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0., 0.],
+       [0., 0.]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Matrix com 1 na diagonal e demais elementos a zero</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span> 
+<span class="n">c</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1, 0, 0],
+       [0, 1, 0],
+       [0, 0, 1]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Matrix com 1.0 na diagonal e demais elementos a zero</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span> 
+<span class="n">c</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1., 0., 0.],
+       [0., 1., 0.],
+       [0., 0., 1.]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]))</span>
+<span class="n">d</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1, 0, 0, 0],
+       [0, 2, 0, 0],
+       [0, 0, 3, 0],
+       [0, 0, 0, 4]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">a</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">9</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="c1"># [start:end:step]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2, 5, 8])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Indexação dos elementos das matrizes</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">a</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0, 0, 0],
+       [0, 1, 0],
+       [0, 0, 2]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># third line, second column</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 0,  0,  0],
+       [ 0,  1,  0],
+       [ 0, 10,  2]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># a segunda linha</span>
+<span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 1, 0])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># a segunda coluna</span>
+<span class="n">a</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0,  1, 10])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="operacoes-elementares">
+<h2>Operações elementares<a class="headerlink" href="#operacoes-elementares" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">a</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0, 10, 20, 30])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span> <span class="mi">4</span> <span class="p">)</span>
+<span class="n">b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 1, 2, 3])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">-</span><span class="n">b</span>
+<span class="n">c</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0,  9, 18, 27])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">b</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">d</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 1, 4, 9])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d1</span> <span class="o">=</span> <span class="n">d</span> <span class="o">+</span> <span class="mi">5</span>
+<span class="n">d1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 5,  6,  9, 14])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+            <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]]</span> <span class="p">)</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span> <span class="p">[[</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+            <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]]</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">C</span> <span class="o">=</span> <span class="n">A</span> <span class="o">*</span> <span class="n">B</span>                       <span class="c1"># produto elemento a elemento</span>
+<span class="n">C</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[2, 0],
+       [0, 4]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span> <span class="o">=</span> <span class="n">A</span> <span class="o">@</span> <span class="n">B</span>                       <span class="c1"># produto de matrizes</span>
+<span class="n">D</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[5, 4],
+       [3, 4]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>                    <span class="c1"># outra forma de multiplicar matrizes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[5, 4],
+       [3, 4]])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exercicios">
+<h2>Exercícios<a class="headerlink" href="#exercicios" title="Permalink to this headline">¶</a></h2>
+<p>Crie as matrizes abaixo (e atenção aos tipos de dados)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+ <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+ <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+ <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
+
+<span class="p">[[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span>
+ <span class="p">[</span><span class="mf">2.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span>
+ <span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">3.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span>
+ <span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">4.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span>
+ <span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">5.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span>
+ <span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">6.</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.0, 0.0, 0.0, 0.0, 0.0],
+ [2.0, 0.0, 0.0, 0.0, 0.0],
+ [0.0, 3.0, 0.0, 0.0, 0.0],
+ [0.0, 0.0, 4.0, 0.0, 0.0],
+ [0.0, 0.0, 0.0, 5.0, 0.0],
+ [0.0, 0.0, 0.0, 0.0, 6.0]]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs/S13"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="Bibliotecas.html" title="previous page">Desenvolvimento de soluções usando bibliotecas</a>
+    <a class='right-next' id="next-link" href="Matplotlib.html" title="next page">Introdução ao Matplotlib</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Margarida Madeira e Moura<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

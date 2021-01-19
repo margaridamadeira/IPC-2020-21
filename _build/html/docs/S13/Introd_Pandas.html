@@ -1,0 +1,1234 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Introdução ao Pandas &#8212; IPC</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2020-21/docs/S13/Introd_Pandas.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Seleção de elementos no pandas" href="Pandas_acesso.html" />
+    <link rel="prev" title="Introdução ao Matplotlib" href="Matplotlib.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://margaridamadeira.github.io/IPC-2020-21/docs/S13/Introd_Pandas.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Introdução ao Pandas" />
+<meta property="og:description" content="Introdução ao Pandas  pandas é uma biblioteca de código aberto em Python   que dispõe de funcionalidades de importação, exportação e manipulação de dados para e" />
+<meta property="og:image"       content="https://margaridamadeira.github.io/IPC-2020-21/_static/IPC_wc.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/IPC_wc.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">IPC</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <p class="caption">
+ <span class="caption-text">
+  Preâmbulo
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Pre/Apresentação.html">
+   Apresentação geral
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Pre/Familiarização.html">
+   Sobre a parte prática
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 1
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S1/Introdução.html">
+   Introdução
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S1/Primeiros_passos.html">
+   Aula prática
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 2
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S2/IniciarProgramar.html">
+   Começar a programar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S2/Temperaturas.html">
+   Primeiros programas
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 3
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S3/ProgPython.html">
+   Programação em Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S3/SubmissãoMooshak.html">
+   Submissão ao Mooshak
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S3/Lab0.html">
+   Lab0
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S3/Lab1.html">
+   Lab1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S3/Lab2.html">
+   Lab2
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 4
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S4/ProgPython2.html">
+   Programação em Python - parte 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S4/Lab3.html">
+   Lab3
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 5
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S5/ProgPython3.html">
+   Programação em Python - parte 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S5/Lab4.html">
+   Lab4
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 6
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S6/ProgPython4.html">
+   Programação em Python - parte 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S6/FestaOutubro2019.html">
+   Festa de outubro de 2019
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 7
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S7/Festa.html">
+   Festa de Programação
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 8
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S8/Algoritmia.html">
+   Criação de soluções
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S8/Lab5.html">
+   Lab5
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 9
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S9/CriarSoluções.html">
+   Criação de soluções - parte 2
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 10
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S10/Ficheiros.html">
+   Ficheiros
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S10/What.html">
+   Lab6
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 11
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S11/T11.html">
+   Esclarecimento de dúvidas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S11/Festa2.html">
+   Festa de Programação
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 12
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S12/ProgFuncional.html">
+   Programação funcional
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S12/ExercFicheiros.html">
+   Lab7
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 13
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Objetos.html">
+   Programação orientada por objetos
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="Bibliotecas.html">
+   Desenvolvimento de soluções usando bibliotecas
+  </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="NumPy_intro.html">
+     Introdução ao NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Matplotlib.html">
+     Introdução ao Matplotlib
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Introdução ao Pandas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Pandas_acesso.html">
+     Seleção de elementos no pandas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Apresent_sympy.html">
+     Introdução ao SymPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="BibliotecasRef.html">
+     Referências
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Semana 14
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S14/FestaJaneiro.html">
+   Festa de Programação
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/docs/S13/Introd_Pandas.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/margaridamadeira/IPC-2020-21"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/margaridamadeira/IPC-2020-21/master?urlpath=tree/docs/docs/S13/Introd_Pandas.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introducao">
+   Introdução
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#series">
+     Series
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dataframes">
+     Dataframes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemplos-de-uso">
+     Exemplos de uso
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencias-adicionais">
+   Referências adicionais
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="introducao-ao-pandas">
+<h1>Introdução ao Pandas<a class="headerlink" href="#introducao-ao-pandas" title="Permalink to this headline">¶</a></h1>
+<p><em>pandas</em> é uma biblioteca de código aberto em Python   que dispõe de funcionalidades de importação, exportação e manipulação de dados para exploração e análise de dados.</p>
+<div class="section" id="introducao">
+<h2>Introdução<a class="headerlink" href="#introducao" title="Permalink to this headline">¶</a></h2>
+<p>Tipicamente, a exploração e análise de dados com <em>pandas</em> considera a importação dos módulos</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>e apoia-se nas funcionalidades obtidas com a utilização das estruturas de dados fundamentais em <em>pandas</em>: Series e DataFrame.</p>
+<div class="section" id="series">
+<h3>Series<a class="headerlink" href="#series" title="Permalink to this headline">¶</a></h3>
+<p>A primeira dessas estruturas é <strong>Series</strong> que representa um objeto unidimensional. As novidades principais desta estrutura são: os dados podem ter tipos distintos e possibilidade de definição explícita do índice.</p>
+<p>Por exemplo,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># a partir de um ndarray </span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;data é do tipo&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data é do tipo &lt;class &#39;numpy.ndarray&#39;&gt; 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">indice</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;um&#39;</span><span class="p">,</span> <span class="s1">&#39;dois&#39;</span><span class="p">,</span> <span class="s1">&#39;tres&#39;</span><span class="p">,</span> <span class="s1">&#39;quatro&#39;</span><span class="p">,</span> <span class="s1">&#39;cinco&#39;</span><span class="p">]</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">indice</span><span class="p">)</span>
+<span class="n">s</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>um        49
+dois      43
+tres      34
+quatro    39
+cinco     32
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># a partir de um dicionário</span>
+<span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mf">1.</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mf">2.</span> <span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mf">4.</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="mf">8.</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">:</span><span class="mf">16.</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">:</span><span class="mf">32.</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;d é do tipo&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">pot2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="n">pot2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>d é do tipo &lt;class &#39;numpy.ndarray&#39;&gt; 
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a     1.0
+b     2.0
+c     4.0
+d     8.0
+e    16.0
+f    32.0
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ou mesmo de um escalar</span>
+<span class="n">num</span> <span class="o">=</span> <span class="mf">3.14</span>
+<span class="n">sn</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;pi&#39;</span><span class="p">,</span> <span class="s1">&#39;outro pi&#39;</span><span class="p">,</span> <span class="s1">&#39;e ainda pi&#39;</span><span class="p">])</span>
+<span class="n">sn</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pi            3.14
+outro pi      3.14
+e ainda pi    3.14
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="dataframes">
+<h3>Dataframes<a class="headerlink" href="#dataframes" title="Permalink to this headline">¶</a></h3>
+<p>Outra estrutura de dados fundamental no <em>pandas</em> é <strong>DataFrame</strong>, uma estrutura de dados composta por linhas e colunas e que pode ser entendida como um grupo de <em>Series</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;2&#39;</span> <span class="p">:</span> <span class="n">pot2</span><span class="p">,</span>
+     <span class="s1">&#39;3&#39;</span> <span class="p">:</span> <span class="mi">3</span><span class="o">**</span><span class="n">np</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="n">pot2</span><span class="p">)}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>2</th>
+      <th>3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>a</th>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>b</th>
+      <td>2.0</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>c</th>
+      <td>4.0</td>
+      <td>9.0</td>
+    </tr>
+    <tr>
+      <th>d</th>
+      <td>8.0</td>
+      <td>27.0</td>
+    </tr>
+    <tr>
+      <th>e</th>
+      <td>16.0</td>
+      <td>81.0</td>
+    </tr>
+    <tr>
+      <th>f</th>
+      <td>32.0</td>
+      <td>243.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span>
+<span class="n">df1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>12</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>9</td>
+      <td>12</td>
+      <td>3</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4</td>
+      <td>6</td>
+      <td>5</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>14</td>
+      <td>9</td>
+      <td>4</td>
+      <td>15</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="exemplos-de-uso">
+<h3>Exemplos de uso<a class="headerlink" href="#exemplos-de-uso" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>2</th>
+      <th>3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>a</th>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>b</th>
+      <td>2.0</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>c</th>
+      <td>4.0</td>
+      <td>9.0</td>
+    </tr>
+    <tr>
+      <th>d</th>
+      <td>8.0</td>
+      <td>27.0</td>
+    </tr>
+    <tr>
+      <th>e</th>
+      <td>16.0</td>
+      <td>81.0</td>
+    </tr>
+    <tr>
+      <th>f</th>
+      <td>32.0</td>
+      <td>243.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;2&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a     1.0
+b     2.0
+c     4.0
+d     8.0
+e    16.0
+f    32.0
+Name: 2, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;outro&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;2&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;3&#39;</span><span class="p">]</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>2</th>
+      <th>3</th>
+      <th>outro</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>a</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>b</th>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>6.0</td>
+    </tr>
+    <tr>
+      <th>c</th>
+      <td>4.0</td>
+      <td>9.0</td>
+      <td>36.0</td>
+    </tr>
+    <tr>
+      <th>d</th>
+      <td>8.0</td>
+      <td>27.0</td>
+      <td>216.0</td>
+    </tr>
+    <tr>
+      <th>e</th>
+      <td>16.0</td>
+      <td>81.0</td>
+      <td>1296.0</td>
+    </tr>
+    <tr>
+      <th>f</th>
+      <td>32.0</td>
+      <td>243.0</td>
+      <td>7776.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">meio</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="o">&gt;</span><span class="mi">10</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span> <span class="o">&lt;</span><span class="mi">100</span><span class="p">)]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">meio</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>2</th>
+      <th>3</th>
+      <th>outro</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>a</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>b</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>c</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>36.0</td>
+    </tr>
+    <tr>
+      <th>d</th>
+      <td>NaN</td>
+      <td>27.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>e</th>
+      <td>16.0</td>
+      <td>81.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>f</th>
+      <td>32.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">meio</span><span class="p">[</span><span class="n">meio</span><span class="o">.</span><span class="n">isnull</span><span class="p">()]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">meio</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>2</th>
+      <th>3</th>
+      <th>outro</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>a</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>b</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>c</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>36.0</td>
+    </tr>
+    <tr>
+      <th>d</th>
+      <td>0.0</td>
+      <td>27.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>e</th>
+      <td>16.0</td>
+      <td>81.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>f</th>
+      <td>32.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">maior</span> <span class="o">=</span> <span class="n">meio</span><span class="p">[</span><span class="s1">&#39;3&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">maior</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>e
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">meio</span><span class="p">[</span><span class="s1">&#39;3&#39;</span><span class="p">][</span><span class="n">maior</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>81.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">meio</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>2</th>
+      <th>3</th>
+      <th>outro</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>6.00000</td>
+      <td>6.000000</td>
+      <td>6.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>8.00000</td>
+      <td>18.000000</td>
+      <td>6.000000</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>13.38656</td>
+      <td>32.698624</td>
+      <td>14.696938</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>12.00000</td>
+      <td>20.250000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>32.00000</td>
+      <td>81.000000</td>
+      <td>36.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="referencias-adicionais">
+<h2>Referências adicionais<a class="headerlink" href="#referencias-adicionais" title="Permalink to this headline">¶</a></h2>
+<p>Leitura recomendada: http://pandas.pydata.org/pandas-docs/stable/tutorials.html</p>
+<p>Documentação de referência: http://pandas.pydata.org/pandas-docs/stable/</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs/S13"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="Matplotlib.html" title="previous page">Introdução ao Matplotlib</a>
+    <a class='right-next' id="next-link" href="Pandas_acesso.html" title="next page">Seleção de elementos no pandas</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Margarida Madeira e Moura<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
